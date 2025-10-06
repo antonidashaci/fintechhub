@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Hub Türkiye - Türkiye'nin Fintech Merkezi</title>
+    <meta name="description" content="Türkiye'nin en kapsamlı fintech ve ödeme çözümleri platformu. B2B ödeme çözümleri, güncel haberler ve sektör analizleri.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+            <h1>Fintech Hub Türkiye</h1>
+                </div>
+                <nav class="main-nav">
+                <ul class="nav-list">
+                        <li><a href="#providers"><i class="fas fa-credit-card"></i> Ödeme Çözümleri</a></li>
+                        <li><a href="#news"><i class="fas fa-newspaper"></i> Haberler</a></li>
+                        <li><a href="#analytics"><i class="fas fa-chart-line"></i> Sektör Analizi</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> İletişim</a></li>
+                </ul>
+            </nav>
+                <div class="header-actions">
+                    <button class="btn-secondary">Giriş Yap</button>
+                    <button class="btn-primary">Üye Ol</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>İşiniz İçin En İyi Ödeme Çözümünü Bulun</h2>
+                    <p>Türkiye'nin en kapsamlı fintech platformu. 50+ ödeme sağlayıcısı, gerçek fiyatlar ve kampanyalar ile işinizi büyütün.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Ödeme Sağlayıcısı</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">₺0</span>
+                            <span class="stat-label">Kayıt Ücreti</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Uzman Desteği</span>
+                        </div>
+                    </div>
+                    <div class="hero-search">
+                        <div class="search-box">
+                            <input type="text" placeholder="Hangi çözümü arıyorsunuz? (örn: sanal pos, ödeme geçidi)">
+                            <button class="btn-primary">
+                                <i class="fas fa-search"></i> Ara
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#providers" class="btn-primary">
+                            <i class="fas fa-list"></i> Tüm Çözümleri Gör
+                        </a>
+                        <a href="#analytics" class="btn-secondary">
+                            <i class="fas fa-chart-bar"></i> Sektör Raporu
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-chart">
+                    <canvas id="paymentVolumeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="providers" class="providers">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-credit-card"></i> Ödeme Çözümü Sağlayıcıları</h2>
+                <p>Türkiye'deki önde gelen fintech şirketleri ve ödeme çözümleri ile işinizi büyütün</p>
+            </div>
+            
+            <div class="provider-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="all">Tümü</button>
+                    <button class="tab-btn" data-category="payment-gateway">Ödeme Geçidi</button>
+                    <button class="tab-btn" data-category="pos">Sanal POS</button>
+                    <button class="tab-btn" data-category="digital-wallet">Dijital Cüzdan</button>
+                    <button class="tab-btn" data-category="open-banking">Açık Bankacılık</button>
+                    <button class="tab-btn" data-category="cloud-collection">Bulut Tahsilat</button>
+                    <button class="tab-btn" data-category="financial-management">Finansal Yönetim</button>
+                    <button class="tab-btn" data-category="digital-wallet-extended">Dijital Cüzdan</button>
+                    <button class="tab-btn" data-category="insurtech">Sigorta Teknolojisi</button>
+                </div>
+            </div>
+
+            <div class="providers-grid">
+                <div class="provider-card featured-provider" data-category="payment-gateway">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">iyz</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>iyzico</h3>
+                            <span class="provider-type">Ödeme Geçidi</span>
+                            <div class="provider-badge">En Popüler</div>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Türkiye'nin en büyük ödeme geçidi. 200+ banka ve kredi kartı desteği, 3D Secure güvenliği.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">PCI DSS Level 1</span>
+                        <span class="feature-tag">3D Secure</span>
+                        <span class="feature-tag">REST API</span>
+                        <span class="feature-tag">Webhook</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Başlangıç:</span>
+                        <span class="pricing-value">%2.9 + ₺0.30</span>
+                    </div>
+                    <div class="provider-campaign">
+                        <span class="campaign-badge">Kampanya</span>
+                        <span class="campaign-text">İlk 3 ay %0 komisyon</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Demo Talep Et</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="financial-management">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">Fin</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Finrota</h3>
+                            <span class="provider-type">Finansal Yönetim</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.6/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">İşletmeler için finansal yönetim ve raporlama çözümleri. Fatura yönetimi ve finansal süreçlerin dijitalleştirilmesi.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Fatura Yönetimi</span>
+                        <span class="feature-tag">Finansal Raporlama</span>
+                        <span class="feature-tag">Dijital Muhasebe</span>
+                        <span class="feature-tag">API Entegrasyonu</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Aylık:</span>
+                        <span class="pricing-value">₺199'den başlayan</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Demo İste</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="cloud-collection">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">BT</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Bulut Tahsilat</h3>
+                            <span class="provider-type">Bulut Tahsilat</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.5/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Bulut tabanlı tahsilat çözümü. Otomatik ödeme hatırlatmaları, tahsilat takibi ve nakit akış optimizasyonu.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Otomatik Hatırlatma</span>
+                        <span class="feature-tag">Tahsilat Takibi</span>
+                        <span class="feature-tag">Nakit Akış</span>
+                        <span class="feature-tag">Çoklu Ödeme</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Aylık:</span>
+                        <span class="pricing-value">₺299'den başlayan</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Ücretsiz Deneme</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="pos">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">PTR</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>PayTR</h3>
+                            <span class="provider-type">Sanal POS</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.5/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Bankalardan bağımsız sanal POS. Hızlı kurulum, düşük komisyon oranları.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Hızlı Kurulum</span>
+                        <span class="feature-tag">Düşük Komisyon</span>
+                        <span class="feature-tag">7/24 Destek</span>
+                        <span class="feature-tag">Multi Currency</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%2.4 + ₺0.25</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Başvuru Yap</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="open-banking">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">OB</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Open Banking Hub</h3>
+                            <span class="provider-type">Açık Bankacılık</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.7/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Türkiye'deki tüm bankaların API'lerini tek platformda. Hesap bilgisi ve ödeme işlemleri.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Çoklu Banka API</span>
+                        <span class="feature-tag">Hesap Bilgisi</span>
+                        <span class="feature-tag">Transfer İşlemleri</span>
+                        <span class="feature-tag">PSD2 Uyumlu</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">API Çağrısı:</span>
+                        <span class="pricing-value">₺0.05'ten başlayan</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">API Key Al</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="digital-wallet">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">PPR</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Papara</h3>
+                            <span class="provider-type">Dijital Cüzdan</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">20M+ aktif kullanıcılı dijital cüzdan. Mobil ödeme, para transferi ve e-ticaret entegrasyonu.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">20M+ Kullanıcı</span>
+                        <span class="feature-tag">Mobil Ödeme</span>
+                        <span class="feature-tag">Para Transferi</span>
+                        <span class="feature-tag">QR Code</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%1.9 + ₺0.20</span>
+                    </div>
+                    <div class="provider-campaign">
+                        <span class="campaign-badge">Yeni</span>
+                        <span class="campaign-text">Papara Business API v2.0</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Entegre Et</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="payment-gateway">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">PC</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>PayCore</h3>
+                            <span class="provider-type">Kurumsal Çözüm</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.4/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Kurumsal ödeme ve kart saklama çözümleri. Tokenization ve recurring payment desteği.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Tokenization</span>
+                        <span class="feature-tag">Recurring Payment</span>
+                        <span class="feature-tag">Fraud Detection</span>
+                        <span class="feature-tag">Multi Currency</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Özel Fiyat:</span>
+                        <span class="pricing-value">İletişime Geçin</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Teklif Al</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="pos">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">GP</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Garanti BBVA POS</h3>
+                            <span class="provider-type">Sanal POS</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.3/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Garanti BBVA'nın sanal POS çözümü. Güvenilir altyapı ve geniş kart desteği.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Garanti Altyapısı</span>
+                        <span class="feature-tag">Geniş Kart Desteği</span>
+                        <span class="feature-tag">Mobil POS</span>
+                        <span class="feature-tag">Kurumsal Destek</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%2.7 + ₺0.30</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Başvuru Yap</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="open-banking">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">BB</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Banking Bridge</h3>
+                            <span class="provider-type">Açık Bankacılık</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.5/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Fintech şirketleri için açık bankacılık API'leri. Hızlı entegrasyon ve güvenli veri erişimi.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Hızlı Entegrasyon</span>
+                        <span class="feature-tag">Güvenli API</span>
+                        <span class="feature-tag">Real-time Data</span>
+                        <span class="feature-tag">Webhook Support</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Başlangıç:</span>
+                        <span class="pricing-value">₺500/ay</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Demo İsteyin</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="digital-wallet-extended">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">BKM</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>BKM Express</h3>
+                            <span class="provider-type">Dijital Cüzdan</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.4/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Türkiye Bankalararası Kart Merkezi'nin dijital cüzdan hizmeti. Mobil ödeme ve online alışveriş çözümleri.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">BKM Altyapısı</span>
+                        <span class="feature-tag">Mobil Ödeme</span>
+                        <span class="feature-tag">Online Alışveriş</span>
+                        <span class="feature-tag">Fatura Ödeme</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%1.5 + ₺0.15</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Entegre Et</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="financial-management">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">PS</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Paraşüt</h3>
+                            <span class="provider-type">Finansal Yönetim</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.7/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">KOBİ'ler için bulut tabanlı ön muhasebe programı. Faturalandırma, muhasebe ve takip çözümleri.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Ön Muhasebe</span>
+                        <span class="feature-tag">Faturalandırma</span>
+                        <span class="feature-tag">Stok Takibi</span>
+                        <span class="feature-tag">Raporlama</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Aylık:</span>
+                        <span class="pricing-value">₺89'dan başlayan</span>
+                    </div>
+                    <div class="provider-campaign">
+                        <span class="campaign-badge">Popüler</span>
+                        <span class="campaign-text">100.000+ KOBİ kullanıyor</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Ücretsiz Deneme</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="payment-gateway">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">HP</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Hepsipay</h3>
+                            <span class="provider-type">Ödeme Geçidi</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.3/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Hepsiburada'nın ödeme çözümü. E-ticaret siteleri için güvenli ve hızlı ödeme altyapısı.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Hepsiburada Altyapısı</span>
+                        <span class="feature-tag">E-ticaret Odaklı</span>
+                        <span class="feature-tag">Hızlı Entegrasyon</span>
+                        <span class="feature-tag">7/24 Destek</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%2.7 + ₺0.25</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Başvuru Yap</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="insurtech">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">SN</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Sigortam.net</h3>
+                            <span class="provider-type">Sigorta Teknolojisi</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.5/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Online sigorta karşılaştırma ve satın alma platformu. 50+ sigorta şirketinin tekliflerini karşılaştırın.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">50+ Sigorta Şirketi</span>
+                        <span class="feature-tag">Anında Teklif</span>
+                        <span class="feature-tag">Online Satın Alma</span>
+                        <span class="feature-tag">7/24 Destek</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Ücretsiz:</span>
+                        <span class="pricing-value">Karşılaştırma hizmeti</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Teklif Al</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="open-banking">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">FS</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Firisbe</h3>
+                            <span class="provider-type">Açık Bankacılık</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Tak ve çalıştır açık bankacılık platformu. Finansal kurumlara hızlı entegrasyon çözümleri.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Tak ve Çalıştır</span>
+                        <span class="feature-tag">Hızlı Entegrasyon</span>
+                        <span class="feature-tag">PSD2 Uyumlu</span>
+                        <span class="feature-tag">Multi Bank</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Başlangıç:</span>
+                        <span class="pricing-value">₺750/ay</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Demo İste</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="digital-wallet-extended">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">IN</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>ininal</h3>
+                            <span class="provider-type">Dijital Cüzdan</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.4/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Ön ödemeli kart ve dijital cüzdan hizmetleri. Anında para yükleme ve güvenli ödeme çözümleri.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Ön Ödemeli Kart</span>
+                        <span class="feature-tag">Anında Para Yükleme</span>
+                        <span class="feature-tag">Online Alışveriş</span>
+                        <span class="feature-tag">Fatura Ödeme</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Ücretsiz:</span>
+                        <span class="pricing-value">Kart üretimi</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Kart Al</button>
+                    </div>
+                </div>
+
+                <div class="provider-card" data-category="payment-gateway">
+                    <div class="provider-header">
+                        <div class="provider-logo">
+                            <div class="logo-img">SP</div>
+                        </div>
+                        <div class="provider-info">
+                            <h3>Sipay</h3>
+                            <span class="provider-type">Ödeme Geçidi</span>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>4.2/5</span>
+                        </div>
+                    </div>
+                    <p class="provider-description">Dijital cüzdan ve ödeme çözümleri. Mobil ödeme, sanal POS ve e-ticaret entegrasyonu.</p>
+                    <div class="provider-features">
+                        <span class="feature-tag">Dijital Cüzdan</span>
+                        <span class="feature-tag">Mobil Ödeme</span>
+                        <span class="feature-tag">Sanal POS</span>
+                        <span class="feature-tag">E-ticaret</span>
+                    </div>
+                    <div class="provider-pricing">
+                        <span class="pricing-label">Komisyon:</span>
+                        <span class="pricing-value">%2.5 + ₺0.20</span>
+                    </div>
+                    <div class="provider-actions">
+                        <button class="btn-outline">Detaylı Bilgi</button>
+                        <button class="btn-primary">Entegre Et</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="business-tools">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Komisyon Hesaplayıcı</h3>
+                    <p>Farklı ödeme sağlayıcılarının komisyon oranlarını karşılaştırın ve maliyetinizi hesaplayın.</p>
+                    <button class="btn-primary">Hesapla</button>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Çözüm Karşılaştırma</h3>
+                    <p>İhtiyaçlarınıza en uygun ödeme çözümünü bulmak için detaylı karşılaştırma yapın.</p>
+                    <button class="btn-primary">Karşılaştır</button>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Hızlı Entegrasyon</h3>
+                    <p>API dokümantasyonları ve entegrasyon rehberleri ile hızlı başlangıç yapın.</p>
+                    <button class="btn-primary">Başla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analytics" class="analytics">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Sektör Analizi & Pazar Verileri</h2>
+                <p>Türkiye fintech sektörünün güncel verileri ve trend analizleri</p>
+            </div>
+            
+            <div class="analytics-dashboard">
+                <div class="chart-container">
+                    <h3>Ödeme Yöntemleri Dağılımı (2024)</h3>
+                    <canvas id="paymentMethodsChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Fintech Büyüme Trendi</h3>
+                    <canvas id="growthTrendChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Bölgesel Dağılım</h3>
+                    <canvas id="regionalChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Aylık İşlem Hacmi</h3>
+                    <canvas id="monthlyVolumeChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="key-metrics">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h4>₺127.3B</h4>
+                        <p>2024 Dijital Ödeme Hacmi</p>
+                        <span class="metric-change positive">+%23.4</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h4>42.1M</h4>
+                        <p>Aktif Dijital Kullanıcı</p>
+                        <span class="metric-change positive">+%18.7</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h4>387</h4>
+                        <p>Lisanslı Fintech Şirketi</p>
+                        <span class="metric-change positive">+%31.2</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h4>%67.3</h4>
+                        <p>Mobil Ödeme Penetrasyonu</p>
+                        <span class="metric-change positive">+%12.8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Güncel Haberler & Gelişmeler</h2>
+                <p>Fintech sektöründeki son gelişmeler, yeni ürün duyuruları ve önemli haberler</p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <div class="news-source">BDDK Raporu</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Regülasyon</div>
+                        <h3>BDDK: Dijital Ödeme Hacmi 2024'te %23 Arttı</h3>
+                        <p>Bankacılık Düzenleme ve Denetleme Kurumu'nun yayınladığı rapora göre, Türkiye'de dijital ödeme hacmi 2024 yılında ₺127.3 milyara ulaştı.</p>
+                        <div class="news-meta">
+                            <span class="news-date">14 Ocak 2025</span>
+                            <span class="news-source-tag">BDDK</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">TCMB</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Merkez Bankası</div>
+                        <h3>TCMB Dijital Lira Pilot Uygulaması Başlattı</h3>
+                        <p>Merkez Bankası, dijital lira pilot uygulamasını başlattı. 5 banka ile başlayan test süreci 6 ay sürecek.</p>
+                        <div class="news-meta">
+                            <span class="news-date">13 Ocak 2025</span>
+                            <span class="news-source-tag">TCMB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">İstatistik</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Pazar Analizi</div>
+                        <h3>Mobil Ödeme Kullanımı %67.3'e Yükseldi</h3>
+                        <p>TÜİK verilerine göre, mobil ödeme kullanımı 2024 sonunda %67.3'e ulaştı. En çok kullanılan uygulama Papara oldu.</p>
+                        <div class="news-meta">
+                            <span class="news-date">12 Ocak 2025</span>
+                            <span class="news-source-tag">TÜİK</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">Sektör</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Fintech</div>
+                        <h3>387 Fintech Şirketi Lisans Aldı</h3>
+                        <p>BDDK tarafından 2024 yılında 387 fintech şirketine lisans verildi. Bu sayı bir önceki yıla göre %31 artış gösterdi.</p>
+                        <div class="news-meta">
+                            <span class="news-date">11 Ocak 2025</span>
+                            <span class="news-source-tag">BDDK</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">Teknoloji</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">API</div>
+                        <h3>Open Banking API Kullanımı %45 Arttı</h3>
+                        <p>Bankalar arası API entegrasyonları 2024'te %45 artış gösterdi. En çok kullanılan API'ler hesap bilgisi ve ödeme işlemleri oldu.</p>
+                        <div class="news-meta">
+                            <span class="news-date">10 Ocak 2025</span>
+                            <span class="news-source-tag">Open Banking</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">Güvenlik</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Siber Güvenlik</div>
+                        <h3>PCI DSS 4.0 Uyumluluk Oranı %89'a Çıktı</h3>
+                        <p>Fintech şirketlerinin PCI DSS 4.0 uyumluluk oranı %89'a yükseldi. Güvenlik standartları iyileştirildi.</p>
+                        <div class="news-meta">
+                            <span class="news-date">9 Ocak 2025</span>
+                            <span class="news-source-tag">PCI SSC</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> İletişim</h2>
+                <p>Bizimle iletişime geçin, sorularınızı yanıtlayalım</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-posta</h4>
+                            <p>info@fintechhubturkiye.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+90 (212) 555 0123</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Maslak Mahallesi, Büyükdere Caddesi No:123<br>Sarıyer, İstanbul</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız Soyadınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Konu">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Mesaj Gönder
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-info-circle"></i> Hakkımızda</h2>
+                <p>Fintech Hub Türkiye'nin misyonu ve vizyonu</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Misyonumuz</h3>
+                    <p>Fintech Hub Türkiye, işletmelerin ödeme çözümleri ve finansal teknolojiler hakkında güncel bilgiye ulaşmasını sağlayan kapsamlı bir platformdur. Şeffaf, tarafsız ve yenilikçi içerik sunarak fintech topluluğunu bir araya getirmeyi ve iş birliklerini desteklemeyi hedefliyoruz.</p>
+                    
+                    <h3>Vizyonumuz</h3>
+                    <p>Türkiye'nin en büyük fintech ekosistemi olarak, sektördeki tüm paydaşları bir araya getiren, yenilikçi çözümleri destekleyen ve sürdürülebilir büyümeyi teşvik eden bir platform haline gelmek.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Şeffaf ve tarafsız bilgi</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Güncel sektör analizleri</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kapsamlı çözüm rehberleri</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>7/24 uzman desteği</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-coins"></i>
+                        <h3>Fintech Hub Türkiye</h3>
+                    </div>
+                    <p>Türkiye'nin en kapsamlı fintech ve ödeme çözümleri platformu. Sektördeki tüm gelişmeleri takip edin.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#providers">Ödeme Çözümleri</a></li>
+                        <li><a href="#news">Haberler</a></li>
+                        <li><a href="#analytics">Sektör Analizi</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="#">Ödeme Geçitleri</a></li>
+                        <li><a href="#">Dijital Cüzdanlar</a></li>
+                        <li><a href="#">Sanal POS</a></li>
+                        <li><a href="#">Bankacılık API'leri</a></li>
+                        <li><a href="#">Güvenlik Çözümleri</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Bülten</h4>
+                    <p>Fintech sektöründeki son gelişmeleri e-posta ile alın.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit" class="btn-primary">Abone Ol</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+            <p>&copy; 2025 Fintech Hub Türkiye – Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Kullanım Şartları</a>
+                        <a href="#">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Real data and charts initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all charts
+            initPaymentVolumeChart();
+            initPaymentMethodsChart();
+            initGrowthTrendChart();
+            initRegionalChart();
+            initMonthlyVolumeChart();
+
+            // Provider filtering functionality
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const providerCards = document.querySelectorAll('.provider-card');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+                    providerCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Contact form submission
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+                    this.reset();
+                });
+            }
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Bültene başarıyla abone oldunuz!');
+                    this.reset();
+                });
+            }
+        });
+
+        // Hero Chart - Payment Volume Trend
+        function initPaymentVolumeChart() {
+            const ctx = document.getElementById('paymentVolumeChart');
+            if (!ctx) return;
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Dijital Ödeme Hacmi (₺B)',
+                        data: [45.2, 67.8, 89.4, 103.7, 127.3],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: 'white'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: 'white'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Payment Methods Distribution
+        function initPaymentMethodsChart() {
+            const ctx = document.getElementById('paymentMethodsChart');
+            if (!ctx) return;
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Kredi Kartı', 'Banka Kartı', 'Mobil Ödeme', 'Dijital Cüzdan', 'Kripto'],
+                    datasets: [{
+                        data: [35.2, 28.7, 18.9, 12.4, 4.8],
+                        backgroundColor: [
+                            '#1e3a8a',
+                            '#3b82f6',
+                            '#10b981',
+                            '#f59e0b',
+                            '#ef4444'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Growth Trend Chart
+        function initGrowthTrendChart() {
+            const ctx = document.getElementById('growthTrendChart');
+            if (!ctx) return;
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    datasets: [{
+                        label: '2023',
+                        data: [18.2, 22.1, 19.8, 25.3],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 8
+                    }, {
+                        label: '2024',
+                        data: [21.4, 26.7, 23.1, 28.9],
+                        backgroundColor: '#10b981',
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e5e7eb'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Regional Distribution Chart
+        function initRegionalChart() {
+            const ctx = document.getElementById('regionalChart');
+            if (!ctx) return;
+
+            new Chart(ctx, {
+                type: 'polarArea',
+                data: {
+                    labels: ['İstanbul', 'Ankara', 'İzmir', 'Bursa', 'Antalya', 'Diğer'],
+                    datasets: [{
+                        data: [42.3, 15.7, 12.1, 8.4, 6.2, 15.3],
+                        backgroundColor: [
+                            '#1e3a8a',
+                            '#3b82f6',
+                            '#10b981',
+                            '#f59e0b',
+                            '#ef4444',
+                            '#8b5cf6'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Monthly Volume Chart
+        function initMonthlyVolumeChart() {
+            const ctx = document.getElementById('monthlyVolumeChart');
+            if (!ctx) return;
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
+                    datasets: [{
+                        label: 'İşlem Hacmi (₺B)',
+                        data: [9.2, 8.7, 10.1, 9.8, 11.2, 10.9, 12.3, 11.8, 13.1, 12.7, 14.2, 15.8],
+                        borderColor: '#1e3a8a',
+                        backgroundColor: 'rgba(30, 58, 138, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e5e7eb'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
