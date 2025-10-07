@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Hub Türkiye - Regülasyon Takvimi</title>
+    <meta name="description" content="BDDK, TCMB ve SPK regülasyonlarını tarih, etki ve aksiyon planlarıyla takip edin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="dark-surface" data-api-base="http://localhost:4000/api" data-page="regulation">
+    <a class="skip-link" href="#main-content">Ana içeriğe atla</a>
+    <header class="site-header" id="top">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <h1>Fintech Hub Türkiye</h1>
+                </div>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                    <span class="sr-only">Menüyü aç/kapat</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="main-nav" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li><a data-nav="home" href="index.html#top"><i class="fas fa-house"></i> Ana Sayfa</a></li>
+                        <li><a data-nav="solutions-anchor" href="#solutions" data-home-target="index.html#solutions"><i class="fas fa-layer-group"></i> Çözümler</a></li>
+                        <li><a data-nav="providers-anchor" href="#providers" data-home-target="index.html#providers"><i class="fas fa-credit-card"></i> Sağlayıcılar</a></li>
+                        <li><a data-nav="analytics-anchor" href="#analytics" data-home-target="index.html#analytics"><i class="fas fa-chart-line"></i> Analitik</a></li>
+                        <li><a data-nav="map-anchor" href="#fintech-map" data-home-target="index.html#fintech-map"><i class="fas fa-map"></i> Fintek Haritası</a></li>
+                        <li><a data-nav="comparison-anchor" href="#comparison" data-home-target="index.html#comparison"><i class="fas fa-balance-scale"></i> Karşılaştırma</a></li>
+                        <li><a data-nav="news" href="news.html"><i class="fas fa-newspaper"></i> Haberler</a></li>
+                        <li><a data-nav="regulation" href="regulation.html"><i class="fas fa-shield-alt"></i> Regülasyon</a></li>
+                        <li><a data-nav="solutions" href="solutions.html"><i class="fas fa-compass"></i> Rehber Portalı</a></li>
+                        <li><a data-nav="providers" href="providers.html"><i class="fas fa-handshake"></i> Sağlayıcı Dizini</a></li>
+                        <li><a data-nav="legal" href="legal.html"><i class="fas fa-file-contract"></i> KVKK & Gizlilik</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-secondary" data-request="info" data-provider="FintechUBB Platformu" data-source="header-login">Giriş Yap</button>
+                    <button class="btn-primary" data-request="application" data-provider="FintechUBB Platformu" data-source="header-cta">Üye Ol</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero hero--secondary" id="regulation">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="hero-kicker">Regülasyon Takvimi</span>
+                        <h2>BDDK, TCMB ve SPK'dan gelen tüm güncellemeler tek takvimde</h2>
+                        <p>Her düzenlemenin kapsamı, yürürlük tarihi, etki analizi ve tamamlanması gereken aksiyonlar hazır listeler halinde sunulur.</p>
+                        <div class="hero-actions">
+                            <a href="#timeline" class="btn-primary"><i class="fas fa-calendar-days"></i> Takvimi görüntüle</a>
+                            <button class="btn-secondary" data-request="info"><i class="fas fa-scale-balanced"></i> Uyum danışmanlığı iste</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="hero-orb"></div>
+                        <div class="hero-mesh"></div>
+                        <div class="hero-chart-card hero-chart-card--compact">
+                            <div class="hero-chart-header">
+                                <span>2024 Kritik Tarihler</span>
+                                <strong>11 regülasyon</strong>
+                            </div>
+                            <div class="mini-stats mini-stats--list">
+                                <div><i class="fas fa-building-columns"></i> BDDK ödeme kuruluşu raporu</div>
+                                <div><i class="fas fa-credit-card"></i> PCI-DSS v4.0 geçiş</div>
+                                <div><i class="fas fa-users"></i> SPK yatırımcı koruma rehberi</div>
+                            </div>
+                        </div>
+                        <div class="hero-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="regulation-timeline" id="timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-clock"></i> 2024-2025 Regülasyon Yol Haritası</h2>
+                    <p>Her kayıt Fintechtime ve resmi kurum duyurularıyla doğrulanmış olup, FintechUBB aksiyon planı ile birlikte sunulur.</p>
+                </div>
+                <div class="timeline-grid" data-regulation-list>
+                    <div class="timeline-empty" data-regulation-empty hidden>
+                        <i class="fas fa-circle-info"></i> Regülasyon takvimi yüklenemedi. <button class="btn-inline" data-request="info" data-source="regulation-empty" data-provider="Regülasyon Masası">Uzmanla iletişime geçin</button>.
+                    </div>
+                </div>
+                <noscript>
+                    <p class="timeline-noscript">Takvimi görüntülemek için JavaScript'i etkinleştirin.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="regulation-faq" id="compliance">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-question-circle"></i> Sık sorulan uyum soruları</h2>
+                    <p>FintechUBB hukuk danışmanlarından gelen yanıtlarla süreçlerinizi hızlandırın.</p>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <button class="faq-trigger" type="button" aria-expanded="false">
+                            <span>PCI-DSS v4.0 geçişinde hangi adımlar zorunlu?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-panel" hidden>
+                            <p>Risk değerlendirmesi, ağ segmentasyonu, çok faktörlü kimlik doğrulama ve sürekli izleme planını güncellemeniz gerekiyor. FintechUBB olarak 6 haftalık geçiş planı sunuyoruz.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-trigger" type="button" aria-expanded="false">
+                            <span>KVKK ihlal bildirimi kaç saat içinde yapılmalı?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-panel" hidden>
+                            <p>Yeni düzenleme ile 48 saat içinde KVKK'ya, 72 saat içinde etkilenen kullanıcılara bildirim yapmanız gerekiyor. Otomatik olay raporlama şablonumuzu kullanabilirsiniz.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-trigger" type="button" aria-expanded="false">
+                            <span>FAST 2.0 test sonuçları nasıl raporlanacak?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-panel" hidden>
+                            <p>TCMB'nin yayımladığı performans rapor formatına uygun JSON ve PDF çıktıları zorunlu hale geldi. Test otomasyon modülümüz bu çıktıları otomatik oluşturuyor.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-strip">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Uyum süreçlerinizi birlikte planlayalım</h2>
+                    <p>Regülasyon takvimine göre proje planı hazırlıyor, gerekli dokümanları ve eğitimleri 10 iş gününde teslim ediyoruz.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn-primary" data-request="info"><i class="fas fa-clipboard-check"></i> Uyum planı talep et</button>
+                    <button class="btn-secondary" data-request="demo"><i class="fas fa-users"></i> Danışmanla görüş</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="form-toast" id="formToast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+    <div class="request-modal" id="requestModal" aria-hidden="true" role="dialog" aria-labelledby="requestModalTitle">
+        <div class="request-modal__overlay" data-close-request></div>
+        <div class="request-modal__dialog" role="document">
+            <header class="request-modal__header">
+                <h2 id="requestModalTitle">Talep Formu</h2>
+                <p id="requestModalSubtitle">FintechUBB uzmanları talebinizi 24 saat içinde yanıtlar.</p>
+                <button class="request-modal__close" type="button" data-close-request aria-label="Talep formunu kapat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </header>
+            <form id="providerRequestForm" class="request-form">
+                <div class="form-grid">
+                    <label class="form-field">
+                        <span>Ad Soyad</span>
+                        <input type="text" name="fullName" placeholder="Adınız Soyadınız" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Şirket</span>
+                        <input type="text" name="company" placeholder="Şirket adı" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Şirket E-posta</span>
+                        <input type="email" name="email" placeholder="ornek@fintech.com" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Telefon</span>
+                        <input type="tel" name="phone" placeholder="+90 5xx xxx xx xx">
+                    </label>
+                    <label class="form-field">
+                        <span>İlgi Alanı</span>
+                        <select name="provider" id="requestProvider" required>
+                            <option value="Regülasyon Danışmanlığı">Regülasyon Danışmanlığı</option>
+                            <option value="Ödeme Geçitleri">Ödeme Geçitleri</option>
+                            <option value="Açık Bankacılık">Açık Bankacılık</option>
+                            <option value="Fraud & Risk">Fraud & Risk</option>
+                            <option value="Finans SaaS">Finans SaaS</option>
+                        </select>
+                    </label>
+                    <label class="form-field">
+                        <span>Aylık İşlem Hacmi</span>
+                        <select name="volume">
+                            <option value="0-1M">₺0 - 1M</option>
+                            <option value="1-10M">₺1M - 10M</option>
+                            <option value="10-50M">₺10M - 50M</option>
+                            <option value="50M+">₺50M+</option>
+                        </select>
+                    </label>
+                </div>
+                <label class="form-field">
+                    <span>Talebiniz</span>
+                    <textarea name="notes" rows="4" placeholder="Hangi regülasyon için destek arıyorsunuz?"></textarea>
+                </label>
+                <input type="hidden" name="intent" id="requestIntent" value="info">
+                <input type="hidden" name="source" id="requestSource" value="web">
+                <div class="request-form__actions">
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Talebi Gönder</button>
+                    <button type="button" class="btn-secondary" data-close-request><i class="fas fa-xmark"></i> Vazgeç</button>
+                </div>
+                <p class="request-form__disclaimer"><i class="fas fa-shield-check"></i> Bilgileriniz FintechUBB KVKK politikalarına uygun olarak saklanır.</p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo logo--footer">
+                    <i class="fas fa-coins"></i>
+                    <span>Fintech Hub Türkiye</span>
+                </div>
+                <p>Regülasyon, teknoloji ve iş birliği üçgeninde fintech şirketlerinin yol arkadaşlığı.</p>
+            </div>
+            <div>
+                <h4>Sayfalar</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#regulation">Regülasyon Takvimi</a></li>
+                    <li><a href="solutions.html">Çözüm Rehberleri</a></li>
+                    <li><a href="providers.html">Sağlayıcı Dizini</a></li>
+                    <li><a href="news.html">Haber Merkezi</a></li>
+                    <li><a href="legal.html">KVKK & Gizlilik</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>İletişim</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> compliance@fintechhubturkiye.com</li>
+                    <li><i class="fas fa-phone"></i> +90 (212) 555 0123</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Maslak, İstanbul</li>
+                </ul>
+                <form class="newsletter-form" data-source="regulation-page">
+                    <label class="sr-only" for="regNewsletter">E-posta</label>
+                    <input id="regNewsletter" type="email" name="email" placeholder="E-posta adresiniz" required>
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Abone ol</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Fintech Hub Türkiye. Tüm hakları saklıdır.</p>
+            <div class="footer-badges">
+                <span><i class="fas fa-lock"></i> SSL 256-bit</span>
+                <span><i class="fas fa-scale-balanced"></i> BDDK uyumlu içerik</span>
+                <span><i class="fas fa-user-check"></i> KVKK uyumlu süreçler</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

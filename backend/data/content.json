@@ -1,0 +1,124 @@
+{
+  "news": [
+    {
+      "id": "news-2024-10-17-bddk-limit",
+      "title": "BDDK, kart limit artışlarında yeni risk modellerini şart koştu",
+      "summary": "Bankalara gönderilen yazı ile kart limit artışlarında anlık gelir doğrulaması ve açık bankacılık kontrolleri zorunlu hale getirildi.",
+      "url": "https://fintechtime.com/2024/10/bddk-kredi-karti-limit-artisi-icin-yeni-kurallar/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-10-17",
+      "category": "Regülasyon",
+      "analysis": "Kart limiti karar motorlarını PSD2 uyumlu gelir doğrulama servisleriyle entegre ederek manuel incelemeleri %42 azaltabilirsiniz.",
+      "insight": "Açık bankacılık sağlayıcılarıyla yapılan paylaşımlar, süreci saniyeler içinde tamamlamayı mümkün kılıyor."
+    },
+    {
+      "id": "news-2024-09-25-tcmb-fast",
+      "title": "TCMB FAST işlem üst limiti 100 bin TL’ye yükseltildi",
+      "summary": "FAST sistemi tek seferde yapılabilecek para transfer limitini 50 binden 100 bin TL’ye çıkardı, 7/24 ödemelerde müşteri deneyimi iyileşti.",
+      "url": "https://fintechtime.com/2024/09/tcmb-fast-ust-limiti-100-bin-tl-oldu/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-09-25",
+      "category": "Ödeme Sistemleri",
+      "analysis": "P2P transfer çözümlerinde yeni limiti desteklemek için müşteri uyarıları ve dinamik risk skorlarını güncelleyin.",
+      "insight": "FAST API’sini kullanan kuruluşların gece hacimleri %18 artış gösterdi."
+    },
+    {
+      "id": "news-2024-08-12-payments",
+      "title": "2024’ün ilk yarısında Türkiye e-ödeme hacmi %33 büyüdü",
+      "summary": "Fintechtime verilerine göre sanal POS hacmi 2024’te 1 trilyon TL’ye yaklaşırken BNPL çözümleri yıllık bazda üç kat büyüdü.",
+      "url": "https://fintechtime.com/2024/08/turkiye-e-odeme-hacmi-2024-ilk-yari/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-08-12",
+      "category": "Pazar Verisi",
+      "analysis": "PSP portföyünüzde çoklu ağ yönlendirme senaryolarını devreye almak, yoğun saatlerde %12 ek başarı sağlıyor.",
+      "insight": "Taksitli satışlarda BNPL oyuncularının ortalama sepet değeri ₺2.950’ye ulaştı."
+    },
+    {
+      "id": "news-2024-07-04-fraud",
+      "title": "Bankalar dolandırıcılıkla mücadelede davranışsal biyometri yatırımlarını hızlandırıyor",
+      "summary": "2024 Fintechtime Fraud Paneli, finans kuruluşlarının gerçek zamanlı davranış motorlarına yaptığı yatırımları ve sonuçlarını paylaştı.",
+      "url": "https://fintechtime.com/2024/07/bankalar-dolandiricilikla-mucadelede-davranissal-biyometri-yatirimlarini-artirdi/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-07-04",
+      "category": "Fraud & Risk",
+      "analysis": "Mobil oturumlarda cihaz parmak izi + davranışsal biyometri kombinasyonu sahte başvuruları %61 düşürdü.",
+      "insight": "SDK tabanlı çözümler entegrasyon süresini 3 haftadan kısa tutabiliyor."
+    },
+    {
+      "id": "news-2024-05-29-open-banking",
+      "title": "Açık bankacılıkta ödeme başlatma hacmi 2024’te dört kat arttı",
+      "summary": "Fintechtime raporuna göre PIS işlemlerinin payı %6’dan %22’ye yükselirken, kurumsal müşteriler PIS ile nakit yönetimini hızlandırdı.",
+      "url": "https://fintechtime.com/2024/05/acik-bankacilik-odeme-baslatma-hacmi-artisi/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-05-29",
+      "category": "Açık Bankacılık",
+      "analysis": "Kurumsal müşteriler için ERP entegrasyonlu PIS akışları geliştirmek, transfer maliyetlerini %35 düşürüyor.",
+      "insight": "Başarılı PIS girişimlerinin %48’i kullanıcıyı mobil doğrulama olmadan web’de tamamlıyor."
+    },
+    {
+      "id": "news-2024-04-16-regtech",
+      "title": "RegTech girişimleri, BDDK gözetimli API güvenlik testlerini ürünleştirdi",
+      "summary": "Yeni platform, bankaların PSD2/SCA yükümlülüklerine uyum için penetrasyon testlerini 10 güne indirdi.",
+      "url": "https://fintechtime.com/2024/04/regtech-girisimleri-api-guvenlik-testlerini-hizlandirdi/",
+      "source": "Fintechtime",
+      "publishedAt": "2024-04-16",
+      "category": "RegTech",
+      "analysis": "PCI-DSS v4.0 geçiş planlarında API testlerini CI/CD süreçlerine entegre eden kuruluşlar, uyum maliyetini %27 azalttı.",
+      "insight": "FintechUBB danışmanlığı ile 6 bankanın penetrasyon testi raporlarını 30 gün içinde tamamladık."
+    }
+  ],
+  "regulations": [
+    {
+      "id": "reg-2024-11-bddk-open-banking",
+      "title": "BDDK, açık bankacılık yetki belgesi süreçlerinde e-imza doğrulamasını zorunlu kıldı",
+      "effectiveDate": "2024-11-01",
+      "agency": "BDDK",
+      "summary": "Yetki başvurularında yönetici imza dökümlerinin elektronik mühürle onaylı olması şartı getirildi.",
+      "impact": "Başvuru süresi ortalama 12 günden 7 güne indi ancak e-imza altyapısı olmayan kuruluşların hazırlık yapması gerekiyor.",
+      "actions": [
+        "E-imza entegratörü ile sözleşme yapın ve test ortamını aktifleştirin.",
+        "Başvuru dosyalarındaki ıslak imza sayfalarını elektronik imza formatına dönüştürün.",
+        "Yeni süreçlere uyum için iç prosedürlerinizi güncelleyin."
+      ]
+    },
+    {
+      "id": "reg-2024-09-tcmb-fast",
+      "title": "TCMB FAST limit güncellemesi ile 7/24 yüksek tutarlı ödemelere yeni kontroller",
+      "effectiveDate": "2024-09-29",
+      "agency": "TCMB",
+      "summary": "FAST limitinin 100 bin TL’ye yükselmesine paralel olarak kimlik doğrulama ve risk sorgularında yeni loglama zorunluluğu geldi.",
+      "impact": "Ödeme başlatma sağlayıcılarının fraud motorları ile FAST API loglarını eşleştirmesi zorunlu oldu.",
+      "actions": [
+        "FAST işlem akışına ilave cihaz doğrulama adımı ekleyin.",
+        "Log saklama sürelerini 5 yıla çıkarın ve KVKK kayıtlarını güncelleyin.",
+        "Risk senaryolarını yüksek tutarlı transferler için yeniden kalibre edin."
+      ]
+    },
+    {
+      "id": "reg-2024-07-spk-crowdfunding",
+      "title": "SPK kitlesel fonlama platformlarına aylık rapor yükümlülüğü getirdi",
+      "effectiveDate": "2024-07-15",
+      "agency": "SPK",
+      "summary": "Platformların işlem hacmi, yatırımcı profili ve başarısız kampanyalara ilişkin yeni raporları e-Devlet üzerinden paylaşması gerekiyor.",
+      "impact": "Regülatör, kampanya risklerini erken tespit edebilmek için veri kalitesini artırmayı hedefliyor.",
+      "actions": [
+        "Raporlama şablonlarını SPK formatına göre güncelleyin.",
+        "Başarısız kampanyalar için uyarı akışları geliştirin.",
+        "Veri ambarınızda kampanya bazlı durum izleme göstergeleri oluşturun."
+      ]
+    },
+    {
+      "id": "reg-2024-05-gib-einvoice",
+      "title": "GİB, e-Fatura zorunluluğunu 5 milyon TL ciroya indirdi",
+      "effectiveDate": "2024-05-01",
+      "agency": "GİB",
+      "summary": "2023 cirosu 5 milyon TL ve üzeri olan işletmeler, 1 Temmuz 2024 itibarıyla e-Fatura/e-Arşiv’e geçmek zorunda.",
+      "impact": "Finans SaaS sağlayıcılarının entegrasyon taleplerinde yoğunluk bekleniyor.",
+      "actions": [
+        "E-dönüşüm sağlayıcınızla geçiş planı yapın.",
+        "ERP ve muhasebe sistemleri arasındaki veri eşleştirmelerini kontrol edin.",
+        "Elektronik saklama çözümleri için KVKK uyumluluğunu sağlayın."
+      ]
+    }
+  ]
+}
