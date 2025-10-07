@@ -33,7 +33,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Space Mono', sans-serif;
+    font-family: 'Space Mono', 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--text-primary);
@@ -174,16 +174,17 @@ img {
 .mobile-nav {
     position: fixed;
     left: 50%;
-    bottom: 16px;
+    bottom: 12px;
     transform: translateX(-50%);
     width: min(420px, 92vw);
-    padding: 12px 18px;
-    background: var(--bg-glass);
+    padding: 10px 16px;
+    background: rgba(10, 14, 28, 0.75);
     border-radius: 24px;
-    border: var(--border-glow);
+    border: 1px solid rgba(112, 107, 255, 0.3);
+    box-shadow: 0 24px 60px rgba(3, 7, 16, 0.4);
     display: none;
     justify-content: space-around;
-    gap: 12px;
+    gap: 8px;
     backdrop-filter: blur(24px);
     z-index: 1400;
 }
@@ -203,12 +204,13 @@ img {
 
 main {
     margin-left: 152px;
+    padding-bottom: 120px;
 }
 
 .hero {
     position: relative;
     min-height: 100vh;
-    padding: 120px clamp(2rem, 8vw, 6rem) 80px;
+    padding: 104px clamp(2rem, 8vw, 6rem) 80px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -701,6 +703,85 @@ main {
     transform: scaleX(1);
 }
 
+.case {
+    position: relative;
+    padding: 120px clamp(2rem, 8vw, 6rem);
+    overflow: hidden;
+}
+
+.case::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 10%, rgba(0, 246, 255, 0.12), transparent 40%),
+                radial-gradient(circle at 90% 0%, rgba(112, 107, 255, 0.18), transparent 55%);
+    opacity: 0.8;
+    z-index: -2;
+}
+
+.case::after {
+    content: '';
+    position: absolute;
+    inset: 20%;
+    border-radius: 38px;
+    background: rgba(6, 8, 18, 0.65);
+    filter: blur(60px);
+    z-index: -3;
+}
+
+.case-lusion::before {
+    background: radial-gradient(circle at 20% 20%, rgba(128, 255, 253, 0.2), transparent 45%),
+                radial-gradient(circle at 80% 10%, rgba(163, 115, 255, 0.22), transparent 60%);
+}
+
+.case-jeton::before {
+    background: radial-gradient(circle at 20% 20%, rgba(255, 140, 90, 0.2), transparent 45%),
+                radial-gradient(circle at 80% 10%, rgba(82, 222, 255, 0.18), transparent 60%);
+}
+
+.case-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.case-card,
+.case-contact {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    background: rgba(10, 14, 28, 0.78);
+    border: 1px solid rgba(112, 107, 255, 0.26);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px);
+    transition: var(--transition);
+}
+
+.case-card:hover,
+.case-contact:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-neon);
+}
+
+.case-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--text-secondary);
+}
+
+.case-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.case-contact p {
+    margin: 0;
+}
+
 .news {
     padding: 120px clamp(2rem, 8vw, 6rem);
 }
@@ -950,11 +1031,15 @@ main {
     .cta-panel {
         text-align: center;
     }
+
+    .case {
+        padding: 96px clamp(1.5rem, 6vw, 3rem);
+    }
 }
 
 @media (max-width: 520px) {
     .hero {
-        padding-top: 140px;
+        padding-top: 120px;
     }
 
     .hero-actions {
