@@ -35,6 +35,7 @@
                         <li><a href="#comparison"><i class="fas fa-balance-scale"></i> Karşılaştırma</a></li>
                         <li><a href="#news"><i class="fas fa-newspaper"></i> Haberler</a></li>
                         <li><a href="#regulation"><i class="fas fa-shield-alt"></i> Regülasyon</a></li>
+                        <li><a href="#ops-insights"><i class="fas fa-clipboard-check"></i> Yol Haritası</a></li>
                     </ul>
                 </nav>
                 <div class="header-actions">
@@ -1593,6 +1594,68 @@
         </div>
     </section>
 
+    <section id="ops-insights" class="ops-insights">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-clipboard-check"></i> Operasyon Özeti &amp; Yol Haritası</h2>
+                <p>Toplanan taleplerin anlık durumu ve ürünün bir sonraki iterasyonları için planlanan geliştirmeler.</p>
+            </div>
+
+            <div class="ops-grid">
+                <div class="ops-metrics">
+                    <div class="ops-metric">
+                        <span class="ops-metric-label">Talep Merkezi</span>
+                        <strong class="ops-metric-value" id="opsRequestsCount">0</strong>
+                        <span class="ops-metric-note">Demo / detaylı bilgi / başvuru kayıtları</span>
+                    </div>
+                    <div class="ops-metric">
+                        <span class="ops-metric-label">İletişim Formu</span>
+                        <strong class="ops-metric-value" id="opsContactCount">0</strong>
+                        <span class="ops-metric-note">Son 30 günde gelen şirket mesajları</span>
+                    </div>
+                    <div class="ops-metric">
+                        <span class="ops-metric-label">Bülten Aboneleri</span>
+                        <strong class="ops-metric-value" id="opsNewsletterCount">0</strong>
+                        <span class="ops-metric-note">Haftalık FinTech bülteni kayıtları</span>
+                    </div>
+                    <div class="ops-metric secondary">
+                        <span class="ops-metric-label">Son Güncelleme</span>
+                        <strong class="ops-metric-value" id="opsLatestUpdate">-</strong>
+                        <span class="ops-metric-note">Yerel olarak saklanan en güncel talep</span>
+                    </div>
+                    <p class="ops-disclaimer"><i class="fas fa-shield-check"></i> Veriler tarayıcınızda şifrelenmeden tutulur; gerçek ortamda KVKK uyumlu bir backend'e aktarılacaktır.</p>
+                </div>
+
+                <div class="ops-roadmap">
+                    <div class="roadmap-column">
+                        <h3><i class="fas fa-check-circle"></i> Tamamlananlar</h3>
+                        <ul>
+                            <li><span class="status done">✓</span> Bölgesel fintech haritası ve senaryoya göre karşılaştırma motoru yayınlandı.</li>
+                            <li><span class="status done">✓</span> Talep, iletişim ve bülten formları tek modal üzerinden birleşik kayıt almaya başladı.</li>
+                            <li><span class="status done">✓</span> Regülasyon takvimi ve FintechUBB haber yorumları 2024 verileriyle güncellendi.</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-column">
+                        <h3><i class="fas fa-spinner"></i> Devam Edenler</h3>
+                        <ul>
+                            <li><span class="status in-progress">•</span> Talep verilerini KVKK uyumlu CRM'e aktarmak için API katmanı hazırlanıyor.</li>
+                            <li><span class="status in-progress">•</span> Haber kartları için Fintechtime RSS entegrasyonu ile günlük otomatik güncelleme.</li>
+                            <li><span class="status in-progress">•</span> Mobilde kişiselleştirilmiş dashboard için kullanıcı oturum yönetimi tasarımı.</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-column">
+                        <h3><i class="fas fa-lightbulb"></i> Planlananlar</h3>
+                        <ul>
+                            <li><span class="status planned">→</span> Gerçek zamanlı işlem hacmi grafikleri için bankalararası veri akışı entegrasyonu.</li>
+                            <li><span class="status planned">→</span> Ödeme sağlayıcıları için self-servis profil yönetimi ve doküman yükleme paneli.</li>
+                            <li><span class="status planned">→</span> Regülasyon takibi bölümünde otomatik e-posta uyarıları ve Slack bildirimleri.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="request-modal" id="requestModal" aria-hidden="true">
         <div class="request-modal__backdrop" data-close-request></div>
         <div class="request-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="requestModalTitle">
@@ -1806,6 +1869,57 @@
                 }, 4200);
             };
 
+            const opsRequestCountEl = document.getElementById('opsRequestsCount');
+            const opsContactCountEl = document.getElementById('opsContactCount');
+            const opsNewsletterCountEl = document.getElementById('opsNewsletterCount');
+            const opsLatestUpdateEl = document.getElementById('opsLatestUpdate');
+
+            const parseStored = key => {
+                try {
+                    const raw = localStorage.getItem(key);
+                    return raw ? JSON.parse(raw) : [];
+                } catch (error) {
+                    console.warn('Yerel veri okunamadı:', error);
+                    return [];
+                }
+            };
+
+            const formatTimestamp = timestamp => {
+                if (!timestamp) return 'Henüz kayıt yok';
+                const date = new Date(timestamp);
+                if (Number.isNaN(date.getTime())) return 'Henüz kayıt yok';
+                return date.toLocaleString('tr-TR', {
+                    day: '2-digit',
+                    month: 'short',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            };
+
+            const updateOpsDashboard = () => {
+                if (!opsRequestCountEl || !opsContactCountEl || !opsNewsletterCountEl || !opsLatestUpdateEl) {
+                    return;
+                }
+
+                const requests = parseStored('fintechhubProviderRequests');
+                const contacts = parseStored('fintechhubContacts');
+                const newsletters = parseStored('fintechhubNewsletter');
+
+                opsRequestCountEl.textContent = requests.length.toString();
+                opsContactCountEl.textContent = contacts.length.toString();
+                opsNewsletterCountEl.textContent = newsletters.length.toString();
+
+                const allEntries = [...requests, ...contacts, ...newsletters]
+                    .filter(entry => entry && entry.timestamp)
+                    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+                opsLatestUpdateEl.textContent = allEntries.length
+                    ? formatTimestamp(allEntries[0].timestamp)
+                    : 'Henüz kayıt yok';
+            };
+
+            updateOpsDashboard();
+
             // Contact form submission
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
@@ -1819,6 +1933,7 @@
                     localStorage.setItem('fintechhubContacts', JSON.stringify(stored));
                     showToast('Mesajınız alındı! En kısa sürede dönüş yapacağız.');
                     this.reset();
+                    updateOpsDashboard();
                 });
             }
 
@@ -1836,6 +1951,7 @@
                     localStorage.setItem('fintechhubNewsletter', JSON.stringify(stored));
                     showToast('Bülten aboneliğiniz oluşturuldu.');
                     this.reset();
+                    updateOpsDashboard();
                 });
             });
 
@@ -1931,6 +2047,7 @@
                     localStorage.setItem('fintechhubProviderRequests', JSON.stringify(stored));
                     showToast('Talebiniz alındı! Sağlayıcı ekibi kısa sürede iletişime geçecek.');
                     closeRequestModal();
+                    updateOpsDashboard();
                 });
             }
 
