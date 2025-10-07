@@ -1,0 +1,14 @@
+{
+  "name": "fintechhub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fintech Hub Türkiye statik site ve örnek backend API",
+  "scripts": {
+    "dev:backend": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}
