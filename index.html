@@ -78,29 +78,24 @@
                         </a>
                     </div>
 
-                    <div class="hero-highlights">
-                        <div class="highlight-card">
-                            <span class="highlight-label"><i class="fas fa-wave-square"></i> Yeni</span>
-                            <p>İnteraktif Türkiye Fintek Haritası ve şehir bazlı filtreler</p>
-                        </div>
-                        <div class="highlight-card">
-                            <span class="highlight-label"><i class="fas fa-envelope-open-text"></i> Haftalık</span>
-                            <p>Fintechtime özetleri + FintechUBB yorumu ile strateji önerileri</p>
-                        </div>
+                    <div class="hero-tags" role="list">
+                        <span class="hero-tag" role="listitem"><i class="fas fa-map"></i> Yeni Fintek Haritası yayında</span>
+                        <span class="hero-tag" role="listitem"><i class="fas fa-envelope-open-text"></i> Haftalık Fintech bülteni</span>
+                        <span class="hero-tag" role="listitem"><i class="fas fa-shield-check"></i> Regülasyon takvimi güncel</span>
                     </div>
 
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">60+</span>
-                            <span class="stat-label">Yetkili Sağlayıcı</span>
+                    <div class="hero-metrics">
+                        <div class="metric-card">
+                            <span class="metric-label">Yetkili Sağlayıcı</span>
+                            <strong class="metric-value">60+</strong>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">48 sa.</span>
-                            <span class="stat-label">Canlıya Alma Süresi</span>
+                        <div class="metric-card">
+                            <span class="metric-label">Canlıya Alma</span>
+                            <strong class="metric-value">48 saat</strong>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">₺4.8B</span>
-                            <span class="stat-label">Aylık İşlem Veri Seti</span>
+                        <div class="metric-card">
+                            <span class="metric-label">Aylık İşlem Datası</span>
+                            <strong class="metric-value">₺4.8B</strong>
                         </div>
                     </div>
                 </div>
@@ -233,11 +228,12 @@
                     <p>FintechUBB ekibi tarafından hazırlanan içerikler; pazar verileri, kilit oyuncular, regülasyon takvimi ve entegrasyon adımlarını kapsayan landing page'lere yönlendirir. Aşağıdaki özetlerden ilginizi çeken alanı seçerek hızla bilgi alın.</p>
                 </div>
                 <div class="solution-detail-nav" role="tablist">
-                    <button id="tab-payment" class="detail-tab active" type="button" role="tab" aria-selected="true" aria-controls="detail-payment" data-target="detail-payment">Ödeme Geçitleri</button>
-                    <button id="tab-open" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-open" data-target="detail-open">Açık Bankacılık</button>
-                    <button id="tab-risk" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-risk" data-target="detail-risk">Fraud &amp; Risk</button>
-                    <button id="tab-saas" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-saas" data-target="detail-saas">Abonelik &amp; SaaS</button>
+                    <button id="tab-payment" class="detail-tab active" type="button" role="tab" aria-selected="true" aria-controls="detail-payment" data-target="detail-payment" data-helper="Ödeme geçidi seçimi için kontrol listenizi ve entegrasyon önerilerini keşfedin.">Ödeme Geçitleri</button>
+                    <button id="tab-open" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-open" data-target="detail-open" data-helper="Bankalarla bağlantıya başlamadan önce uyumluluk ve sandbox adımlarını inceleyin.">Açık Bankacılık</button>
+                    <button id="tab-risk" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-risk" data-target="detail-risk" data-helper="Fraud & risk azaltma için gerçek zamanlı izleme ve raporlama yapı taşlarını planlayın.">Fraud &amp; Risk</button>
+                    <button id="tab-saas" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-saas" data-target="detail-saas" data-helper="Yinelenen gelir yönetimi ve churn azaltma stratejilerini adım adım uygulayın.">Abonelik &amp; SaaS</button>
                 </div>
+                <div class="detail-helper" id="detailHelper">Ödeme geçidi seçimi için kontrol listenizi ve entegrasyon önerilerini keşfedin.</div>
                 <div class="detail-panels">
                     <article id="detail-payment" class="detail-panel active" role="tabpanel" aria-labelledby="tab-payment">
                         <div class="detail-grid">
@@ -359,61 +355,6 @@
         </div>
     </section>
 
-    <section id="inspiration" class="inspiration">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-sparkles"></i> İlham Veren Deneyimler</h2>
-                <p>Lusion ve Jeton'un ileri seviye tasarım yaklaşımlarından ilham alarak Fintech Hub Türkiye deneyimini güçlendiriyoruz.</p>
-            </div>
-            <div class="inspiration-grid">
-                <article id="lusion-showcase" class="inspiration-card">
-                    <header class="inspiration-header">
-                        <span class="badge">Lusion</span>
-                        <h3>Immersive Etkileşim Tasarımı</h3>
-                    </header>
-                    <p>Lusion'un dinamik görsel dünyasından esinlenen mikro etkileşimler ve ışık oyunlarıyla Fintech Hub arayüzünü daha sezgisel hale getiriyoruz.</p>
-                    <ul class="inspiration-list">
-                        <li><i class="fas fa-circle-notch"></i> Veri kartlarında cam efekti ve yumuşak ışıklar</li>
-                        <li><i class="fas fa-vr-cardboard"></i> Kaydırma sırasında yavaşça ortaya çıkan içerik katmanları</li>
-                        <li><i class="fas fa-pen-nib"></i> Marka bütünlüğünü koruyan neon vurgular ve tipografi</li>
-                    </ul>
-                    <div class="inspiration-contact">
-                        <div>
-                            <span>İş birlikleri</span>
-                            <a href="mailto:hello@lusion.co">hello@lusion.co</a>
-                        </div>
-                        <div>
-                            <span>Merkez</span>
-                            <p>London, Birleşik Krallık</p>
-                        </div>
-                    </div>
-                </article>
-                <article id="jeton-showcase" class="inspiration-card">
-                    <header class="inspiration-header">
-                        <span class="badge">Jeton</span>
-                        <h3>Gerçek Zamanlı Ödeme Akışı</h3>
-                    </header>
-                    <p>Jeton'un küresel ödeme deneyiminden aldığımız ilhamla hızlı, güvenilir ve çok kanallı ödeme çözümlerini vitrine taşıyoruz.</p>
-                    <ul class="inspiration-list">
-                        <li><i class="fas fa-globe"></i> Çok dilli müşteri yolculuğu için hazırlanan içerik blokları</li>
-                        <li><i class="fas fa-lock"></i> Güven ve regülasyonu vurgulayan HUD göstergeleri</li>
-                        <li><i class="fas fa-headset"></i> 7/24 destek ve SLA iletişimi için öne çıkan kartlar</li>
-                    </ul>
-                    <div class="inspiration-contact">
-                        <div>
-                            <span>Destek</span>
-                            <a href="mailto:support@jeton.com">support@jeton.com</a>
-                        </div>
-                        <div>
-                            <span>Merkez</span>
-                            <p>London, Birleşik Krallık</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <section id="providers" class="providers">
         <div class="container">
             <div class="section-header">
@@ -467,8 +408,8 @@
                         <span class="campaign-text">İlk 3 ay %0 komisyon</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Demo Talep Et</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Demo Talep Et</button>
                     </div>
                 </div>
 
@@ -498,8 +439,8 @@
                         <span class="pricing-value">₺199'den başlayan</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Demo İste</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Demo İste</button>
                     </div>
                 </div>
 
@@ -529,8 +470,8 @@
                         <span class="pricing-value">₺299'den başlayan</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Ücretsiz Deneme</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Ücretsiz Deneme</button>
                     </div>
                 </div>
 
@@ -560,8 +501,8 @@
                         <span class="pricing-value">%2.4 + ₺0.25</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Başvuru Yap</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Başvuru Yap</button>
                     </div>
                 </div>
 
@@ -591,8 +532,8 @@
                         <span class="pricing-value">₺0.05'ten başlayan</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">API Key Al</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">API Key Al</button>
                     </div>
                 </div>
 
@@ -626,8 +567,8 @@
                         <span class="campaign-text">Papara Business API v2.0</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Entegre Et</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Entegre Et</button>
                     </div>
                 </div>
 
@@ -657,8 +598,8 @@
                         <span class="pricing-value">İletişime Geçin</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Teklif Al</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Teklif Al</button>
                     </div>
                 </div>
 
@@ -688,8 +629,8 @@
                         <span class="pricing-value">%2.7 + ₺0.30</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Başvuru Yap</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Başvuru Yap</button>
                     </div>
                 </div>
 
@@ -719,8 +660,8 @@
                         <span class="pricing-value">₺500/ay</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Demo İsteyin</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Demo İsteyin</button>
                     </div>
                 </div>
 
@@ -750,8 +691,8 @@
                         <span class="pricing-value">%3.4 + ₺0.40</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Limit Tanımla</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Limit Tanımla</button>
                     </div>
                 </div>
 
@@ -785,8 +726,8 @@
                         <span class="campaign-text">100.000+ KOBİ kullanıyor</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Ücretsiz Deneme</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Ücretsiz Deneme</button>
                     </div>
                 </div>
 
@@ -816,8 +757,8 @@
                         <span class="pricing-value">%2.7 + ₺0.25</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Başvuru Yap</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Başvuru Yap</button>
                     </div>
                 </div>
 
@@ -847,8 +788,8 @@
                         <span class="pricing-value">Karşılaştırma hizmeti</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Teklif Al</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Teklif Al</button>
                     </div>
                 </div>
 
@@ -878,8 +819,8 @@
                         <span class="pricing-value">₺750/ay</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Demo İste</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="demo">Demo İste</button>
                     </div>
                 </div>
 
@@ -909,8 +850,8 @@
                         <span class="pricing-value">%2.9 + ₺0.35</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">BNPL Başlat</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">BNPL Başlat</button>
                     </div>
                 </div>
 
@@ -940,8 +881,8 @@
                         <span class="pricing-value">%2.5 + ₺0.20</span>
                     </div>
                     <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Entegre Et</button>
+                        <button type="button" class="btn-outline" data-request="info">Detaylı Bilgi</button>
+                        <button type="button" class="btn-primary" data-request="application">Entegre Et</button>
                     </div>
                 </div>
             </div>
@@ -953,7 +894,7 @@
                     </div>
                     <h3>Komisyon Hesaplayıcı</h3>
                     <p>Farklı ödeme sağlayıcılarının komisyon oranlarını karşılaştırın ve maliyetinizi hesaplayın.</p>
-                    <button class="btn-primary">Hesapla</button>
+                    <a class="btn-primary" href="#analytics">Hesapla</a>
                 </div>
                 
                 <div class="tool-card">
@@ -962,7 +903,7 @@
                     </div>
                     <h3>Çözüm Karşılaştırma</h3>
                     <p>İhtiyaçlarınıza en uygun ödeme çözümünü bulmak için detaylı karşılaştırma yapın.</p>
-                    <button class="btn-primary">Karşılaştır</button>
+                    <a class="btn-primary" href="#comparison">Karşılaştır</a>
                 </div>
                 
                 <div class="tool-card">
@@ -971,7 +912,7 @@
                     </div>
                     <h3>Hızlı Entegrasyon</h3>
                     <p>API dokümantasyonları ve entegrasyon rehberleri ile hızlı başlangıç yapın.</p>
-                    <button class="btn-primary">Başla</button>
+                    <a class="btn-primary" href="#contact">Başla</a>
                 </div>
             </div>
         </div>
@@ -1058,7 +999,7 @@
         <div class="container">
             <div class="section-header">
                 <h2><i class="fas fa-map-marked-alt"></i> Türkiye Fintek Haritası</h2>
-                <p>Şehir ve kategori bazında fintech oyuncularını keşfedin, yeni iş birliklerine birkaç tıklamayla ulaşın.</p>
+                <p>Bölge ve kategori bazında fintech oyuncularını keşfedin, yeni iş birliklerine birkaç tıklamayla ulaşın.</p>
             </div>
 
             <div class="map-layout">
@@ -1070,11 +1011,13 @@
                         <span><i class="fas fa-circle text-fraud"></i> Risk & Güvenlik</span>
                     </div>
                     <div class="map-illustration" aria-hidden="true">
-                        <div class="map-node" style="--x:18%; --y:32%;"><span>İstanbul</span></div>
-                        <div class="map-node" style="--x:55%; --y:28%;"><span>Ankara</span></div>
-                        <div class="map-node" style="--x:68%; --y:44%;"><span>İzmir</span></div>
-                        <div class="map-node" style="--x:42%; --y:58%;"><span>Bursa</span></div>
-                        <div class="map-node" style="--x:76%; --y:68%;"><span>Antalya</span></div>
+                        <div class="map-node" style="--x:22%; --y:34%;"><span>Marmara</span></div>
+                        <div class="map-node" style="--x:54%; --y:36%;"><span>İç Anadolu</span></div>
+                        <div class="map-node" style="--x:32%; --y:54%;"><span>Ege</span></div>
+                        <div class="map-node" style="--x:70%; --y:64%;"><span>Akdeniz</span></div>
+                        <div class="map-node" style="--x:62%; --y:18%;"><span>Karadeniz</span></div>
+                        <div class="map-node" style="--x:82%; --y:46%;"><span>Doğu Anadolu</span></div>
+                        <div class="map-node" style="--x:86%; --y:66%;"><span>Güneydoğu</span></div>
                         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                             <defs>
                                 <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -1097,17 +1040,20 @@
                             <button type="button" class="filter-btn" data-map-category="wallet">Dijital Cüzdan</button>
                             <button type="button" class="filter-btn" data-map-category="risk">Risk & Güvenlik</button>
                         </div>
-                        <div class="filter-group" role="group" aria-label="Şehir filtreleri">
-                            <button type="button" class="chip-btn active" data-map-city="all">Türkiye</button>
-                            <button type="button" class="chip-btn" data-map-city="istanbul">İstanbul</button>
-                            <button type="button" class="chip-btn" data-map-city="ankara">Ankara</button>
-                            <button type="button" class="chip-btn" data-map-city="izmir">İzmir</button>
-                            <button type="button" class="chip-btn" data-map-city="antalya">Antalya</button>
+                        <div class="filter-group" role="group" aria-label="Bölge filtreleri">
+                            <button type="button" class="chip-btn active" data-map-region="all" data-region-label="Türkiye">Türkiye</button>
+                            <button type="button" class="chip-btn" data-map-region="marmara" data-region-label="Marmara">Marmara</button>
+                            <button type="button" class="chip-btn" data-map-region="ic-anadolu" data-region-label="İç Anadolu">İç Anadolu</button>
+                            <button type="button" class="chip-btn" data-map-region="ege" data-region-label="Ege">Ege</button>
+                            <button type="button" class="chip-btn" data-map-region="akdeniz" data-region-label="Akdeniz">Akdeniz</button>
+                            <button type="button" class="chip-btn" data-map-region="karadeniz" data-region-label="Karadeniz">Karadeniz</button>
+                            <button type="button" class="chip-btn" data-map-region="dogu-anadolu" data-region-label="Doğu Anadolu">Doğu Anadolu</button>
+                            <button type="button" class="chip-btn" data-map-region="guneydogu" data-region-label="Güneydoğu">Güneydoğu</button>
                         </div>
                     </div>
-                    <div class="map-status" aria-live="polite">7 sonuç listeleniyor.</div>
+                    <div class="map-status" aria-live="polite">Türkiye genelinde 9 bölgesel sonuç listeleniyor.</div>
                     <div class="map-grid">
-                        <article class="map-card" data-map-category="payment" data-map-city="istanbul">
+                        <article class="map-card" data-map-category="payment" data-map-region="marmara" data-region-label="Marmara">
                             <header>
                                 <h3>Craftgate</h3>
                                 <span class="tag payment">Ödeme</span>
@@ -1119,7 +1065,7 @@
                                 <li><i class="fas fa-envelope"></i> hello@craftgate.io</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="open-banking" data-map-city="istanbul">
+                        <article class="map-card" data-map-category="open-banking" data-map-region="marmara" data-region-label="Marmara">
                             <header>
                                 <h3>Token.io Türkiye</h3>
                                 <span class="tag open-banking">Açık Bankacılık</span>
@@ -1131,7 +1077,7 @@
                                 <li><i class="fas fa-envelope"></i> turkey@token.io</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="wallet" data-map-city="ankara">
+                        <article class="map-card" data-map-category="wallet" data-map-region="ic-anadolu" data-region-label="İç Anadolu">
                             <header>
                                 <h3>Papara</h3>
                                 <span class="tag wallet">Dijital Cüzdan</span>
@@ -1143,7 +1089,7 @@
                                 <li><i class="fas fa-envelope"></i> destek@papara.com</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="risk" data-map-city="istanbul">
+                        <article class="map-card" data-map-category="risk" data-map-region="marmara" data-region-label="Marmara">
                             <header>
                                 <h3>PingFIN Fraud</h3>
                                 <span class="tag risk">Risk & Güvenlik</span>
@@ -1155,7 +1101,7 @@
                                 <li><i class="fas fa-envelope"></i> contact@pingfin.ai</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="payment" data-map-city="izmir">
+                        <article class="map-card" data-map-category="payment" data-map-region="ege" data-region-label="Ege">
                             <header>
                                 <h3>Paycell İş Çözümleri</h3>
                                 <span class="tag payment">Ödeme</span>
@@ -1167,7 +1113,7 @@
                                 <li><i class="fas fa-envelope"></i> partner@paycell.com.tr</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="wallet" data-map-city="antalya">
+                        <article class="map-card" data-map-category="wallet" data-map-region="akdeniz" data-region-label="Akdeniz">
                             <header>
                                 <h3>Jeton Wallet</h3>
                                 <span class="tag wallet">Dijital Cüzdan</span>
@@ -1179,16 +1125,40 @@
                                 <li><i class="fas fa-envelope"></i> support@jeton.com</li>
                             </ul>
                         </article>
-                        <article class="map-card" data-map-category="open-banking" data-map-city="istanbul">
+                        <article class="map-card" data-map-category="open-banking" data-map-region="karadeniz" data-region-label="Karadeniz">
                             <header>
-                                <h3>Rebels API</h3>
+                                <h3>Kolaysoft Karadeniz Hub</h3>
                                 <span class="tag open-banking">Açık Bankacılık</span>
                             </header>
-                            <p>KOBİ'lere özel muhasebe entegrasyonları ve nakit akış analitiği.</p>
+                            <p>Samsun Teknopark'ta e-dönüşüm, e-fatura ve açık bankacılık entegrasyon danışmanlığı.</p>
                             <ul>
-                                <li><i class="fas fa-map-marker-alt"></i> Ataşehir, İstanbul</li>
-                                <li><i class="fas fa-phone"></i> +90 (216) 912 11 22</li>
-                                <li><i class="fas fa-envelope"></i> hello@rebelsapi.com</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Samsun Teknopark</li>
+                                <li><i class="fas fa-phone"></i> +90 (362) 250 05 10</li>
+                                <li><i class="fas fa-envelope"></i> karadeniz@kolaysoft.com.tr</li>
+                            </ul>
+                        </article>
+                        <article class="map-card" data-map-category="risk" data-map-region="dogu-anadolu" data-region-label="Doğu Anadolu">
+                            <header>
+                                <h3>Ininal Doğu Veri Merkezi</h3>
+                                <span class="tag risk">Risk &amp; Güvenlik</span>
+                            </header>
+                            <p>Erzurum'da PCI DSS uyumlu fraud izleme ve yedekleme altyapısıyla yüksek hacimli işlem analizi.</p>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> Erzurum Teknokent</li>
+                                <li><i class="fas fa-phone"></i> +90 (442) 606 06 60</li>
+                                <li><i class="fas fa-envelope"></i> doguanadolu@ininal.com</li>
+                            </ul>
+                        </article>
+                        <article class="map-card" data-map-category="payment" data-map-region="guneydogu" data-region-label="Güneydoğu">
+                            <header>
+                                <h3>Ödeal Bölge Ofisi</h3>
+                                <span class="tag payment">Ödeme</span>
+                            </header>
+                            <p>Gaziantep merkezli saha ekibiyle mobil POS, linkle ödeme ve saha tahsilatı çözümleri.</p>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> Şehitkamil, Gaziantep</li>
+                                <li><i class="fas fa-phone"></i> +90 (342) 502 05 80</li>
+                                <li><i class="fas fa-envelope"></i> guneydogu@odeal.com.tr</li>
                             </ul>
                         </article>
                     </div>
@@ -1534,19 +1504,49 @@
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Adınız Soyadınız" required>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <span>Ad Soyad</span>
+                            <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Şirket</span>
+                            <input type="text" name="company" placeholder="Çalıştığınız şirket" required>
+                        </label>
+                        <label class="form-field">
+                            <span>E-posta</span>
+                            <input type="email" name="email" placeholder="E-posta adresiniz" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Telefon</span>
+                            <input type="tel" name="phone" placeholder="+90 5xx xxx xx xx">
+                        </label>
+                        <label class="form-field">
+                            <span>Talep Türü</span>
+                            <select name="topic" required>
+                                <option value="">Seçiniz</option>
+                                <option value="entegrasyon">Entegrasyon danışmanlığı</option>
+                                <option value="demo">Demo talebi</option>
+                                <option value="isbirligi">İş birliği / Sponsorluk</option>
+                                <option value="medya">Medya / Basın</option>
+                            </select>
+                        </label>
+                        <label class="form-field">
+                            <span>Aylık İşlem Hacmi</span>
+                            <select name="volume">
+                                <option value="">Seçiniz</option>
+                                <option value="0-1M">₺0 - 1M</option>
+                                <option value="1-10M">₺1M - 10M</option>
+                                <option value="10-50M">₺10M - 50M</option>
+                                <option value="50M+">₺50M+</option>
+                            </select>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="E-posta Adresiniz" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Konu">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
-                    </div>
+                    <label class="form-field">
+                        <span>Mesajınız</span>
+                        <textarea name="message" rows="5" placeholder="Proje detaylarınızı paylaşın" required></textarea>
+                    </label>
                     <button type="submit" class="btn-primary">
                         <i class="fas fa-paper-plane"></i> Mesaj Gönder
                     </button>
@@ -1592,6 +1592,74 @@
             </div>
         </div>
     </section>
+
+    <div class="request-modal" id="requestModal" aria-hidden="true">
+        <div class="request-modal__backdrop" data-close-request></div>
+        <div class="request-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="requestModalTitle">
+            <button class="request-modal__close" type="button" data-close-request aria-label="Talep formunu kapat">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="request-modal__header">
+                <span class="request-modal__kicker">FintechUBB Talep Merkezi</span>
+                <h3 id="requestModalTitle">Sağlayıcı ile iletişim kurun</h3>
+                <p id="requestModalSubtitle">İhtiyacınıza göre demo, detaylı bilgi veya başvuru talebinizi paylaşın. Ekibimiz 24 saat içinde dönüş yapar.</p>
+            </div>
+            <form id="providerRequestForm" class="request-form">
+                <input type="hidden" name="provider" id="requestProvider">
+                <input type="hidden" name="intent" id="requestIntent">
+                <div class="form-grid">
+                    <label class="form-field">
+                        <span>Ad Soyad</span>
+                        <input type="text" name="fullName" required placeholder="Örn. Ayşe Yılmaz">
+                    </label>
+                    <label class="form-field">
+                        <span>Şirket</span>
+                        <input type="text" name="company" required placeholder="Şirket veya girişim adı">
+                    </label>
+                    <label class="form-field">
+                        <span>E-posta</span>
+                        <input type="email" name="email" required placeholder="ornek@fintech.com">
+                    </label>
+                    <label class="form-field">
+                        <span>Telefon</span>
+                        <input type="tel" name="phone" placeholder="+90 5xx xxx xx xx">
+                    </label>
+                    <label class="form-field">
+                        <span>Aylık İşlem Hacmi</span>
+                        <select name="monthlyVolume" required>
+                            <option value="">Seçiniz</option>
+                            <option value="0-1M">₺0 - 1M</option>
+                            <option value="1-10M">₺1M - 10M</option>
+                            <option value="10-50M">₺10M - 50M</option>
+                            <option value="50M+">₺50M+</option>
+                        </select>
+                    </label>
+                    <label class="form-field">
+                        <span>Öncelik</span>
+                        <select name="priority" required>
+                            <option value="">Seçiniz</option>
+                            <option value="1-3 ay">1-3 ay içinde proje</option>
+                            <option value="3-6 ay">3-6 ay içinde proje</option>
+                            <option value="degerlendirme">Bilgi toplama aşaması</option>
+                        </select>
+                    </label>
+                </div>
+                <label class="form-field">
+                    <span>Notlar</span>
+                    <textarea name="notes" rows="4" placeholder="Mevcut altyapınız veya özel entegrasyon ihtiyaçlarınız"></textarea>
+                </label>
+                <div class="request-form__actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Talebi Gönder
+                    </button>
+                    <button type="button" class="btn-outline" data-close-request>Vazgeç</button>
+                </div>
+                <p class="request-form__disclaimer"><i class="fas fa-shield-check"></i> Bilgileriniz FintechUBB KVKK politikalarına uygun olarak saklanır ve yalnızca seçtiğiniz sağlayıcı ile paylaşılır.</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-toast" id="formToast" role="status" aria-live="polite" aria-hidden="true"></div>
 
     </main>
 
@@ -1690,8 +1758,12 @@
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
+                    const selector = this.getAttribute('href');
+                    if (!selector || selector.length === 1) {
+                        return;
+                    }
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+                    const target = document.querySelector(selector);
                     if (target) {
                         target.scrollIntoView({
                             behavior: 'smooth',
@@ -1719,12 +1791,33 @@
                 });
             }
 
+            const toast = document.getElementById('formToast');
+            let toastTimeoutId;
+
+            const showToast = message => {
+                if (!toast) return;
+                toast.textContent = message;
+                toast.classList.add('is-visible');
+                toast.setAttribute('aria-hidden', 'false');
+                clearTimeout(toastTimeoutId);
+                toastTimeoutId = setTimeout(() => {
+                    toast.classList.remove('is-visible');
+                    toast.setAttribute('aria-hidden', 'true');
+                }, 4200);
+            };
+
             // Contact form submission
-            const contactForm = document.querySelector('.contact-form');
+            const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+                    const formData = new FormData(this);
+                    const payload = Object.fromEntries(formData.entries());
+                    payload.timestamp = new Date().toISOString();
+                    const stored = JSON.parse(localStorage.getItem('fintechhubContacts') || '[]');
+                    stored.push(payload);
+                    localStorage.setItem('fintechhubContacts', JSON.stringify(stored));
+                    showToast('Mesajınız alındı! En kısa sürede dönüş yapacağız.');
                     this.reset();
                 });
             }
@@ -1733,14 +1826,118 @@
             document.querySelectorAll('.newsletter-form').forEach(form => {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    alert('Bültene başarıyla abone oldunuz!');
+                    const formData = new FormData(this);
+                    const payload = Object.fromEntries(formData.entries());
+                    payload.timestamp = new Date().toISOString();
+                    const source = this.getAttribute('data-source') || 'footer';
+                    payload.source = source;
+                    const stored = JSON.parse(localStorage.getItem('fintechhubNewsletter') || '[]');
+                    stored.push(payload);
+                    localStorage.setItem('fintechhubNewsletter', JSON.stringify(stored));
+                    showToast('Bülten aboneliğiniz oluşturuldu.');
                     this.reset();
                 });
             });
 
+            // Provider request modal
+            const requestModal = document.getElementById('requestModal');
+            const requestForm = document.getElementById('providerRequestForm');
+            const requestProviderInput = document.getElementById('requestProvider');
+            const requestIntentInput = document.getElementById('requestIntent');
+            const requestTitle = document.getElementById('requestModalTitle');
+            const requestSubtitle = document.getElementById('requestModalSubtitle');
+            const requestButtons = document.querySelectorAll('[data-request]');
+            let lastRequestTrigger = null;
+            const intentLabels = {
+                info: 'detaylı bilgi talebi',
+                demo: 'demo talebi',
+                application: 'başvuru talebi'
+            };
+            const intentDescriptions = {
+                info: 'Teknik doküman, fiyatlandırma ve kullanım senaryolarını paylaşıyoruz.',
+                demo: 'Canlı demo takvimi ve entegrasyon ön koşullarını sizinle eşleştiriyoruz.',
+                application: 'Sözleşme ve kurulum sürecini başlatmak için gerekli belgeleri iletiyoruz.'
+            };
+
+            const closeRequestModal = () => {
+                if (!requestModal) return;
+                requestModal.classList.remove('is-visible');
+                requestModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+                if (requestForm) {
+                    requestForm.reset();
+                }
+                if (lastRequestTrigger) {
+                    lastRequestTrigger.focus();
+                    lastRequestTrigger = null;
+                }
+            };
+
+            const openRequestModal = (providerName, intentKey, trigger) => {
+                if (!requestModal || !requestForm) return;
+                const key = intentLabels[intentKey] ? intentKey : 'info';
+                requestForm.reset();
+                requestProviderInput.value = providerName;
+                requestIntentInput.value = key;
+                requestTitle.textContent = `${providerName} için ${intentLabels[key]}`;
+                requestSubtitle.textContent = intentDescriptions[key] || 'Talebiniz FintechUBB uzmanlarına iletilir ve 24 saat içinde yanıtlanır.';
+                requestModal.classList.add('is-visible');
+                requestModal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+                lastRequestTrigger = trigger || null;
+                const focusField = requestForm.querySelector('input[name="fullName"]');
+                if (focusField && typeof focusField.focus === 'function') {
+                    try {
+                        focusField.focus({ preventScroll: true });
+                    } catch (error) {
+                        focusField.focus();
+                    }
+                }
+            };
+
+            requestButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const providerCard = button.closest('.provider-card');
+                    const providerNameElement = providerCard ? providerCard.querySelector('.provider-info h3') : null;
+                    const providerName = providerNameElement ? providerNameElement.textContent.trim() : 'Seçili sağlayıcı';
+                    const intent = button.dataset.request || 'info';
+                    openRequestModal(providerName, intent, button);
+                });
+            });
+
+            if (requestModal) {
+                requestModal.addEventListener('click', event => {
+                    if (event.target.closest('[data-close-request]')) {
+                        event.preventDefault();
+                        closeRequestModal();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && requestModal && requestModal.classList.contains('is-visible')) {
+                    closeRequestModal();
+                }
+            });
+
+            if (requestForm) {
+                requestForm.addEventListener('submit', event => {
+                    event.preventDefault();
+                    const formData = new FormData(requestForm);
+                    const payload = Object.fromEntries(formData.entries());
+                    payload.timestamp = new Date().toISOString();
+                    const stored = JSON.parse(localStorage.getItem('fintechhubProviderRequests') || '[]');
+                    stored.push(payload);
+                    localStorage.setItem('fintechhubProviderRequests', JSON.stringify(stored));
+                    showToast('Talebiniz alındı! Sağlayıcı ekibi kısa sürede iletişime geçecek.');
+                    closeRequestModal();
+                });
+            }
+
             // Solution detail tabs
             const detailTabs = document.querySelectorAll('.detail-tab');
             const detailPanels = document.querySelectorAll('.detail-panel');
+            const detailHelper = document.getElementById('detailHelper');
             if (detailTabs.length && detailPanels.length) {
                 detailTabs.forEach(tab => {
                     tab.addEventListener('click', () => {
@@ -1756,24 +1953,28 @@
                             panel.hidden = !isTarget;
                             panel.classList.toggle('active', isTarget);
                         });
+                        if (detailHelper) {
+                            detailHelper.textContent = tab.dataset.helper || tab.textContent;
+                        }
                     });
                 });
             }
 
             // Fintech map filtering
             const mapCategoryButtons = document.querySelectorAll('.filter-btn');
-            const mapCityButtons = document.querySelectorAll('.chip-btn');
+            const mapRegionButtons = document.querySelectorAll('.chip-btn');
             const mapCards = document.querySelectorAll('.map-card');
             const mapStatus = document.querySelector('.map-status');
             let activeCategory = 'all';
-            let activeCity = 'all';
+            let activeRegion = 'all';
+            let activeRegionLabel = 'Türkiye';
 
             function updateMapResults() {
                 let visible = 0;
                 mapCards.forEach(card => {
                     const matchesCategory = activeCategory === 'all' || card.dataset.mapCategory === activeCategory;
-                    const matchesCity = activeCity === 'all' || card.dataset.mapCity === activeCity;
-                    if (matchesCategory && matchesCity) {
+                    const matchesRegion = activeRegion === 'all' || card.dataset.mapRegion === activeRegion;
+                    if (matchesCategory && matchesRegion) {
                         card.style.display = 'flex';
                         visible += 1;
                     } else {
@@ -1781,7 +1982,8 @@
                     }
                 });
                 if (mapStatus) {
-                    mapStatus.textContent = `${visible} sonuç listeleniyor.`;
+                    const scope = activeRegion === 'all' ? 'Türkiye genelinde' : `${activeRegionLabel} bölgesinde`;
+                    mapStatus.textContent = `${scope} ${visible} sonuç listeleniyor.`;
                 }
             }
 
@@ -1794,11 +1996,12 @@
                 });
             });
 
-            mapCityButtons.forEach(btn => {
+            mapRegionButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    mapCityButtons.forEach(b => b.classList.remove('active'));
+                    mapRegionButtons.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    activeCity = btn.dataset.mapCity;
+                    activeRegion = btn.dataset.mapRegion;
+                    activeRegionLabel = btn.dataset.regionLabel || 'Türkiye';
                     updateMapResults();
                 });
             });
@@ -2137,16 +2340,17 @@
             new Chart(ctx, {
                 type: 'polarArea',
                 data: {
-                    labels: ['İstanbul', 'Ankara', 'İzmir', 'Bursa', 'Antalya', 'Diğer'],
+                    labels: ['Marmara', 'İç Anadolu', 'Ege', 'Akdeniz', 'Karadeniz', 'Doğu Anadolu', 'Güneydoğu Anadolu'],
                     datasets: [{
-                        data: [42.3, 15.7, 12.1, 8.4, 6.2, 15.3],
+                        data: [45.3, 16.4, 12.8, 9.1, 7.6, 5.2, 3.6],
                         backgroundColor: [
                             'rgba(28, 96, 245, 0.85)',
                             'rgba(27, 197, 164, 0.85)',
                             'rgba(111, 78, 242, 0.82)',
                             'rgba(255, 122, 89, 0.8)',
                             'rgba(90, 168, 255, 0.75)',
-                            'rgba(28, 96, 245, 0.45)'
+                            'rgba(28, 96, 245, 0.55)',
+                            'rgba(27, 197, 164, 0.45)'
                         ],
                         borderWidth: 1,
                         borderColor: '#ffffff'
@@ -2198,28 +2402,40 @@
                 data: {
                     labels: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
                     datasets: [{
-                        type: 'line',
-                        label: 'İşlem Hacmi (₺B)',
-                        data: [9.2, 8.7, 10.1, 9.8, 11.2, 10.9, 12.3, 11.8, 13.1, 12.7, 14.2, 15.8],
+                        label: 'Kredi Kartı POS Hacmi (₺B)',
+                        data: [6.1, 5.8, 6.7, 6.5, 7.4, 7.2, 8.1, 7.8, 8.6, 8.3, 9.1, 10.2],
+                        backgroundColor: 'rgba(28, 96, 245, 0.28)',
                         borderColor: '#1c60f5',
-                        backgroundColor: 'rgba(28, 96, 245, 0.18)',
+                        borderWidth: 1.5,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        yAxisID: 'y',
+                        order: 1
+                    }, {
+                        label: 'Havale/EFT Hacmi (₺B)',
+                        data: [3.1, 2.9, 3.4, 3.3, 3.8, 3.7, 4.2, 4.0, 4.5, 4.4, 4.9, 5.4],
+                        backgroundColor: 'rgba(27, 197, 164, 0.35)',
+                        borderColor: '#1bc5a4',
+                        borderWidth: 1.5,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        yAxisID: 'y',
+                        order: 1
+                    }, {
+                        type: 'line',
+                        label: 'İşlem Adedi (Milyon)',
+                        data: [118, 112, 124, 119, 131, 128, 137, 133, 145, 141, 152, 165],
+                        borderColor: '#ff7a59',
+                        backgroundColor: 'rgba(255, 122, 89, 0.22)',
                         borderWidth: 3,
-                        fill: true,
+                        fill: false,
                         tension: 0.35,
                         pointRadius: 4,
                         pointHoverRadius: 6,
                         pointBackgroundColor: '#ff7a59',
                         pointBorderWidth: 0,
-                        yAxisID: 'y',
-                        order: 2
-                    }, {
-                        label: 'İşlem Adedi (Milyon)',
-                        data: [118, 112, 124, 119, 131, 128, 137, 133, 145, 141, 152, 165],
-                        backgroundColor: 'rgba(27, 197, 164, 0.35)',
-                        borderRadius: 12,
-                        borderSkipped: false,
                         yAxisID: 'y1',
-                        order: 1
+                        order: 2
                     }]
                 },
                 options: {
@@ -2234,9 +2450,9 @@
                         },
                         tooltip: {
                             callbacks: {
-                                label: context => context.dataset.label.includes('₺')
-                                    ? ` ${context.label}: ₺${context.parsed.y.toFixed(1)}B`
-                                    : ` ${context.label}: ${context.parsed.y.toFixed(0)}M`
+                                label: context => context.dataset.yAxisID === 'y'
+                                    ? ` ${context.dataset.label}: ₺${context.parsed.y.toFixed(1)}B`
+                                    : ` ${context.dataset.label}: ${context.parsed.y.toFixed(0)}M`
                             }
                         }
                     },
