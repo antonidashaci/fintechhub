@@ -7,13 +7,14 @@
     <meta name="description" content="Türkiye'nin en kapsamlı fintech ve ödeme çözümleri platformu. B2B ödeme çözümleri, güncel haberler ve sektör analizleri.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="dark-surface">
+    <a class="skip-link" href="#main-content">Ana içeriğe atla</a>
     <header class="site-header" id="top">
         <div class="container">
             <div class="header-content">
@@ -44,13 +45,38 @@
         </div>
     </header>
 
+    <main id="main-content">
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <span class="hero-kicker">Türkiye Fintek Ekosisteminin Kontrol Paneli</span>
                     <h2>Fintek entegrasyonlarını 48 saat içinde canlıya alın</h2>
-                    <p>Ödeme geçitlerinden açık bankacılığa kadar 60+ sağlayıcıyı, güncel fiyatları ve regülasyon değişikliklerini tek bir yerden takip edin. Fintech Hub Türkiye, karar süreçlerini hızlandırmak için veri, uzmanlık ve tasarımı bir araya getiriyor.</p>
+                    <p>Ödeme geçitlerinden açık bankacılığa kadar 60+ sağlayıcıyı, güncel fiyatlarını ve regülasyon değişikliklerini tek bir yerden takip edin. Fintech Hub Türkiye, karar süreçlerini hızlandırmak için veri, uzmanlık ve tasarımı bir araya getiriyor.</p>
+
+                    <div class="hero-search search-elevated">
+                        <label class="sr-only" for="hero-search-input">Çözüm arayın</label>
+                        <div class="search-box">
+                            <input id="hero-search-input" type="text" placeholder="Hangi çözümü arıyorsunuz? (örn: sanal POS, açık bankacılık API)">
+                            <button class="btn-primary">
+                                <i class="fas fa-search"></i> Ara
+                            </button>
+                        </div>
+                        <div class="search-suggestions">
+                            <span><i class="fas fa-hashtag"></i> ödeme geçidi</span>
+                            <span><i class="fas fa-hashtag"></i> açık bankacılık</span>
+                            <span><i class="fas fa-hashtag"></i> fraud önleme</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#solutions" class="btn-primary">
+                            <i class="fas fa-meteor"></i> Rehberleri Aç
+                        </a>
+                        <a href="#analytics" class="btn-secondary">
+                            <i class="fas fa-chart-bar"></i> 2024 Sektör Raporu
+                        </a>
+                    </div>
 
                     <div class="hero-highlights">
                         <div class="highlight-card">
@@ -77,27 +103,32 @@
                             <span class="stat-label">Aylık İşlem Veri Seti</span>
                         </div>
                     </div>
-
-                    <div class="hero-search">
-                        <div class="search-box">
-                            <input type="text" placeholder="Hangi çözümü arıyorsunuz? (örn: sanal POS, açık bankacılık API)">
-                            <button class="btn-primary">
-                                <i class="fas fa-search"></i> Ara
-                            </button>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-orb"></div>
+                    <div class="hero-mesh"></div>
+                    <div class="hero-chart-card">
+                        <div class="hero-chart-header">
+                            <span>Ödeme Akış Simülasyonu</span>
+                            <strong>2024</strong>
+                        </div>
+                        <canvas id="paymentVolumeChart"></canvas>
+                        <div class="hero-chart-foot">
+                            <div>
+                                <span class="foot-label">Dijital Ödeme</span>
+                                <strong>₺127.3B</strong>
+                            </div>
+                            <div>
+                                <span class="foot-label">Mobil Pay</span>
+                                <strong>₺41.6B</strong>
+                            </div>
+                            <div>
+                                <span class="foot-label">Ortalama Ticket</span>
+                                <strong>₺187</strong>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="hero-actions">
-                        <a href="#solutions" class="btn-primary">
-                            <i class="fas fa-meteor"></i> Rehberleri Aç
-                        </a>
-                        <a href="#analytics" class="btn-secondary">
-                            <i class="fas fa-chart-bar"></i> 2024 Sektör Raporu
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-chart">
-                    <canvas id="paymentVolumeChart"></canvas>
+                    <div class="hero-glow"></div>
                 </div>
             </div>
         </div>
@@ -114,7 +145,7 @@
                 <article class="solution-card">
                     <header>
                         <span class="solution-badge">Ödeme Geçitleri</span>
-                        <h3>Çok kanallı tahsilat & amp; dinamik fiyatlandırma</h3>
+                        <h3>Çok kanallı tahsilat &amp; dinamik fiyatlandırma</h3>
                         <p class="solution-subtitle">iyzico, PayTR, Hepsipay, Param</p>
                     </header>
                     <ul class="solution-highlights">
@@ -194,6 +225,136 @@
                         <a class="solution-link" href="#contact">Uzmanla görüş <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
+            </div>
+
+            <div class="solution-detail">
+                <div class="detail-intro">
+                    <h3>Her çözüm için derinlemesine rehberler</h3>
+                    <p>FintechUBB ekibi tarafından hazırlanan içerikler; pazar verileri, kilit oyuncular, regülasyon takvimi ve entegrasyon adımlarını kapsayan landing page'lere yönlendirir. Aşağıdaki özetlerden ilginizi çeken alanı seçerek hızla bilgi alın.</p>
+                </div>
+                <div class="solution-detail-nav" role="tablist">
+                    <button id="tab-payment" class="detail-tab active" type="button" role="tab" aria-selected="true" aria-controls="detail-payment" data-target="detail-payment">Ödeme Geçitleri</button>
+                    <button id="tab-open" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-open" data-target="detail-open">Açık Bankacılık</button>
+                    <button id="tab-risk" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-risk" data-target="detail-risk">Fraud &amp; Risk</button>
+                    <button id="tab-saas" class="detail-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-saas" data-target="detail-saas">Abonelik &amp; SaaS</button>
+                </div>
+                <div class="detail-panels">
+                    <article id="detail-payment" class="detail-panel active" role="tabpanel" aria-labelledby="tab-payment">
+                        <div class="detail-grid">
+                            <div class="detail-copy">
+                                <h4>Ödeme Geçidi seçerken nelere dikkat edilmeli?</h4>
+                                <p>Çoklu banka yönlendirme, fraud koruması ve tek dashboard yönetimi için gereksinimlerinizi belirleyin. Komisyon oranlarının yanında settlement süreleri, chargeback politikaları ve KVKK uyumu gibi başlıklar kritik.</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-chart-line"></i> Pazar büyüklüğü 2024: ₺127B, yıllık büyüme %23</li>
+                                    <li><i class="fas fa-user-shield"></i> Tokenization + PCI DSS Level 1 altyapısı standart hale geldi</li>
+                                    <li><i class="fas fa-link"></i> Entegrasyon: REST, GraphQL, webhooks ve hazır e-ticaret modülleri</li>
+                                </ul>
+                            </div>
+                            <div class="detail-metrics">
+                                <div>
+                                    <span>Hedef segment</span>
+                                    <strong>Marketplace &amp; B2C</strong>
+                                </div>
+                                <div>
+                                    <span>Canlıya alma</span>
+                                    <strong>48-72 saat</strong>
+                                </div>
+                                <div>
+                                    <span>Öne çıkan oyuncular</span>
+                                    <strong>iyzico · PayTR · Craftgate</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="detail-link" href="#comparison"><i class="fas fa-arrow-right"></i> Komisyon karşılaştırmasına git</a>
+                    </article>
+
+                    <article id="detail-open" class="detail-panel" role="tabpanel" aria-labelledby="tab-open" hidden>
+                        <div class="detail-grid">
+                            <div class="detail-copy">
+                                <h4>Açık bankacılık ile veri ve ödeme akışlarını yeniden tasarlayın</h4>
+                                <p>Hesap bilgi hizmeti (AIS) ve ödeme emri başlatma (PIS) senaryoları için bankalarla olan bağlantı haritanızı planlayın. Sandbox erişimleri ve müşteri onay yönetimi yeni gelir modellerini destekler.</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-building-columns"></i> 32 banka ile PSD2 uyumlu API ağı</li>
+                                    <li><i class="fas fa-gavel"></i> BDDK 2025 taslağı: sandbox &amp; paylaşımlı sorumluluk modeli</li>
+                                    <li><i class="fas fa-route"></i> Entegrasyon yolları: OAuth 2.0, consent management, webhook</li>
+                                </ul>
+                            </div>
+                            <div class="detail-metrics">
+                                <div>
+                                    <span>Hedef segment</span>
+                                    <strong>Bankacılık dışı finans</strong>
+                                </div>
+                                <div>
+                                    <span>Canlıya alma</span>
+                                    <strong>3-5 hafta</strong>
+                                </div>
+                                <div>
+                                    <span>Öne çıkan oyuncular</span>
+                                    <strong>Sipay · Token · Fimple</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="detail-link" href="#fintech-map"><i class="fas fa-arrow-right"></i> Bölgesel oyuncuları görüntüle</a>
+                    </article>
+
+                    <article id="detail-risk" class="detail-panel" role="tabpanel" aria-labelledby="tab-risk" hidden>
+                        <div class="detail-grid">
+                            <div class="detail-copy">
+                                <h4>Fraud &amp; risk yönetimi ile sahtekârlığı %90+ azaltın</h4>
+                                <p>Davranışsal analiz, cihaz parmak izi ve AML raporlama modüllerini tek çatı altında toplayın. Gerçek zamanlı uyarılar ve makine öğrenimi tabanlı skorlar, yüksek hacimli işletmelerde kayıpları minimuma indirir.</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-robot"></i> 5 ms altı karar verme için yapay zekâ destekli skor</li>
+                                    <li><i class="fas fa-network-wired"></i> API/SDK ile mobil ve web kanal bütünlüğü</li>
+                                    <li><i class="fas fa-file-shield"></i> MASAK uyumlu otomatik rapor gönderimi</li>
+                                </ul>
+                            </div>
+                            <div class="detail-metrics">
+                                <div>
+                                    <span>Hedef segment</span>
+                                    <strong>E-ticaret &amp; dijital bankalar</strong>
+                                </div>
+                                <div>
+                                    <span>Canlıya alma</span>
+                                    <strong>10-15 gün</strong>
+                                </div>
+                                <div>
+                                    <span>Öne çıkan oyuncular</span>
+                                    <strong>Socrates · Ravelin · IysPro</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="detail-link" href="#newsletter"><i class="fas fa-arrow-right"></i> Haftalık vaka analizini alın</a>
+                    </article>
+
+                    <article id="detail-saas" class="detail-panel" role="tabpanel" aria-labelledby="tab-saas" hidden>
+                        <div class="detail-grid">
+                            <div class="detail-copy">
+                                <h4>Abonelik ekonomisi için yinelenen gelir altyapısı</h4>
+                                <p>Ödeme yeniden deneme (retry), akıllı tahsilat ve vergi entegrasyonlarını uçtan uca yönetin. Müşteri yaşam boyu değerini artırmak için churn analizi ve faturalandırma otomasyonunu aynı panelde toplayın.</p>
+                                <ul class="detail-list">
+                                    <li><i class="fas fa-sync"></i> Akıllı retry akışları ile %18 ek tahsilat</li>
+                                    <li><i class="fas fa-chart-simple"></i> MRR, net churn ve cohort analiz panelleri</li>
+                                    <li><i class="fas fa-file-invoice"></i> E-fatura ve ERP entegrasyonlarında yerel vergi uyumu</li>
+                                </ul>
+                            </div>
+                            <div class="detail-metrics">
+                                <div>
+                                    <span>Hedef segment</span>
+                                    <strong>SaaS &amp; üyelik</strong>
+                                </div>
+                                <div>
+                                    <span>Canlıya alma</span>
+                                    <strong>2 hafta</strong>
+                                </div>
+                                <div>
+                                    <span>Öne çıkan oyuncular</span>
+                                    <strong>Stripe Atlas · Parasub · Paybull</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="detail-link" href="#contact"><i class="fas fa-arrow-right"></i> Uzmanla görüşmek için randevu al</a>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -917,8 +1078,8 @@
                         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                             <defs>
                                 <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#1d9bf0" stop-opacity="0.35" />
-                                    <stop offset="100%" stop-color="#0fbf9f" stop-opacity="0.2" />
+                                    <stop offset="0%" stop-color="#1c60f5" stop-opacity="0.35" />
+                                    <stop offset="100%" stop-color="#1bc5a4" stop-opacity="0.2" />
                                 </linearGradient>
                             </defs>
                             <path d="M5,18 C18,5 42,8 58,20 C74,32 89,28 94,42 C98,54 84,70 66,78 C48,86 28,98 12,90 C2,84 -4,66 5,52 Z" fill="url(#mapGradient)" opacity="0.6"></path>
@@ -1043,6 +1204,19 @@
                 <p>Komisyon oranları, entegrasyon süresi ve destek modelleriyle öne çıkan sağlayıcıları yan yana görün.</p>
             </div>
 
+            <div class="comparison-controls">
+                <label for="comparisonScenario">Senaryo seçin:</label>
+                <select id="comparisonScenario">
+                    <option value="all">Hepsi</option>
+                    <option value="marketplace">Marketplace / Çoklu satıcı</option>
+                    <option value="subscription">Abonelik ekonomisi</option>
+                    <option value="physical">Fiziksel + dijital hibrit</option>
+                    <option value="developer">Geliştirici odaklı</option>
+                </select>
+                <button type="button" class="btn-outline" id="comparisonReset"><i class="fas fa-undo"></i> Sıfırla</button>
+                <p class="comparison-hint"><i class="fas fa-lightbulb"></i> Seçtiğiniz senaryoya uygun sağlayıcılar vurgulanır ve tablo yalnızca kritik metrikleri gösterir.</p>
+            </div>
+
             <div class="comparison-table" role="table" aria-label="Ödeme sağlayıcı karşılaştırması">
                 <div class="comparison-row comparison-head" role="row">
                     <div role="columnheader">Sağlayıcı</div>
@@ -1050,8 +1224,9 @@
                     <div role="columnheader">Çekim Süresi</div>
                     <div role="columnheader">Desteklenen Kanallar</div>
                     <div role="columnheader">Destek &amp; SLA</div>
+                    <div role="columnheader">Öne Çıkan Senaryo</div>
                 </div>
-                <div class="comparison-row" role="row">
+                <div class="comparison-row" role="row" data-scenario="marketplace subscription">
                     <div role="cell">
                         <strong>iyzico</strong>
                         <span class="cell-note">Marketplace &amp; abonelik</span>
@@ -1060,8 +1235,9 @@
                     <div role="cell">T+1</div>
                     <div role="cell">Kredi/Banka Kartı, Link, Abonelik</div>
                     <div role="cell">7/24 Türkçe destek, 30 dk yanıt</div>
+                    <div role="cell" class="scenario-cell">Hızlı ölçeklenmek isteyen pazar yerleri</div>
                 </div>
-                <div class="comparison-row" role="row">
+                <div class="comparison-row" role="row" data-scenario="marketplace">
                     <div role="cell">
                         <strong>PayTR</strong>
                         <span class="cell-note">E-ticaret &amp; pazar yeri</span>
@@ -1070,8 +1246,9 @@
                     <div role="cell">T+1 / T+3</div>
                     <div role="cell">Kart, Havale/EFT, Link, QR</div>
                     <div role="cell">SLA 1 saat, dedike hesap yöneticisi</div>
+                    <div role="cell" class="scenario-cell">Komisyon optimizasyonu arayan e-ticaret</div>
                 </div>
-                <div class="comparison-row" role="row">
+                <div class="comparison-row" role="row" data-scenario="physical">
                     <div role="cell">
                         <strong>Param</strong>
                         <span class="cell-note">Fiziksel POS + sanal POS</span>
@@ -1080,8 +1257,9 @@
                     <div role="cell">T+0 - T+2</div>
                     <div role="cell">Kart, NFC POS, Dijital Cüzdan</div>
                     <div role="cell">Omni-kanal çağrı merkezi</div>
+                    <div role="cell" class="scenario-cell">Mağaza &amp; online birleşik deneyim</div>
                 </div>
-                <div class="comparison-row" role="row">
+                <div class="comparison-row" role="row" data-scenario="developer marketplace">
                     <div role="cell">
                         <strong>Craftgate</strong>
                         <span class="cell-note">Çoklu banka yönlendirme</span>
@@ -1090,6 +1268,7 @@
                     <div role="cell">T+1 / manuel</div>
                     <div role="cell">Kart, Link, Abonelik, Açık Bankacılık</div>
                     <div role="cell">Webhook, sandbox, 4 saat çözüm</div>
+                    <div role="cell" class="scenario-cell">API esnekliği arayan ürün ekipleri</div>
                 </div>
             </div>
 
@@ -1126,6 +1305,10 @@
                             <span class="news-date">18 Eylül 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
                         </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>Açık bankacılık panelinden çıkan veri paylaşımı taahhütleri, 2025 sandbox süreci öncesinde entegrasyon ekiplerinin yol haritasını hızlandıracak. Katılımcıların API hız testi sonuçları, platform seçiminde belirleyici olacak.</p>
+                        </div>
                     </div>
                 </article>
 
@@ -1140,6 +1323,10 @@
                         <div class="news-meta">
                             <span class="news-date">27 Kasım 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
+                        </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>Papara'nın süper uygulama vizyonu, fintech ekosisteminde sadakat ve çapraz satış modelleri için güçlü bir örnek sunuyor. Benzer stratejilerde modüler cüzdan entegrasyonları ve kullanıcı içgörülerini paylaşmak kritik.</p>
                         </div>
                     </div>
                 </article>
@@ -1156,6 +1343,10 @@
                             <span class="news-date">5 Ağustos 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
                         </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>BNPL çözümlerinde kullanıcı sayısının artması, risk motorlarının mikro segmentlere göre ayarlanmasını gerektiriyor. Colendi örneği, alternatif skor kaynaklarının (fatura, mobil) entegrasyonuna yatırım yapmanın önemini vurguluyor.</p>
+                        </div>
                     </div>
                 </article>
 
@@ -1170,6 +1361,10 @@
                         <div class="news-meta">
                             <span class="news-date">12 Temmuz 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
+                        </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>iyzico'nun BNPL stratejisinde gördüğümüz üç kat büyüme, e-ticaret ortaklıklarının ödeme akışına hız kazandırıyor. İşletmeler, API güncellemeleriyle yeni taksit kurgularını test ederek satış hunisini optimize edebilir.</p>
                         </div>
                     </div>
                 </article>
@@ -1186,6 +1381,10 @@
                             <span class="news-date">21 Haziran 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
                         </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>FAST 2.0 ile gelen saniyede 20.000 işlem kapasitesi, ödeme kuruluşlarının altyapı yatırım planlarını yeniden yazdırıyor. Performans testlerini 2025'ten önce tamamlayan oyuncular, B2B segmentte rekabette öne geçecek.</p>
+                        </div>
                     </div>
                 </article>
 
@@ -1200,6 +1399,10 @@
                         <div class="news-meta">
                             <span class="news-date">2 Mayıs 2024</span>
                             <span class="news-source-tag">Fintechtime</span>
+                        </div>
+                        <div class="news-comment">
+                            <span class="comment-label">FintechUBB Yorumu</span>
+                            <p>Yapay zekâ tabanlı fraud önleme çözümleri, MASAK yükümlülüklerini karşılamak isteyen kurumlar için ölçeklenebilir bir seçenek sunuyor. Podcast'te paylaşılan gerçek zamanlı skor örnekleri, AML takımlarının günlük iş yükünü %30 azaltabilir.</p>
                         </div>
                     </div>
                 </article>
@@ -1390,6 +1593,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -1533,6 +1738,28 @@
                 });
             });
 
+            // Solution detail tabs
+            const detailTabs = document.querySelectorAll('.detail-tab');
+            const detailPanels = document.querySelectorAll('.detail-panel');
+            if (detailTabs.length && detailPanels.length) {
+                detailTabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const targetId = tab.dataset.target;
+                        detailTabs.forEach(btn => {
+                            btn.classList.remove('active');
+                            btn.setAttribute('aria-selected', 'false');
+                        });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-selected', 'true');
+                        detailPanels.forEach(panel => {
+                            const isTarget = panel.id === targetId;
+                            panel.hidden = !isTarget;
+                            panel.classList.toggle('active', isTarget);
+                        });
+                    });
+                });
+            }
+
             // Fintech map filtering
             const mapCategoryButtons = document.querySelectorAll('.filter-btn');
             const mapCityButtons = document.querySelectorAll('.chip-btn');
@@ -1578,6 +1805,46 @@
 
             updateMapResults();
 
+            // Comparison scenario filtering
+            const scenarioSelect = document.getElementById('comparisonScenario');
+            const comparisonRows = document.querySelectorAll('.comparison-table .comparison-row:not(.comparison-head)');
+            const comparisonReset = document.getElementById('comparisonReset');
+
+            function updateComparisonRows(value) {
+                const highlight = value !== 'all';
+                comparisonRows.forEach(row => {
+                    const scenarios = (row.dataset.scenario || '').split(' ');
+                    const matches = value === 'all' || scenarios.includes(value);
+                    if (matches) {
+                        row.classList.remove('filtered');
+                        row.setAttribute('aria-hidden', 'false');
+                        row.classList.toggle('focused', highlight);
+                    } else {
+                        row.classList.add('filtered');
+                        row.classList.remove('focused');
+                        row.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+
+            if (scenarioSelect) {
+                scenarioSelect.addEventListener('change', () => {
+                    updateComparisonRows(scenarioSelect.value);
+                });
+            }
+
+            if (comparisonReset) {
+                comparisonReset.addEventListener('click', () => {
+                    if (scenarioSelect) {
+                        scenarioSelect.value = 'all';
+                    }
+                    comparisonRows.forEach(row => {
+                        row.classList.remove('filtered', 'focused');
+                        row.setAttribute('aria-hidden', 'false');
+                    });
+                });
+            }
+
             // Comparison CSV download
             const downloadComparisonBtn = document.getElementById('downloadComparison');
             if (downloadComparisonBtn) {
@@ -1606,12 +1873,12 @@
 
             const context = ctx.getContext('2d');
             const gradientStroke = context.createLinearGradient(0, 0, 0, ctx.height || 320);
-            gradientStroke.addColorStop(0, '#1d9bf0');
-            gradientStroke.addColorStop(1, '#0f4c81');
+            gradientStroke.addColorStop(0, '#1c60f5');
+            gradientStroke.addColorStop(1, '#1bc5a4');
 
             const gradientFill = context.createLinearGradient(0, 0, 0, ctx.height || 320);
-            gradientFill.addColorStop(0, 'rgba(29, 155, 240, 0.25)');
-            gradientFill.addColorStop(1, 'rgba(15, 76, 129, 0.05)');
+            gradientFill.addColorStop(0, 'rgba(28, 96, 245, 0.24)');
+            gradientFill.addColorStop(1, 'rgba(27, 197, 164, 0.08)');
 
             new Chart(ctx, {
                 type: 'line',
@@ -1627,7 +1894,7 @@
                         tension: 0.45,
                         pointRadius: 4,
                         pointHoverRadius: 6,
-                        pointBackgroundColor: '#a855f7',
+                        pointBackgroundColor: '#ff7a59',
                         pointBorderWidth: 0,
                         segment: {
                             borderDash: ctx => ctx.p0DataIndex === 0 ? [0, 0] : [4, 4]
@@ -1635,21 +1902,21 @@
                     }, {
                         label: 'Mobil Ödeme Hacmi (₺B)',
                         data: [12.4, 19.3, 26.2, 32.8, 41.6],
-                        borderColor: '#0fbf9f',
-                        backgroundColor: 'rgba(15, 191, 159, 0.18)',
+                        borderColor: '#1bc5a4',
+                        backgroundColor: 'rgba(27, 197, 164, 0.18)',
                         borderWidth: 2,
                         fill: true,
                         tension: 0.45,
                         pointRadius: 4,
                         pointHoverRadius: 6,
-                        pointBackgroundColor: '#0fbf9f',
+                        pointBackgroundColor: '#1bc5a4',
                         pointBorderWidth: 0,
                         borderDash: [6, 6]
                     }, {
                         label: 'Ortalama İşlem Tutarı (₺)',
                         data: [128, 142, 155, 169, 187],
-                        borderColor: '#38bdf8',
-                        backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                        borderColor: '#ff7a59',
+                        backgroundColor: 'rgba(255, 122, 89, 0.18)',
                         borderWidth: 2,
                         fill: false,
                         tension: 0.35,
@@ -1665,7 +1932,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: '#0f172a',
+                                color: '#051433',
                                 usePointStyle: true,
                                 padding: 18
                             }
@@ -1689,10 +1956,10 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.12)'
+                                color: 'rgba(28, 96, 245, 0.12)'
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `₺${value}B`
                             }
                         },
@@ -1702,16 +1969,16 @@
                                 drawOnChartArea: false
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `₺${value}`
                             }
                         },
                         x: {
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.08)'
+                                color: 'rgba(28, 96, 245, 0.08)'
                             },
                             ticks: {
-                                color: '#1f2937'
+                                color: '#1c2c4d'
                             }
                         }
                     }
@@ -1732,11 +1999,11 @@
                         label: '2024 Payı',
                         data: [34.6, 27.9, 19.7, 13.2, 4.6],
                         backgroundColor: [
-                            '#1d9bf0',
-                            '#38bdf8',
-                            '#0fbf9f',
-                            '#a855f7',
-                            '#f97316'
+                            '#1c60f5',
+                            '#5aa8ff',
+                            '#1bc5a4',
+                            '#6f4ef2',
+                            '#ff7a59'
                         ],
                         borderColor: '#ffffff',
                         borderWidth: 3,
@@ -1746,11 +2013,11 @@
                         label: '2023 Payı',
                         data: [37.1, 29.4, 16.5, 11.2, 3.8],
                         backgroundColor: [
-                            'rgba(29, 155, 240, 0.18)',
-                            'rgba(56, 189, 248, 0.18)',
-                            'rgba(15, 191, 159, 0.18)',
-                            'rgba(168, 85, 247, 0.18)',
-                            'rgba(249, 115, 22, 0.18)'
+                            'rgba(28, 96, 245, 0.18)',
+                            'rgba(90, 168, 255, 0.18)',
+                            'rgba(27, 197, 164, 0.18)',
+                            'rgba(111, 78, 242, 0.18)',
+                            'rgba(255, 122, 89, 0.18)'
                         ],
                         borderColor: '#ffffff',
                         borderWidth: 2,
@@ -1767,7 +2034,7 @@
                             labels: {
                                 padding: 20,
                                 usePointStyle: true,
-                                color: '#0f172a'
+                                color: '#051433'
                             }
                         },
                         tooltip: {
@@ -1792,21 +2059,21 @@
                     datasets: [{
                         label: '2023 Gelir Büyümesi',
                         data: [18.2, 22.1, 19.8, 25.3],
-                        backgroundColor: 'rgba(29, 155, 240, 0.65)',
+                        backgroundColor: 'rgba(28, 96, 245, 0.45)',
                         borderRadius: 12,
                         borderSkipped: false
                     }, {
                         label: '2024 Gelir Büyümesi',
                         data: [21.4, 26.7, 23.1, 28.9],
-                        backgroundColor: 'rgba(15, 191, 159, 0.7)',
+                        backgroundColor: 'rgba(27, 197, 164, 0.7)',
                         borderRadius: 12,
                         borderSkipped: false
                     }, {
                         type: 'line',
                         label: 'Aktif Müşteri Artışı',
                         data: [16.5, 18.9, 21.4, 24.8],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                        borderColor: '#ff7a59',
+                        backgroundColor: 'rgba(255, 122, 89, 0.18)',
                         borderWidth: 3,
                         tension: 0.35,
                         yAxisID: 'y1'
@@ -1819,7 +2086,7 @@
                         legend: {
                             position: 'top',
                             labels: {
-                                color: '#0f172a'
+                                color: '#051433'
                             }
                         },
                         tooltip: {
@@ -1832,10 +2099,10 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.12)'
+                                color: 'rgba(28, 96, 245, 0.12)'
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `%${value}`
                             }
                         },
@@ -1845,16 +2112,16 @@
                                 drawOnChartArea: false
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `%${value}`
                             }
                         },
                         x: {
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.08)'
+                                color: 'rgba(28, 96, 245, 0.08)'
                             },
                             ticks: {
-                                color: '#1f2937'
+                                color: '#1c2c4d'
                             }
                         }
                     }
@@ -1874,12 +2141,12 @@
                     datasets: [{
                         data: [42.3, 15.7, 12.1, 8.4, 6.2, 15.3],
                         backgroundColor: [
-                            'rgba(29, 155, 240, 0.85)',
-                            'rgba(15, 191, 159, 0.85)',
-                            'rgba(168, 85, 247, 0.85)',
-                            'rgba(245, 158, 11, 0.85)',
-                            'rgba(59, 130, 246, 0.85)',
-                            'rgba(79, 140, 230, 0.7)'
+                            'rgba(28, 96, 245, 0.85)',
+                            'rgba(27, 197, 164, 0.85)',
+                            'rgba(111, 78, 242, 0.82)',
+                            'rgba(255, 122, 89, 0.8)',
+                            'rgba(90, 168, 255, 0.75)',
+                            'rgba(28, 96, 245, 0.45)'
                         ],
                         borderWidth: 1,
                         borderColor: '#ffffff'
@@ -1892,7 +2159,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: '#0f172a'
+                                color: '#051433'
                             }
                         },
                         tooltip: {
@@ -1904,13 +2171,13 @@
                     scales: {
                         r: {
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.15)'
+                                color: 'rgba(28, 96, 245, 0.15)'
                             },
                             ticks: {
                                 display: false
                             },
                             pointLabels: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 font: {
                                     size: 12
                                 }
@@ -1934,21 +2201,21 @@
                         type: 'line',
                         label: 'İşlem Hacmi (₺B)',
                         data: [9.2, 8.7, 10.1, 9.8, 11.2, 10.9, 12.3, 11.8, 13.1, 12.7, 14.2, 15.8],
-                        borderColor: '#1d9bf0',
-                        backgroundColor: 'rgba(29, 155, 240, 0.18)',
+                        borderColor: '#1c60f5',
+                        backgroundColor: 'rgba(28, 96, 245, 0.18)',
                         borderWidth: 3,
                         fill: true,
                         tension: 0.35,
                         pointRadius: 4,
                         pointHoverRadius: 6,
-                        pointBackgroundColor: '#1d9bf0',
+                        pointBackgroundColor: '#ff7a59',
                         pointBorderWidth: 0,
                         yAxisID: 'y',
                         order: 2
                     }, {
                         label: 'İşlem Adedi (Milyon)',
                         data: [118, 112, 124, 119, 131, 128, 137, 133, 145, 141, 152, 165],
-                        backgroundColor: 'rgba(15, 191, 159, 0.35)',
+                        backgroundColor: 'rgba(27, 197, 164, 0.35)',
                         borderRadius: 12,
                         borderSkipped: false,
                         yAxisID: 'y1',
@@ -1962,7 +2229,7 @@
                         legend: {
                             position: 'top',
                             labels: {
-                                color: '#0f172a'
+                                color: '#051433'
                             }
                         },
                         tooltip: {
@@ -1981,10 +2248,10 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.12)'
+                                color: 'rgba(28, 96, 245, 0.12)'
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `₺${value}B`
                             }
                         },
@@ -1995,16 +2262,16 @@
                                 drawOnChartArea: false
                             },
                             ticks: {
-                                color: '#1f2937',
+                                color: '#1c2c4d',
                                 callback: value => `${value}M`
                             }
                         },
                         x: {
                             grid: {
-                                color: 'rgba(15, 58, 122, 0.08)'
+                                color: 'rgba(28, 96, 245, 0.08)'
                             },
                             ticks: {
-                                color: '#1f2937'
+                                color: '#1c2c4d'
                             }
                         }
                     }
