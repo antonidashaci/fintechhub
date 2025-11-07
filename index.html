@@ -36,8 +36,23 @@
                 </ul>
             </nav>
                 <div class="header-actions">
-                    <button class="btn-secondary">Giriş Yap</button>
-                    <button class="btn-primary">Üye Ol</button>
+                    <div class="auth-buttons" id="auth-buttons">
+                        <button class="btn-secondary" type="button" data-modal-target="#login-modal">
+                            <i class="fas fa-right-to-bracket"></i> Giriş Yap
+                        </button>
+                        <button class="btn-primary" type="button" data-modal-target="#signup-modal">
+                            <i class="fas fa-user-plus"></i> Üye Ol
+                        </button>
+                    </div>
+                    <div class="auth-logged-in" id="auth-logged-in" hidden>
+                        <button class="header-account-chip" type="button" data-modal-target="#account-modal">
+                            <span class="chip-icon"><i class="fas fa-user-circle"></i></span>
+                            <span class="chip-text">
+                                <span class="chip-label">Hoş geldiniz</span>
+                                <span class="chip-name" id="auth-user-name">Üye</span>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,7 +168,7 @@
                     </div>
                     <h3>Komisyon Hesaplayıcı</h3>
                     <p>Ortalama sepet tutarı ve işlem hacmine göre sağlayıcı maliyetlerini simüle edin.</p>
-                    <button class="btn-primary" type="button">Hesapla</button>
+                    <button class="btn-primary" type="button" data-modal-target="#commission-modal">Hesapla</button>
                 </article>
 
                 <article class="tool-card" data-modal-target="#comparison-modal">
@@ -162,7 +177,7 @@
                     </div>
                     <h3>Çözüm Karşılaştırma</h3>
                     <p>3 sağlayıcıya kadar seçerek özellik ve fiyatlarını yan yana görün.</p>
-                    <button class="btn-primary" type="button">Karşılaştır</button>
+                    <button class="btn-primary" type="button" data-modal-target="#comparison-modal">Karşılaştır</button>
                 </article>
 
                 <article class="tool-card" data-modal-target="#integration-modal">
@@ -171,7 +186,7 @@
                     </div>
                     <h3>Hızlı Entegrasyon</h3>
                     <p>Sandbox ortamı, test kartları ve entegrasyon kontrol listelerine erişin.</p>
-                    <button class="btn-primary" type="button">Başla</button>
+                    <button class="btn-primary" type="button" data-modal-target="#integration-modal">Başla</button>
                 </article>
             </div>
         </div>
@@ -573,6 +588,138 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="login-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="login-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-right-to-bracket"></i>
+                </div>
+                <div>
+                    <h3 id="login-modal-title">Fintech Hub Hesabınıza Giriş Yapın</h3>
+                    <p class="modal-subtitle">Demo hesabımızla platformu hemen deneyebilirsiniz</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="login-form" class="modal-form" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">E-posta</label>
+                        <input id="login-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Şifre</label>
+                        <input id="login-password" name="password" type="password" placeholder="Şifreniz" autocomplete="current-password" minlength="6" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox">
+                            <input id="login-remember" name="remember" type="checkbox">
+                            <span>Beni hatırla</span>
+                        </label>
+                        <button class="link-button" type="button" id="forgot-password-btn">Şifremi unuttum</button>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-arrow-right"></i> Giriş Yap
+                    </button>
+                    <p class="form-helper">Demo hesap: <strong>demo@fintechhubturkiye.com</strong> / <strong>Fintech!2025</strong></p>
+                    <div class="form-status" id="login-form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="signup-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div>
+                    <h3 id="signup-modal-title">Fintech Hub'a Ücretsiz Katılın</h3>
+                    <p class="modal-subtitle">Karşılaştırma araçları ve raporlar için hesap oluşturun</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="signup-form" class="modal-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-name">Ad Soyad</label>
+                            <input id="signup-name" name="name" type="text" placeholder="Adınız Soyadınız" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-company">Şirket</label>
+                            <input id="signup-company" name="company" type="text" placeholder="Şirket Adı" autocomplete="organization" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">İş E-postası</label>
+                        <input id="signup-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Şifre</label>
+                        <input id="signup-password" name="password" type="password" placeholder="En az 8 karakter" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-user-check"></i> Hesap Oluştur
+                    </button>
+                    <p class="form-helper">Üyelikle sağladıklarımız: karşılaştırma geçmişi, sektör raporları, erken erişim davetleri.</p>
+                    <div class="form-status" id="signup-form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="account-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="account-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-user-gear"></i>
+                </div>
+                <div>
+                    <h3 id="account-modal-title">Hesap Özeti</h3>
+                    <p class="modal-subtitle">Üyelik bilgilerinizi yönetin ve araçlara hızlı erişin</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <div class="account-summary">
+                    <div class="account-avatar"><i class="fas fa-user"></i></div>
+                    <div>
+                        <h4 id="account-user-name">Misafir Kullanıcı</h4>
+                        <p id="account-user-email" class="account-email">Giriş yapmadınız.</p>
+                        <p id="account-user-company" class="account-company"></p>
+                    </div>
+                </div>
+                <div class="account-actions">
+                    <button class="btn-secondary account-action-btn" type="button" data-account-open-modal="#comparison-modal">
+                        <i class="fas fa-balance-scale"></i> Karşılaştırma Aracını Aç
+                    </button>
+                    <button class="btn-secondary account-action-btn" type="button" data-account-open-modal="#commission-modal">
+                        <i class="fas fa-calculator"></i> Komisyon Hesapla
+                    </button>
+                    <button class="btn-secondary account-action-btn" type="button" data-account-open-modal="#integration-modal">
+                        <i class="fas fa-rocket"></i> Entegrasyon Adımlarını Gör
+                    </button>
+                </div>
+                <div class="account-footer">
+                    <button class="btn-outline" type="button" id="account-logout-btn">
+                        <i class="fas fa-arrow-right-from-bracket"></i> Çıkış Yap
+                    </button>
+                    <div class="form-status" id="account-status" aria-live="polite"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal" id="provider-modal" aria-hidden="true">
         <div class="modal-backdrop" data-modal-dismiss></div>

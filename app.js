@@ -450,6 +450,25 @@ const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/info@fintechhubturkiye.com"
 const NEWSLETTER_ENDPOINT = "https://formsubmit.co/ajax/newsletter@fintechhubturkiye.com";
 const DEMO_ENDPOINT = "https://formsubmit.co/ajax/demo@fintechhubturkiye.com";
 const FOCUSABLE_SELECTOR = "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])";
+const DEFAULT_AUTH_USERS = [
+  {
+    name: "Demo Kullanıcısı",
+    company: "Fintech Hub Türkiye",
+    email: "demo@fintechhubturkiye.com",
+    password: "Fintech!2025"
+  },
+  {
+    name: "Selin Kaya",
+    company: "Growth Lab",
+    email: "selin.kaya@fintechhubturkiye.com",
+    password: "Growth2025!"
+  }
+];
+const AUTH_STORAGE_KEYS = {
+  USERS: "fintechhub_auth_users_v1",
+  SESSION: "fintechhub_auth_session_v1",
+  PERSIST: "fintechhub_auth_persist_v1"
+};
 
 let activeCategory = "all";
 let searchQuery = "";
@@ -459,6 +478,8 @@ let activeModal = null;
 let lastFocusedElement = null;
 let currentProvider = null;
 const modalFocusTrapHandlers = new Map();
+let cachedAuthUsers = null;
+let cachedSessionUser = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   initCharts();
@@ -471,6 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initForms();
   initBusinessTools();
+  initAuth();
 });
 
 function initProviders() {
@@ -977,6 +999,22 @@ function initForms() {
       });
     });
   }
+
+  const loginForm = document.getElementById("login-form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      handleLogin(loginForm);
+    });
+  }
+
+  const signupForm = document.getElementById("signup-form");
+  if (signupForm) {
+    signupForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      handleSignup(signupForm);
+    });
+  }
 }
 
 async function submitForm(form, { endpoint, successMessage, errorMessage }) {
@@ -1019,6 +1057,283 @@ async function submitForm(form, { endpoint, successMessage, errorMessage }) {
     form.classList.remove("is-loading");
     if (submitButton) submitButton.disabled = false;
   }
+}
+
+function initAuth() {
+  updateAuthState();
+
+  const logoutButton = document.getElementById("account-logout-btn");
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      handleLogout();
+    });
+  }
+
+  const forgotPasswordButton = document.getElementById("forgot-password-btn");
+  if (forgotPasswordButton) {
+    forgotPasswordButton.addEventListener("click", () => {
+      const status = document.getElementById("login-form-status");
+      if (status) {
+        status.textContent =
+          "Demo hesabı için şifre: Fintech!2025. Özel hesaplar için destek@fintechhubturkiye.com üzerinden ulaşabilirsiniz.";
+        status.classList.remove("success", "error");
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-account-open-modal]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetSelector = button.getAttribute("data-account-open-modal");
+      const accountModal = document.getElementById("account-modal");
+      if (accountModal) {
+        closeModal(accountModal);
+      }
+      if (!targetSelector) return;
+      const targetModal = document.querySelector(targetSelector);
+      if (targetModal) {
+        openModal(targetModal);
+      }
+    });
+  });
+}
+
+function getStoredUsers() {
+  if (cachedAuthUsers) return cachedAuthUsers;
+  const baseUsers = DEFAULT_AUTH_USERS.map((user) => ({ ...user }));
+  try {
+    const stored = localStorage.getItem(AUTH_STORAGE_KEYS.USERS);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        parsed.forEach((user) => {
+          if (!user || !user.email) return;
+          const existingIndex = baseUsers.findIndex(
+            (item) => item.email && item.email.toLowerCase() === user.email.toLowerCase()
+          );
+          if (existingIndex >= 0) {
+            baseUsers[existingIndex] = { ...baseUsers[existingIndex], ...user };
+          } else {
+            baseUsers.push(user);
+          }
+        });
+      }
+    }
+  } catch (error) {
+    // Depolama okumasında sorun olursa varsayılan kullanıcılar kullanılmaya devam eder.
+  }
+  cachedAuthUsers = baseUsers;
+  return cachedAuthUsers;
+}
+
+function saveAuthUsers(users) {
+  cachedAuthUsers = users;
+  try {
+    localStorage.setItem(AUTH_STORAGE_KEYS.USERS, JSON.stringify(users));
+  } catch (error) {
+    // Depolama erişimi başarısız olursa hatayı sessizce yok say.
+  }
+}
+
+function getActiveUser() {
+  if (cachedSessionUser) return cachedSessionUser;
+  try {
+    const stored = sessionStorage.getItem(AUTH_STORAGE_KEYS.SESSION);
+    if (stored) {
+      cachedSessionUser = JSON.parse(stored);
+      return cachedSessionUser;
+    }
+    const persistent = localStorage.getItem(AUTH_STORAGE_KEYS.PERSIST);
+    if (persistent) {
+      cachedSessionUser = JSON.parse(persistent);
+      try {
+        sessionStorage.setItem(AUTH_STORAGE_KEYS.SESSION, JSON.stringify(cachedSessionUser));
+      } catch (storageError) {
+        // Oturum depolaması kullanılamıyorsa göz ardı et.
+      }
+      return cachedSessionUser;
+    }
+  } catch (error) {
+    cachedSessionUser = null;
+  }
+  return cachedSessionUser;
+}
+
+function setActiveUser(user) {
+  if (user) {
+    cachedSessionUser = {
+      name: user.name || "Fintech Hub Üyesi",
+      email: user.email,
+      company: user.company || ""
+    };
+    try {
+      sessionStorage.setItem(AUTH_STORAGE_KEYS.SESSION, JSON.stringify(cachedSessionUser));
+    } catch (error) {
+      // Sessiz geç
+    }
+  } else {
+    cachedSessionUser = null;
+    try {
+      sessionStorage.removeItem(AUTH_STORAGE_KEYS.SESSION);
+    } catch (error) {
+      // Sessiz geç
+    }
+  }
+}
+
+function persistActiveUser(user, shouldPersist) {
+  try {
+    if (shouldPersist && user) {
+      localStorage.setItem(
+        AUTH_STORAGE_KEYS.PERSIST,
+        JSON.stringify({ name: user.name || "Fintech Hub Üyesi", email: user.email, company: user.company || "" })
+      );
+    } else {
+      localStorage.removeItem(AUTH_STORAGE_KEYS.PERSIST);
+    }
+  } catch (error) {
+    // Tarayıcı depolaması kullanılamıyorsa sessizce yoksay.
+  }
+}
+
+function updateAuthState() {
+  const user = getActiveUser();
+  const authButtons = document.getElementById("auth-buttons");
+  const authLoggedIn = document.getElementById("auth-logged-in");
+  const accountName = document.getElementById("auth-user-name");
+  if (authButtons) {
+    authButtons.toggleAttribute("hidden", Boolean(user));
+  }
+  if (authLoggedIn) {
+    authLoggedIn.toggleAttribute("hidden", !user);
+  }
+  if (accountName) {
+    accountName.textContent = user ? user.name || user.email : "Üye";
+  }
+  populateAccountModal(user);
+}
+
+function populateAccountModal(user) {
+  const nameElement = document.getElementById("account-user-name");
+  const emailElement = document.getElementById("account-user-email");
+  const companyElement = document.getElementById("account-user-company");
+  const statusElement = document.getElementById("account-status");
+  if (statusElement) {
+    statusElement.textContent = "";
+    statusElement.classList.remove("success", "error");
+  }
+  if (user && user.email) {
+    if (nameElement) nameElement.textContent = user.name || "Fintech Hub Üyesi";
+    if (emailElement) emailElement.textContent = user.email;
+    if (companyElement) {
+      companyElement.textContent = user.company ? `${user.company}` : "";
+    }
+  } else {
+    if (nameElement) nameElement.textContent = "Misafir Kullanıcı";
+    if (emailElement) emailElement.textContent = "Giriş yapmadınız.";
+    if (companyElement) companyElement.textContent = "";
+  }
+}
+
+function handleLogin(form) {
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  const status = document.getElementById("login-form-status");
+  const email = (form.email.value || "").trim().toLowerCase();
+  const password = form.password.value || "";
+  const users = getStoredUsers();
+  const user = users.find((item) => item.email && item.email.toLowerCase() === email);
+  if (!user || user.password !== password) {
+    if (status) {
+      status.textContent = "E-posta veya şifre hatalı. Demo hesap bilgilerinin doğru olduğundan emin olun.";
+      status.classList.add("error");
+      status.classList.remove("success");
+    }
+    return;
+  }
+  setActiveUser(user);
+  persistActiveUser(user, form.remember?.checked);
+  updateAuthState();
+  if (status) {
+    status.textContent = "Başarıyla giriş yaptınız. Hesap panelinizi açıyoruz.";
+    status.classList.add("success");
+    status.classList.remove("error");
+  }
+  form.reset();
+  setTimeout(() => {
+    const loginModal = document.getElementById("login-modal");
+    if (loginModal) {
+      closeModal(loginModal);
+    }
+    const accountModal = document.getElementById("account-modal");
+    if (accountModal) {
+      openModal(accountModal);
+    }
+  }, 700);
+}
+
+function handleSignup(form) {
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  const status = document.getElementById("signup-form-status");
+  const name = (form.name.value || "").trim();
+  const company = (form.company.value || "").trim();
+  const email = (form.email.value || "").trim().toLowerCase();
+  const password = form.password.value || "";
+  const users = getStoredUsers();
+  const exists = users.some((item) => item.email && item.email.toLowerCase() === email);
+  if (exists) {
+    if (status) {
+      status.textContent = "Bu e-posta ile zaten kayıt bulunuyor. Lütfen giriş yapmayı deneyin.";
+      status.classList.add("error");
+      status.classList.remove("success");
+    }
+    return;
+  }
+  const newUser = { name, company, email, password };
+  const updatedUsers = [...users, newUser];
+  saveAuthUsers(updatedUsers);
+  setActiveUser(newUser);
+  persistActiveUser(newUser, true);
+  updateAuthState();
+  if (status) {
+    status.textContent = "Üyeliğiniz oluşturuldu. Araçlara erişim için hesap panelini açıyoruz.";
+    status.classList.add("success");
+    status.classList.remove("error");
+  }
+  form.reset();
+  setTimeout(() => {
+    const signupModal = document.getElementById("signup-modal");
+    if (signupModal) {
+      closeModal(signupModal);
+    }
+    const accountModal = document.getElementById("account-modal");
+    if (accountModal) {
+      openModal(accountModal);
+    }
+  }, 700);
+}
+
+function handleLogout() {
+  setActiveUser(null);
+  persistActiveUser(null, false);
+  updateAuthState();
+  const status = document.getElementById("account-status");
+  if (status) {
+    status.textContent = "Çıkış yapıldı. Tekrar görüşmek üzere!";
+    status.classList.add("success");
+    status.classList.remove("error");
+  }
+  setTimeout(() => {
+    const accountModal = document.getElementById("account-modal");
+    if (accountModal) {
+      closeModal(accountModal);
+    }
+  }, 800);
 }
 
 function initBusinessTools() {
