@@ -443,6 +443,256 @@ const providers = [
       minCommitment: "₺4.990 / ay"
     },
     supportsCommissionCalculator: true
+  },
+  {
+    id: "garanti-bbva",
+    name: "Garanti BBVA Ödeme Sistemleri",
+    logo: "GAR",
+    categories: ["bank", "pos", "open-banking"],
+    type: "Banka Ödeme Çözümleri",
+    rating: 4.7,
+    reviews: 298,
+    featured: true,
+    isNew: false,
+    badges: ["Kurumsal"],
+    cardDescription:
+      "Bankacılık destekli sanal POS, tahsilat yönetimi ve API altyapısı ile yüksek hacimli işletmelere güvenli çözümler sunar.",
+    modalSummary:
+      "Garanti BBVA, perakende ve abonelik modelleri için ölçeklenebilir POS ve tahsilat altyapısı sağlar. Çok kanallı ödeme, Açık Bankacılık API'leri ve kurumsal destek ekibiyle işletmelerin nakit akışını optimize eder.",
+    features: ["Dinamik POS", "Tahsilat API", "Açık Bankacılık", "Kur Risk Yönetimi"],
+    differentiators: [
+      "Kurumsal seviye SLA",
+      "Yerinde uyumluluk desteği",
+      "EMEA çapında kart kabulü",
+      "ERP entegrasyon kitleri"
+    ],
+    pricing: {
+      label: "POS Komisyonu:",
+      headline: "%2.39 + ₺0.19",
+      feeModel: { percentage: 2.39, fixed: 0.19, subscription: 0, currency: "TRY", installment: 0.4 },
+      tiers: [
+        { label: "₺0 - ₺1M", value: "%2.59 + ₺0.19" },
+        { label: "₺1M - ₺3M", value: "%2.39 + ₺0.15" },
+        { label: "₺3M+", value: "Özel fiyatlandırma" }
+      ],
+      notes: "Kur garantili tahsilat ve döviz hesaplaması opsiyoneldir."
+    },
+    campaign: { label: "Teşvik", text: "Yeni Açık Bankacılık API'lerinde ilk 6 ay ücretsiz", expires: "30 Haziran 2025" },
+    metrics: { settlement: "T+1/T+2", support: "Özel müşteri temsilcisi", uptime: "%99.98", successRate: "%99.1" },
+    keywords: ["garanti", "banka pos", "açık bankacılık", "tahsilat"],
+    addedAt: "2024-06-10",
+    resources: [
+      { label: "API Portal", url: "https://developers.garantibbva.com.tr", icon: "fa-code" },
+      { label: "POS Başvuru", url: "https://www.garantibbva.com.tr/isletme/sanal-pos", icon: "fa-file-signature" }
+    ],
+    contact: { email: "fintech@garantibbva.com.tr", phone: "+90 (212) 318 18 18" },
+    comparison: {
+      goLive: "4 hafta",
+      compliance: ["PCI DSS 4.0", "KVKK", "PSD2"],
+      integrations: ["SAP", "Oracle", "Microsoft Dynamics"],
+      minCommitment: "₺250K aylık hacim"
+    },
+    supportsCommissionCalculator: true
+  },
+  {
+    id: "akbank",
+    name: "Akbank Axess POS & API",
+    logo: "AKB",
+    categories: ["bank", "pos"],
+    type: "Banka POS",
+    rating: 4.6,
+    reviews: 254,
+    featured: true,
+    isNew: false,
+    badges: ["Axess"],
+    cardDescription:
+      "E-ticaret ve fiziki POS kanallarını tek panelde yöneten, kampanya yönetimi ve taksitli satış desteği sağlayan banka çözümü.",
+    modalSummary:
+      "Akbank Axess POS, çok kanallı kampanya kurguları ve taksitli satış seçenekleriyle büyüyen KOBİ'lere odaklanır. Yenilenmiş panel üzerinden gerçek zamanlı raporlama ve iade yönetimi sunar.",
+    features: ["Omnichannel POS", "Kampanya Motoru", "Gelişmiş Raporlama", "İade Otomasyonu"],
+    differentiators: [
+      "Axess üye işyeri kampanyaları",
+      "Anlık limit kontrolü",
+      "Kasa ve muhasebe entegrasyonları",
+      "Taksit optimizasyonu"
+    ],
+    pricing: {
+      label: "POS Komisyonu:",
+      headline: "%2.49 + ₺0.25",
+      feeModel: { percentage: 2.49, fixed: 0.25, subscription: 0, currency: "TRY", installment: 0.35 },
+      tiers: [
+        { label: "₺0 - ₺500K", value: "%2.79 + ₺0.29" },
+        { label: "₺500K - ₺1.5M", value: "%2.49 + ₺0.25" },
+        { label: "₺1.5M+", value: "Özel teklif" }
+      ],
+      notes: "Taksit başına ek %0.35 maliyet uygulanır."
+    },
+    campaign: { label: "Kampanya", text: "Axess üye işyerlerine 12 aya kadar faizsiz taksit", expires: "31 Temmuz 2025" },
+    metrics: { settlement: "T+1", support: "7/24 Çağrı Merkezi", uptime: "%99.94", successRate: "%98.9" },
+    keywords: ["akbank", "axess", "pos", "kampanya"],
+    addedAt: "2024-03-18",
+    resources: [
+      { label: "POS Başvuru", url: "https://www.akbank.com/tr-tr/isletme/sanal-pos", icon: "fa-credit-card" },
+      { label: "Teknik Döküman", url: "https://developer.akbank.com", icon: "fa-book" }
+    ],
+    contact: { email: "pos@akbank.com", phone: "+90 (212) 385 77 77" },
+    comparison: {
+      goLive: "3 hafta",
+      compliance: ["PCI DSS 4.0", "KVKK"],
+      integrations: ["Logo", "Paraşüt", "Mikro"],
+      minCommitment: "₺150K aylık hacim"
+    },
+    supportsCommissionCalculator: true
+  },
+  {
+    id: "isbankasi",
+    name: "Türkiye İş Bankası MaxiPOS",
+    logo: "ISB",
+    categories: ["bank", "cloud-collection"],
+    type: "Tahsilat & POS",
+    rating: 4.5,
+    reviews: 221,
+    featured: false,
+    isNew: false,
+    badges: ["MaxiPOS"],
+    cardDescription:
+      "MaxiPOS paneliyle dijital tahsilat, linkle ödeme ve kurumsal raporlama çözümleri sunan banka altyapısı.",
+    modalSummary:
+      "Türkiye İş Bankası MaxiPOS, saha satış ekipleri ve B2B tahsilatlar için linkle ödeme, abonelik tahsilatı ve raporlama hizmetlerini tek platformda sunar. KVKK uyumlu veri saklama özellikleri bulunur.",
+    features: ["Linkle Ödeme", "Abonelik Tahsilatı", "Kurumsal Raporlama", "Yetki Yönetimi"],
+    differentiators: [
+      "MaxiPOS mobil uygulaması",
+      "Kur bazlı raporlama",
+      "Yetki ve rol tabanlı erişim",
+      "Banka teminat desteği"
+    ],
+    pricing: {
+      label: "Tahsilat Ücreti:",
+      headline: "%2.29 + ₺0.22",
+      feeModel: { percentage: 2.29, fixed: 0.22, subscription: 149, currency: "TRY", installment: 0.28 },
+      tiers: [
+        { label: "₺0 - ₺300K", value: "%2.49 + ₺0.25" },
+        { label: "₺300K - ₺1M", value: "%2.29 + ₺0.22" },
+        { label: "₺1M+", value: "Özel fiyat" }
+      ],
+      notes: "MaxiPOS paneli için aylık ₺149 bakım bedeli alınır."
+    },
+    campaign: null,
+    metrics: { settlement: "T+2", support: "Özel müşteri yöneticisi", uptime: "%99.9", successRate: "%98.4" },
+    keywords: ["iş bankası", "maxipos", "tahsilat", "linkle ödeme"],
+    addedAt: "2024-05-02",
+    resources: [
+      { label: "MaxiPOS Bilgi", url: "https://www.isbank.com.tr/sanal-pos", icon: "fa-circle-info" },
+      { label: "Başvuru Formu", url: "https://www.isbank.com.tr/isletme/basvuru", icon: "fa-file-lines" }
+    ],
+    contact: { email: "maxipos@isbank.com.tr", phone: "+90 (850) 724 72 47" },
+    comparison: {
+      goLive: "5 hafta",
+      compliance: ["PCI DSS 4.0", "KVKK"],
+      integrations: ["Logo", "Nebim", "Workcube"],
+      minCommitment: "₺200K aylık hacim"
+    },
+    supportsCommissionCalculator: true
+  },
+  {
+    id: "yapi-kredi",
+    name: "Yapı Kredi Ödeme Kurulumu",
+    logo: "YKB",
+    categories: ["bank", "payment-gateway"],
+    type: "Banka Ödeme Geçidi",
+    rating: 4.6,
+    reviews: 245,
+    featured: false,
+    isNew: true,
+    badges: ["World"],
+    cardDescription:
+      "Worldcard uyumlu taksit kampanyaları, tokenizasyon ve çoklu para birimi desteği sunan banka geçidi.",
+    modalSummary:
+      "Yapı Kredi Ödeme Kurulumu, World üye işyerlerine özel kampanyalar ve çoklu para birimi desteği sağlar. Tokenizasyon ile PCI yükünü azaltır ve abonelik işlemlerini kolaylaştırır.",
+    features: ["Tokenizasyon", "World Kampanyaları", "Çoklu Para Birimi", "Abonelik API"],
+    differentiators: [
+      "World ekosistemi kampanyaları",
+      "Dövizli tahsilat",
+      "3D Secure 2.2 geçiş paketi",
+      "PCI danışmanlığı"
+    ],
+    pricing: {
+      label: "Komisyon:",
+      headline: "%2.45 + ₺0.18",
+      feeModel: { percentage: 2.45, fixed: 0.18, subscription: 0, currency: "TRY", installment: 0.38 },
+      tiers: [
+        { label: "₺0 - ₺400K", value: "%2.65 + ₺0.20" },
+        { label: "₺400K - ₺1.2M", value: "%2.45 + ₺0.18" },
+        { label: "₺1.2M+", value: "Özel anlaşma" }
+      ],
+      notes: "Dövizli tahsilat için ek %0.25 spread uygulanır."
+    },
+    campaign: { label: "World", text: "Yeni üye işyerlerine ilk 3 ay taksit farkı yok", expires: "31 Ağustos 2025" },
+    metrics: { settlement: "T+1", support: "7/24 World Posline", uptime: "%99.92", successRate: "%98.7" },
+    keywords: ["yapı kredi", "world", "tokenizasyon", "döviz"],
+    addedAt: "2025-01-28",
+    resources: [
+      { label: "World POS", url: "https://www.yapikredi.com.tr/isletme/world-pos", icon: "fa-store" },
+      { label: "Developer Portal", url: "https://developer.yapikredi.com.tr", icon: "fa-code" }
+    ],
+    contact: { email: "worldpos@yapikredi.com.tr", phone: "+90 (212) 339 70 00" },
+    comparison: {
+      goLive: "4 hafta",
+      compliance: ["PCI DSS 4.0", "KVKK"],
+      integrations: ["Magento", "WooCommerce", "Shopify"],
+      minCommitment: "₺180K aylık hacim"
+    },
+    supportsCommissionCalculator: true
+  },
+  {
+    id: "qnb-finansbank",
+    name: "QNB Finansbank Enpara İş",
+    logo: "QNB",
+    categories: ["bank", "open-banking"],
+    type: "Açık Bankacılık & POS",
+    rating: 4.4,
+    reviews: 187,
+    featured: false,
+    isNew: true,
+    badges: ["Enpara İş"],
+    cardDescription:
+      "API tabanlı hesap bilgisi, ödeme başlatma ve uygun maliyetli POS çözümlerini tek platformda sunar.",
+    modalSummary:
+      "QNB Finansbank Enpara İş, dijital KOBİ'lere yönelik açık bankacılık API'leri ve uygun maliyetli POS çözümleri sunar. Self-servis paneli sayesinde hızlı başvuru ve entegrasyon imkânı sağlar.",
+    features: ["Ödeme Başlatma", "Hesap Bilgisi API", "Hızlı Başvuru", "Finansal Analitik"],
+    differentiators: [
+      "Enpara düşük maliyetli fiyatlama",
+      "Tamamen dijital onboarding",
+      "Finansal analitik paneller",
+      "PSD2 uyumlu API yönetimi"
+    ],
+    pricing: {
+      label: "POS Komisyonu:",
+      headline: "%2.19 + ₺0.21",
+      feeModel: { percentage: 2.19, fixed: 0.21, subscription: 0, currency: "TRY", installment: 0.32 },
+      tiers: [
+        { label: "₺0 - ₺250K", value: "%2.39 + ₺0.23" },
+        { label: "₺250K - ₺800K", value: "%2.19 + ₺0.21" },
+        { label: "₺800K+", value: "Özel fiyat" }
+      ],
+      notes: "API kullanımında aylık 1.000 ücretsiz çağrı, sonrasında çağrı başına ₺0.05."
+    },
+    campaign: { label: "Dijital", text: "Enpara İş müşterilerine POS kurulumu ücretsiz", expires: "31 Aralık 2025" },
+    metrics: { settlement: "T+1", support: "Dijital destek ekibi", uptime: "%99.9", successRate: "%98.1" },
+    keywords: ["qnb", "enpara", "açık bankacılık", "kobi"],
+    addedAt: "2024-11-30",
+    resources: [
+      { label: "Enpara İş", url: "https://www.qnbfinansbank.enpara.com/isletme", icon: "fa-rocket" },
+      { label: "API Belgeleri", url: "https://developer.qnbfinansbank.com", icon: "fa-diagram-project" }
+    ],
+    contact: { email: "fintech@qnbfinansbank.com", phone: "+90 (850) 222 3663" },
+    comparison: {
+      goLive: "3 hafta",
+      compliance: ["PCI DSS 4.0", "KVKK", "PSD2"],
+      integrations: ["Paraşüt", "Netsis", "Unity"],
+      minCommitment: "₺120K aylık hacim"
+    },
+    supportsCommissionCalculator: true
   }
 ];
 
@@ -496,6 +746,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initProviders() {
+  const initialCategory = document.body?.dataset?.initialCategory;
+  if (initialCategory) {
+    activeCategory = initialCategory;
+    document.querySelectorAll(".tab-btn").forEach((button) => {
+      if (button.getAttribute("data-category") === initialCategory) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+  }
   renderedProviders = [...providers];
   applyFilters();
 }
@@ -767,6 +1028,15 @@ function initModals() {
   document.querySelectorAll("[data-modal-target]").forEach((element) => {
     element.addEventListener("click", (event) => {
       const targetSelector = event.currentTarget.getAttribute("data-modal-target");
+      const providerId = event.currentTarget.getAttribute("data-provider");
+      if (targetSelector === "#provider-modal" && providerId) {
+        openProviderModal(providerId);
+        return;
+      }
+      if (targetSelector === "#demo-modal" && providerId) {
+        openDemoModal(providerId);
+        return;
+      }
       if (targetSelector) {
         const modal = document.querySelector(targetSelector);
         if (modal) {
@@ -976,6 +1246,30 @@ function initForms() {
     });
   }
 
+  const contactGeneralForm = document.getElementById("contact-general-form");
+  if (contactGeneralForm) {
+    contactGeneralForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      submitForm(contactGeneralForm, {
+        endpoint: CONTACT_ENDPOINT,
+        successMessage: "Destek talebiniz kaydedildi. Kısa süre içinde dönüş yapacağız.",
+        errorMessage: "Destek talebi gönderilirken hata oluştu. Lütfen tekrar deneyin."
+      });
+    });
+  }
+
+  const contactPartnerForm = document.getElementById("contact-partner-form");
+  if (contactPartnerForm) {
+    contactPartnerForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      submitForm(contactPartnerForm, {
+        endpoint: CONTACT_ENDPOINT,
+        successMessage: "İş ortaklığı talebiniz alındı. 24 saat içinde partner ekibimiz dönüş yapacak.",
+        errorMessage: "Talebiniz iletilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin."
+      });
+    });
+  }
+
   const newsletterForm = document.getElementById("newsletter-form");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", (event) => {
@@ -988,6 +1282,18 @@ function initForms() {
     });
   }
 
+  const aboutContactForm = document.getElementById("about-contact-form");
+  if (aboutContactForm) {
+    aboutContactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      submitForm(aboutContactForm, {
+        endpoint: CONTACT_ENDPOINT,
+        successMessage: "Ekibimiz 1 iş günü içinde sizinle iletişime geçecek.",
+        errorMessage: "Form gönderilirken hata oluştu. Lütfen daha sonra tekrar deneyin."
+      });
+    });
+  }
+
   const demoForm = document.getElementById("demo-request-form");
   if (demoForm) {
     demoForm.addEventListener("submit", (event) => {
@@ -996,6 +1302,18 @@ function initForms() {
         endpoint: DEMO_ENDPOINT,
         successMessage: "Demo talebiniz kaydedildi. Ekiplerimiz kısa sürede iletişime geçecek.",
         errorMessage: "Demo talebi gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin."
+      });
+    });
+  }
+
+  const bankAdvisoryForm = document.getElementById("bank-advisory-form");
+  if (bankAdvisoryForm) {
+    bankAdvisoryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      submitForm(bankAdvisoryForm, {
+        endpoint: DEMO_ENDPOINT,
+        successMessage: "Danışmanlık talebiniz alındı. 48 saat içinde banka raporunuzu paylaşacağız.",
+        errorMessage: "Talep gönderilirken bir sorun oluştu. Lütfen tekrar deneyin."
       });
     });
   }
