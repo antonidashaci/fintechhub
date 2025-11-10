@@ -1,6 +1,18 @@
-# Fintech Hub Türkiye – statik site prototipi
+# Fintech Hub Türkiye – Production-Ready Fintech Platform 🚀
 
-Bu depo, Türkiye’deki fintech ve ödeme çözümleri ekosistemi için planlanan hub sitesinin temel bir prototipini içerir. Şimdilik basit bir **HTML/CSS** tabanlı statik site olarak hazırlanmıştır. İlerleyen aşamalarda içerik yönetimi (CMS), veritabanı ve dinamik özellikler eklenecektir.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
+
+Türkiye'nin en kapsamlı fintech ve ödeme çözümleri platformu. **Full-stack** uygulama olarak PostgreSQL veritabanı, Express.js API backend'i, JWT authentication ve modern frontend ile geliştirilmiştir.
+
+## ⭐ Platform Özellikleri
+
+- 🔐 **JWT Authentication** - Güvenli kullanıcı yönetimi
+- 🗄️ **PostgreSQL Database** - 12 tablo ile robust veri yapısı
+- 🎯 **User Dashboard** - Favoriler, karşılaştırma geçmişi, kişisel panel
+- 📊 **Analytics** - Google Analytics 4 + özel event tracking
+- 🔍 **SEO Optimized** - Structured data, Open Graph, sitemap
+- ⚖️ **Legal Compliant** - KVKK uyumlu gizlilik politikası
+- 🚀 **Production Ready** - Netlify deploy, PM2 config, Nginx setup
 
 ## İçerik
 
@@ -32,13 +44,30 @@ npm run update:market
 
 Komut, EVDS servisinden son 10 günün USD, EUR, GBP, CHF, CNY ve altın alış kurlarını alır, yüzde değişimleri hesaplar ve ticker bileşeni tarafından kullanılan JSON çıktısını üretir.
 
-## Netlify üzerinde yayınlamak
+## 🌐 Netlify'de Deploy Etme
 
-1. Bir [Netlify](https://www.netlify.com/) hesabı oluşturun.
-2. Bu projeyi GitHub/GitLab üzerinde bir depoya gönderin (veya Netlify’nin “Deploy manually” seçeneği ile zip olarak yükleyin).
-3. Netlify panelinde **“New site from Git”** seçeneğini seçip depoyu bağlayın.
-4. Build ayarları olarak statik site olduğu için “build command” boş bırakılabilir, “publish directory” ise projenin kök dizini olacaktır (`/`).
-5. Alan adınızı bağlamak için Netlify’nin **Domain Management** bölümünü kullanabilirsiniz.
+### Otomatik Deploy (Önerilen)
+
+1. [Netlify](https://www.netlify.com/) hesabınızla giriş yapın
+2. **"Add new site" > "Import an existing project"** seçin
+3. GitHub reponuzu bağlayın
+4. Netlify `netlify.toml` dosyasını otomatik algılayacak
+5. **Deploy site** butonuna tıklayın
+
+### Manuel Kurulum (Opsiyonel)
+
+Netlify'de manuel ayarlar:
+- **Build command**: `npm install`
+- **Publish directory**: `.` (root)
+- **Node version**: `18` (Environment variables'da)
+
+### Preview Deployments
+
+Her branch için otomatik preview URL'i oluşturulur:
+- **Production**: `https://your-site.netlify.app`
+- **Preview**: `https://deploy-preview-123--your-site.netlify.app`
+
+> ⚠️ **Not**: Backend API'leri Netlify'de çalışmaz. Production için PostgreSQL ve Express backend'ini ayrı host etmeniz gerekir (Heroku, Railway, DigitalOcean vb.).
 
 ## Sonraki adımlar
 
