@@ -720,7 +720,8 @@ const AUTH_STORAGE_KEYS = {
   PERSIST: "fintechhub_auth_persist_v1"
 };
 
-const MARKET_DATA_URL = "/data/market-rates.json";
+const MARKET_DATA_URL = "/.netlify/functions/fetch-rates";
+const MARKET_DATA_FALLBACK = "/data/market-rates.json";
 const DEFAULT_MARKET_DATA = {
   lastUpdated: "10 Kasım 2025",
   rates: [
@@ -1933,29 +1934,23 @@ function formatCurrency(value) {
 const providerLogos = {
   // Payment Gateways
   'iyzico': 'https://www.iyzico.com/assets/images/content/iyzico-one-line.svg',
-  'payflex': 'https://logo.clearbit.com/payflex.com.tr',
+  'paytr': 'https://www.paytr.com/logo/logo-dark.svg',
+  'bkm-express': 'https://bkmexpress.com.tr/assets/images/bkm-express-logo.svg',
   
   // Digital Wallets
   'papara-business': 'https://www.papara.com/images/papara-logo.svg',
+  'param': 'https://param.com.tr/Content/images/param-logo.png',
   
-  // Open Banking
-  'apiconnect': 'https://logo.clearbit.com/apiconnect.com',
-  
-  // Cloud Collection
-  'bulut-tahsilat': 'https://logo.clearbit.com/buluttahsilat.com',
-  
-  // Financial Management
-  'ledgerly': 'https://logo.clearbit.com/ledgerly.com',
+  // mPOS
+  'moka': 'https://moka.com/assets/img/moka-logo.svg',
   
   // BNPL
-  'bnpl-max': 'https://logo.clearbit.com/bnplmax.com',
+  'payflex': 'https://logo.clearbit.com/payflex.com.tr',
+  'tosla': 'https://tosla.com/assets/logo.svg',
   
-  // Insurtech
-  'neo-sigorta': 'https://logo.clearbit.com/neosigorta.com',
-  
-  // AI Risk
-  'riskvision': 'https://logo.clearbit.com/riskvision.ai',
-  
+  // Neo Bank
+  'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
+
   // Banks
   'garanti-bbva': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Garanti_BBVA_logo.svg/200px-Garanti_BBVA_logo.svg.png',
   'akbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Akbank_logo.svg/200px-Akbank_logo.svg.png',

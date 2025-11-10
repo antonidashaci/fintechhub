@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog & Haberler | Fintech Hub Türkiye</title>
+    <meta name="description" content="Fintech dünyasından son haberler, trendler ve analizler." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .blog-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .blog-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+      
+      .blog-card {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      
+      .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      
+      .blog-image {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+      }
+      
+      .blog-content {
+        padding: 1.5rem;
+      }
+      
+      .blog-meta {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        margin-bottom: 1rem;
+      }
+      
+      .blog-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--gray-800);
+      }
+      
+      .blog-excerpt {
+        color: var(--gray-600);
+        line-height: 1.6;
+      }
+      
+      .blog-tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: var(--primary-light);
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <i class="fas fa-chart-line"></i>
+          <span>Fintech Hub <span class="logo-tr">TR</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Ana Sayfa</a>
+          <a href="/#providers" class="nav-link">Sağlayıcılar</a>
+          <a href="/karsilastir/" class="nav-link">Karşılaştır</a>
+          <a href="/blog/" class="nav-link active">Blog</a>
+          <a href="/hakkimizda/" class="nav-link">Hakkımızda</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="blog-container">
+      <header class="blog-header">
+        <h1>📰 Blog & Haberler</h1>
+        <p>Fintech dünyasından son gelişmeler, trendler ve analizler</p>
+      </header>
+
+      <div class="blog-grid" id="blog-grid">
+        <!-- Blog posts populated by JS or statically -->
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-rocket"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 10 Kasım 2025</span>
+              <span><i class="fas fa-user"></i> Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">Türkiye'de BNPL Pazarı Hızla Büyüyor</h2>
+            <p class="blog-excerpt">
+              Şimdi al sonra öde (BNPL) modeli Türkiye'de büyük ilgi görüyor. Tosla ve PayFlex gibi platformlar,
+              özellikle genç kullanıcılar arasında popülerlik kazanıyor.
+            </p>
+            <div>
+              <span class="blog-tag">BNPL</span>
+              <span class="blog-tag">Trend</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-shield-alt"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 8 Kasım 2025</span>
+              <span><i class="fas fa-user"></i> Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">PCI DSS 4.0'a Geçiş Rehberi</h2>
+            <p class="blog-excerpt">
+              Ödeme güvenliği standardı PCI DSS 4.0'a geçiş yapmak isteyen işletmeler için kapsamlı rehberimiz yayınlandı.
+              Yeni gereksinimleri ve uyum sürecini detaylıca anlattık.
+            </p>
+            <div>
+              <span class="blog-tag">Güvenlik</span>
+              <span class="blog-tag">Rehber</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 5 Kasım 2025</span>
+              <span><i class="fas fa-user"></i> Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">mPOS Sistemleri: 2025 Karşılaştırması</h2>
+            <p class="blog-excerpt">
+              Moka, iyzico ve diğer mPOS sağlayıcılarının özelliklerini, fiyatlarını ve avantajlarını
+              detaylıca karşılaştırdık. Sizin için en uygun çözüm hangisi?
+            </p>
+            <div>
+              <span class="blog-tag">mPOS</span>
+              <span class="blog-tag">Karşılaştırma</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-coins"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 2 Kasım 2025</span>
+              <span><i class="fas fa-user"></i> Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">Dijital Cüzdanlar ve Gelecek</h2>
+            <p class="blog-excerpt">
+              Papara ve Param gibi dijital cüzdanlar finansal ekosistemde nasıl bir rol oynuyor?
+              Geleceğin ödeme alışkanlıkları üzerine bir analiz.
+            </p>
+            <div>
+              <span class="blog-tag">Dijital Cüzdan</span>
+              <span class="blog-tag">Analiz</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-chart-line"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 30 Ekim 2025</span>
+              <span><i class="fas fa-user"></i> Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">E-Ticaret İçin Komisyon Optimizasyonu</h2>
+            <p class="blog-excerpt">
+              Ödeme komisyonlarını nasıl optimize edebilirsiniz? İşlem hacminize göre en avantajlı
+              sağlayıcı seçimi için ipuçları.
+            </p>
+            <div>
+              <span class="blog-tag">E-Ticaret</span>
+              <span class="blog-tag">İpucu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image"><i class="fas fa-university"></i></div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> 28 Ekim 2025</span>
+              <span class="blog-tag">Fintech Hub</span>
+            </div>
+            <h2 class="blog-title">Bankalar vs Neo-Bankalar</h2>
+            <p class="blog-excerpt">
+              Geleneksel bankalar ile Kolektif gibi neo-bankalar arasındaki farklar neler?
+              Girişimciler için hangi seçenek daha avantajlı?
+            </p>
+            <div>
+              <span class="blog-tag">Banking</span>
+              <span class="blog-tag">Karşılaştırma</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-chart-line"></i> Fintech Hub TR</h3>
+          <p>Türkiye'nin en kapsamlı fintech sağlayıcı rehberi</p>
+        </div>
+        <div class="footer-section">
+          <h4>Kurumsal</h4>
+          <a href="/hakkimizda/">Hakkımızda</a>
+          <a href="/iletisim/">İletişim</a>
+        </div>
+        <div class="footer-section">
+          <h4>Yasal</h4>
+          <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
+          <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fintech Hub Türkiye. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -4,15 +4,26 @@
 
   // Logo URL mapping (same as main app.js)
   const providerLogos = {
+    // Payment Gateways
     'iyzico': 'https://www.iyzico.com/assets/images/content/iyzico-one-line.svg',
-    'payflex': 'https://logo.clearbit.com/payflex.com.tr',
+    'paytr': 'https://www.paytr.com/logo/logo-dark.svg',
+    'bkm-express': 'https://bkmexpress.com.tr/assets/images/bkm-express-logo.svg',
+    
+    // Digital Wallets
     'papara-business': 'https://www.papara.com/images/papara-logo.svg',
-    'apiconnect': 'https://logo.clearbit.com/apiconnect.com',
-    'bulut-tahsilat': 'https://logo.clearbit.com/buluttahsilat.com',
-    'ledgerly': 'https://logo.clearbit.com/ledgerly.com',
-    'bnpl-max': 'https://logo.clearbit.com/bnplmax.com',
-    'neo-sigorta': 'https://logo.clearbit.com/neosigorta.com',
-    'riskvision': 'https://logo.clearbit.com/riskvision.ai',
+    'param': 'https://param.com.tr/Content/images/param-logo.png',
+    
+    // mPOS
+    'moka': 'https://moka.com/assets/img/moka-logo.svg',
+    
+    // BNPL
+    'payflex': 'https://logo.clearbit.com/payflex.com.tr',
+    'tosla': 'https://tosla.com/assets/logo.svg',
+    
+    // Neo Bank
+    'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
+
+    // Banks
     'garanti-bbva': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Garanti_BBVA_logo.svg/200px-Garanti_BBVA_logo.svg.png',
     'akbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Akbank_logo.svg/200px-Akbank_logo.svg.png',
     'isbankasi': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/200px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png',
@@ -401,6 +412,12 @@
         }
       }
       
+      // Add JSON-LD structured data
+      addStructuredData(provider);
+      
+      // Track page view with GA4
+      trackProviderView(provider);
+      
       // Show content, hide loading
       document.getElementById('loading-state').style.display = 'none';
       document.getElementById('provider-content').style.display = 'block';
@@ -409,6 +426,52 @@
       console.error('Error:', error);
       document.getElementById('loading-state').style.display = 'none';
       document.getElementById('error-state').style.display = 'block';
+    }
+  }
+
+  // Add JSON-LD structured data for SEO
+  function addStructuredData(provider) {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": provider.name,
+      "applicationCategory": "FinanceApplication",
+      "description": provider.modalSummary || provider.cardDescription,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": provider.rating,
+        "reviewCount": provider.reviews,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": provider.pricing?.feeModel?.percentage || "0",
+        "priceCurrency": "TRY",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    };
+    
+    if (provider.resources && provider.resources.length > 0) {
+      schema.url = provider.resources[0].url;
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+
+  // Track provider page view with GA4
+  function trackProviderView(provider) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'view_provider', {
+        provider_id: provider.id,
+        provider_name: provider.name,
+        provider_type: provider.type,
+        provider_rating: provider.rating
+      });
     }
   }
 
