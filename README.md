@@ -45,3 +45,4 @@ Komut, EVDS servisinden son 10 günün USD, EUR, GBP, CHF, CNY ve altın alış 
 - Tasarımı ve kullanıcı deneyimini iyileştirmek için Figma üzerinde bir arayüz prototipi oluşturulabilir ve buradaki HTML/CSS kodu güncellenebilir.
 - İçerik yönetimi için Netlify CMS, Sanity veya Strapi gibi bir headless CMS entegre edilebilir; bu sayede haberler ve firma bilgileri yönetim panelinden güncellenebilir.
 - Site dinamik hâle getirilmek istenirse bir frontend framework’ü (örneğin Next.js veya SvelteKit) kullanılabilir ve serverless fonksiyonlar ile veriler sunulabilir.
+- Sağlayıcı komisyon ve fiyat verilerini otomatik senkronize etmek için [docs/provider-data-strategy.md](docs/provider-data-strategy.md) belgesindeki veri hattı planı uygulanabilir.

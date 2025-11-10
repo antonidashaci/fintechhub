@@ -1522,15 +1522,23 @@ function updateAuthState() {
   const user = getActiveUser();
   const authButtons = document.getElementById("auth-buttons");
   const authLoggedIn = document.getElementById("auth-logged-in");
-  const accountName = document.getElementById("auth-user-name");
+  const accountShortcut = document.getElementById("account-shortcut");
   if (authButtons) {
     authButtons.toggleAttribute("hidden", Boolean(user));
   }
   if (authLoggedIn) {
     authLoggedIn.toggleAttribute("hidden", !user);
   }
-  if (accountName) {
-    accountName.textContent = user ? user.name || user.email : "Üye";
+  if (accountShortcut) {
+    const fallbackLabel = "Hesap panelini aç";
+    if (user && (user.name || user.email)) {
+      const displayName = user.name || user.email;
+      accountShortcut.setAttribute("aria-label", `${displayName} hesabını aç`);
+      accountShortcut.setAttribute("title", displayName);
+    } else {
+      accountShortcut.setAttribute("aria-label", fallbackLabel);
+      accountShortcut.removeAttribute("title");
+    }
   }
   populateAccountModal(user);
 }

@@ -18,24 +18,14 @@
                 <span class="announcement-text"><i class="fas fa-bolt"></i> 2025 Q1 Fintech Ekosistem Raporu yayınlandı.</span>
                 <a href="#analytics" class="announcement-link">Raporu inceleyin</a>
             </div>
-            <div class="header-content">
-                <div class="logo">
+            <div class="header-top">
+                <a class="logo" href="/">
                     <i class="fas fa-coins" aria-hidden="true"></i>
                     <div class="logo-text">
                         <h1>Fintech Hub Türkiye</h1>
                         <p class="logo-tagline">Ödeme inovasyonu ve regülasyon uyumu için merkezi platform</p>
                     </div>
-                </div>
-                <nav class="main-nav">
-                <ul class="nav-list">
-                        <li><a href="/"><i class="fas fa-house"></i> Ana Sayfa</a></li>
-                        <li><a href="/bankalar/"><i class="fas fa-building-columns"></i> Bankalar</a></li>
-                        <li><a href="#providers"><i class="fas fa-credit-card"></i> Sağlayıcılar</a></li>
-                        <li><a href="#analytics"><i class="fas fa-chart-line"></i> Sektör Analizi</a></li>
-                        <li><a href="/hakkimizda/"><i class="fas fa-people-group"></i> Hakkımızda</a></li>
-                        <li><a href="/iletisim/"><i class="fas fa-headset"></i> İletişim</a></li>
-                </ul>
-            </nav>
+                </a>
                 <div class="header-actions">
                     <div class="auth-buttons" id="auth-buttons">
                         <button class="btn-secondary" type="button" data-modal-target="#login-modal">
@@ -46,16 +36,22 @@
                         </button>
                     </div>
                     <div class="auth-logged-in" id="auth-logged-in" hidden>
-                        <button class="header-account-chip" type="button" data-modal-target="#account-modal">
-                            <span class="chip-icon"><i class="fas fa-user-circle"></i></span>
-                            <span class="chip-text">
-                                <span class="chip-label">Hoş geldiniz</span>
-                                <span class="chip-name" id="auth-user-name">Üye</span>
-                            </span>
+                        <button class="account-icon-button" id="account-shortcut" type="button" data-modal-target="#account-modal" aria-label="Hesap panelini aç">
+                            <i class="fas fa-user-circle"></i>
                         </button>
                     </div>
                 </div>
             </div>
+            <nav class="main-nav" aria-label="Ana menü">
+                <ul class="nav-list">
+                    <li><a href="/"><i class="fas fa-house"></i> Ana Sayfa</a></li>
+                    <li><a href="/bankalar/"><i class="fas fa-building-columns"></i> Bankalar</a></li>
+                    <li><a href="#providers"><i class="fas fa-credit-card"></i> Sağlayıcılar</a></li>
+                    <li><a href="#analytics"><i class="fas fa-chart-line"></i> Sektör Analizi</a></li>
+                    <li><a href="/hakkimizda/"><i class="fas fa-people-group"></i> Hakkımızda</a></li>
+                    <li><a href="/iletisim/"><i class="fas fa-headset"></i> İletişim</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
