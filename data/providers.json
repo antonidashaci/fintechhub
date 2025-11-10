@@ -1,0 +1,47 @@
+[
+  {
+    "id": "iyzico",
+    "name": "iyzico",
+    "logo": "iyz",
+    "categories": ["payment-gateway"],
+    "type": "Ödeme Geçidi",
+    "rating": 4.8,
+    "reviews": 326,
+    "featured": true,
+    "isNew": false,
+    "badges": ["En Popüler"],
+    "cardDescription": "210+ banka entegrasyonu, PCI DSS 4.0 uyumu ve gelişmiş fraud yönetimiyle en kapsamlı ödeme geçidi.",
+    "modalSummary": "iyzico, yüksek işlem hacimli perakende ve pazaryeri platformları için optimize edilmiş ödeme geçidi sunar. PCI DSS 4.0 uyumu, PSD2 hazır mimarisi ve güçlü fraud yönetim panelleriyle ölçeklenebilirlik sağlar.",
+    "features": ["PCI DSS Level 1", "3D Secure 2.2", "REST & GraphQL API", "Webhook Retry"],
+    "differentiators": ["210+ banka/kart entegrasyonu", "T+1 ödeme döngüsü", "Gelişmiş fraud ekranı", "Dinamik kur oranı yönetimi"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.79 + ₺0.19",
+      "feeModel": { "percentage": 2.79, "fixed": 0.19, "subscription": 0, "currency": "TRY", "installment": 0.45 },
+      "tiers": [
+        { "label": "₺0 - ₺250K", "value": "%2.79 + ₺0.19" },
+        { "label": "₺250K - ₺750K", "value": "%2.59 + ₺0.15" },
+        { "label": "₺750K+", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Taksit başına +%0.45 maliyet uygulanır."
+    },
+    "campaign": { "label": "Kampanya", "text": "Yeni POS entegrasyonunda %25 indirim", "expires": "31 Mart 2025" },
+    "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.95", "successRate": "%99.2" },
+    "keywords": ["iyzico", "ödeme geçidi", "sanal pos", "fraud", "checkout"],
+    "addedAt": "2024-11-15",
+    "resources": [
+      { "label": "Dokümantasyon", "url": "https://docs.iyzico.com", "icon": "fa-book" },
+      { "label": "Sandbox", "url": "https://sandbox.iyzico.com", "icon": "fa-flask" },
+      { "label": "Durum Sayfası", "url": "https://status.iyzico.com", "icon": "fa-signal" }
+    ],
+    "contact": { "email": "sales@iyzico.com", "phone": "+90 (212) 900 00 00" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS 4.0", "KVKK", "PSD2"],
+      "integrations": ["Shopify", "Magento", "WooCommerce", "SAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  }
+]
+

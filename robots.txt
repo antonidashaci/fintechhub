@@ -1,0 +1,17 @@
+# Fintech Hub Türkiye - Robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /server/
+
+# Sitemap
+Sitemap: https://fintechhubturkiye.com/sitemap.xml
+
+# Crawl-delay for specific bots
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: bingbot
+Crawl-delay: 1
+

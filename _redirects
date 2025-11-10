@@ -1,0 +1,6 @@
+# API redirects (Note: Full backend requires external hosting)
+# For now, API calls will need external backend
+
+# SPA Fallback
+/*    /index.html   200
+

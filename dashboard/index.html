@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Paneli - Fintech Hub Türkiye</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <a class="logo" href="/">
+                    <i class="fas fa-coins" aria-hidden="true"></i>
+                    <div class="logo-text">
+                        <h1>Fintech Hub Türkiye</h1>
+                        <p class="logo-tagline">Kontrol Paneli</p>
+                    </div>
+                </a>
+                <div class="header-actions">
+                    <div class="auth-logged-in">
+                        <button class="account-icon-button" id="account-shortcut" type="button" aria-label="Hesap menüsü">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Ana menü">
+                <ul class="nav-list">
+                    <li><a href="/dashboard/"><i class="fas fa-house"></i> Kontrol Paneli</a></li>
+                    <li><a href="/dashboard/#favorites"><i class="fas fa-star"></i> Favorilerim</a></li>
+                    <li><a href="/dashboard/#history"><i class="fas fa-clock-rotate-left"></i> Geçmiş</a></li>
+                    <li><a href="/"><i class="fas fa-arrow-left"></i> Ana Sayfaya Dön</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="subpage-hero">
+        <div class="container">
+            <div class="subpage-hero-content">
+                <div class="subpage-hero-text">
+                    <h2>Hoş Geldiniz, <span id="user-name-display">Kullanıcı</span></h2>
+                    <p>Kayıtlı karşılaştırmalarınız, favori sağlayıcılarınız ve kişiselleştirilmiş önerileriniz burada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subpage-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Hızlı İstatistikler</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-star"></i></div>
+                    <div class="metric-content">
+                        <h4 id="stats-favorites">0</h4>
+                        <p>Favori Sağlayıcı</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="metric-content">
+                        <h4 id="stats-comparisons">0</h4>
+                        <p>Karşılaştırma</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-magnifying-glass"></i></div>
+                    <div class="metric-content">
+                        <h4 id="stats-searches">-</h4>
+                        <p>Son Arama</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="favorites-section">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2><i class="fas fa-star"></i> Favori Sağlayıcılarınız</h2>
+                    <p>Takip ettiğiniz ödeme çözümü sağlayıcıları</p>
+                </div>
+
+                <div id="favorites-grid" class="providers-grid"></div>
+                <div id="favorites-empty" style="display: none; text-align: center; padding: 3rem; background: white; border-radius: 1rem; border: 1px dashed var(--gray-300);">
+                    <div style="font-size: 3rem; color: var(--gray-400); margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Henüz favori eklemediniz</h3>
+                    <p style="color: var(--gray-600);">Sağlayıcı kartlarında bulunan yıldız ikonuna tıklayarak favorilere ekleyebilirsiniz.</p>
+                    <a href="/#providers" class="btn-primary" style="margin-top: 1.5rem;">
+                        <i class="fas fa-search"></i> Sağlayıcıları Keşfet
+                    </a>
+                </div>
+            </div>
+
+            <div id="history-section" style="margin-top: 4rem;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2><i class="fas fa-clock-rotate-left"></i> Karşılaştırma Geçmişi</h2>
+                    <p>Daha önce yaptığınız karşılaştırmalar</p>
+                </div>
+
+                <div id="history-list" style="display: grid; gap: 1.5rem;"></div>
+                <div id="history-empty" style="display: none; text-align: center; padding: 3rem; background: white; border-radius: 1rem; border: 1px dashed var(--gray-300);">
+                    <div style="font-size: 3rem; color: var(--gray-400); margin-bottom: 1rem;">
+                        <i class="fas fa-clock-rotate-left"></i>
+                    </div>
+                    <h3>Henüz karşılaştırma yapmadınız</h3>
+                    <p style="color: var(--gray-600);">Karşılaştırma aracını kullanarak sağlayıcıları yan yana görebilirsiniz.</p>
+                    <button class="btn-primary" style="margin-top: 1.5rem;" onclick="window.location.href='/#providers'">
+                        <i class="fas fa-balance-scale"></i> Karşılaştırma Yap
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Fintech Hub Türkiye – Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
+                        <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+                        <a href="/cerez-politikasi/">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../app.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+
