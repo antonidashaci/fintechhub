@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <rect width="200" height="50" fill="#0054A6"/>
-  <text x="100" y="30" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">Garanti BBVA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#0054A6"/>
+  <text x="100" y="35" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Garanti</text>
+  <text x="100" y="58" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">BBVA</text>
 </svg>

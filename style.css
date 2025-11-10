@@ -791,7 +791,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 8px;
+    padding: 4px;
 }
 
 /* Specific provider logo backgrounds */
