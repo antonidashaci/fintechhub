@@ -1916,6 +1916,15 @@ form.is-loading {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .site-header {
+        position: static;
+        box-shadow: none;
+    }
+
+    .market-ticker {
+        position: static;
+    }
+
     .announcement-bar {
         flex-direction: column;
         align-items: flex-start;

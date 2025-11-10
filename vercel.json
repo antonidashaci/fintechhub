@@ -1,0 +1,25 @@
+{
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "app.js", "use": "@vercel/static" },
+    { "src": "style.css", "use": "@vercel/static" },
+    { "src": "data/**/*", "use": "@vercel/static" },
+    { "src": "assets/**/*", "use": "@vercel/static" },
+    { "src": "blog/**/*", "use": "@vercel/static" },
+    { "src": "bankalar/**/*", "use": "@vercel/static" },
+    { "src": "dashboard/**/*", "use": "@vercel/static" },
+    { "src": "gizlilik-politikasi/**/*", "use": "@vercel/static" },
+    { "src": "kullanim-sartlari/**/*", "use": "@vercel/static" },
+    { "src": "cerez-politikasi/**/*", "use": "@vercel/static" },
+    { "src": "hakkimizda/**/*", "use": "@vercel/static" },
+    { "src": "iletisim/**/*", "use": "@vercel/static" },
+    { "src": "provider/**/*", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" },
+    { "src": "_redirects", "use": "@vercel/static" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+

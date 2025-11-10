@@ -720,7 +720,7 @@ const AUTH_STORAGE_KEYS = {
   PERSIST: "fintechhub_auth_persist_v1"
 };
 
-const MARKET_DATA_URL = "/.netlify/functions/fetch-rates";
+const MARKET_DATA_URL = "/api/fetch-rates";
 const MARKET_DATA_FALLBACK = "/data/market-rates.json";
 const DEFAULT_MARKET_DATA = {
   lastUpdated: "10 Kasım 2025",
