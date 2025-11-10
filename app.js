@@ -720,16 +720,20 @@ const AUTH_STORAGE_KEYS = {
   PERSIST: "fintechhub_auth_persist_v1"
 };
 
-const MARKET_RATES = [
-  { symbol: "USD/TRY", value: "30,52", change: "+0,37%", direction: "up", icon: "fa-dollar-sign" },
-  { symbol: "EUR/TRY", value: "32,87", change: "-0,14%", direction: "down", icon: "fa-euro-sign" },
-  { symbol: "GBP/TRY", value: "38,24", change: "+0,22%", direction: "up", icon: "fa-sterling-sign" },
-  { symbol: "CHF/TRY", value: "33,18", change: "+0,05%", direction: "up", icon: "fa-money-bill-wave" },
-  { symbol: "CNY/TRY", value: "4,25", change: "-0,31%", direction: "down", icon: "fa-yen-sign" },
-  { symbol: "GAU/TRY", value: "2.115", change: "+0,48%", direction: "up", icon: "fa-coins" }
-];
+const MARKET_DATA_URL = "/data/market-rates.json";
+const DEFAULT_MARKET_DATA = {
+  lastUpdated: "10 Kasım 2025",
+  rates: [
+    { symbol: "USD/TRY", value: "34,52", change: "+0,38%", direction: "up", icon: "fa-dollar-sign" },
+    { symbol: "EUR/TRY", value: "36,74", change: "-0,12%", direction: "down", icon: "fa-euro-sign" },
+    { symbol: "GBP/TRY", value: "42,05", change: "+0,21%", direction: "up", icon: "fa-sterling-sign" },
+    { symbol: "CHF/TRY", value: "37,42", change: "+0,07%", direction: "up", icon: "fa-money-bill-wave" },
+    { symbol: "CNY/TRY", value: "4,72", change: "-0,29%", direction: "down", icon: "fa-yen-sign" },
+    { symbol: "GAU/TRY", value: "2.412,00", change: "+0,44%", direction: "up", icon: "fa-coins" }
+  ]
+};
 
-const MARKET_LAST_UPDATED = "14 Şubat 2025 10:00";
+let marketDataPromise = null;
 
 let activeCategory = "all";
 let searchQuery = "";
@@ -1802,16 +1806,21 @@ function updateComparisonTable(selectedProviders) {
     .join("");
 }
 
-function initMarketTicker() {
+async function initMarketTicker() {
   const tickers = document.querySelectorAll("[data-market-ticker]");
   if (!tickers.length) {
     return;
   }
 
+  const marketData = await loadMarketData();
+  const rates = marketData.rates || [];
+  const items = rates.length ? rates : DEFAULT_MARKET_DATA.rates;
+  const updatedLabel = marketData.lastUpdated || DEFAULT_MARKET_DATA.lastUpdated;
+
   tickers.forEach((ticker) => {
     const updated = ticker.querySelector("[data-market-updated]");
-    if (updated && MARKET_LAST_UPDATED) {
-      updated.textContent = MARKET_LAST_UPDATED;
+    if (updated && updatedLabel) {
+      updated.textContent = updatedLabel;
     }
 
     const track = ticker.querySelector(".market-ticker-track");
@@ -1819,24 +1828,44 @@ function initMarketTicker() {
       return;
     }
 
-    const itemsMarkup = MARKET_RATES.map((rate) => {
-      const trendClass = rate.direction === "down" ? "negative" : "positive";
-      const iconMarkup = rate.icon ? `<i class="fas ${rate.icon}" aria-hidden="true"></i>` : "";
-      const symbolMarkup = iconMarkup ? `${iconMarkup} ${rate.symbol}` : rate.symbol;
-      return `
-        <div class="ticker-item ${trendClass}" role="listitem">
-          <span class="ticker-symbol">${symbolMarkup}</span>
-          <span class="ticker-value">${rate.value}</span>
-          <span class="ticker-change ${trendClass}">${rate.change}</span>
-        </div>
-      `;
-    }).join("");
+    const itemsMarkup = items
+      .map((rate) => {
+        const trendClass = rate.direction === "down" ? "negative" : "positive";
+        const iconMarkup = rate.icon ? `<i class="fas ${rate.icon}" aria-hidden="true"></i>` : "";
+        const symbolMarkup = iconMarkup ? `${iconMarkup} ${rate.symbol}` : rate.symbol;
+        return `
+          <div class="ticker-item ${trendClass}" role="listitem">
+            <span class="ticker-symbol">${symbolMarkup}</span>
+            <span class="ticker-value">${rate.value}</span>
+            <span class="ticker-change ${trendClass}">${rate.change}</span>
+          </div>
+        `;
+      })
+      .join("");
 
     track.innerHTML = `${itemsMarkup}${itemsMarkup}`;
-    const duration = Math.max(20, MARKET_RATES.length * 4);
+    const duration = Math.max(20, items.length * 4);
     track.style.setProperty("--ticker-duration", `${duration}s`);
     ticker.classList.add("is-active");
   });
+}
+
+function loadMarketData() {
+  if (!marketDataPromise) {
+    marketDataPromise = fetch(MARKET_DATA_URL, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Piyasa verileri alınamadı (HTTP ${response.status})`);
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        console.warn("Market ticker verileri yüklenemedi, varsayılan değerler kullanılacak.", error);
+        return { ...DEFAULT_MARKET_DATA };
+      });
+  }
+
+  return marketDataPromise;
 }
 
 function initScrollAnimations() {

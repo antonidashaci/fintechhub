@@ -1,0 +1,8 @@
+{
+  "name": "fintechhub",
+  "version": "1.0.0",
+  "description": "FintechHub static site with data fetch scripts",
+  "scripts": {
+    "update:market": "node scripts/fetch_tcmb_rates.js"
+  }
+}

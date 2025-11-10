@@ -21,6 +21,17 @@ python3 -m http.server 8000
 
 Ardından tarayıcınızda `http://localhost:8000` adresine giderek siteyi görebilirsiniz.
 
+## TCMB EVDS kur verilerini güncellemek
+
+Projede yer alan TCMB referans kuru bandı `data/market-rates.json` dosyasından beslenir. Bu dosyayı güncellemek için TCMB EVDS API anahtarınızı `.env` dosyasına kaydedip aşağıdaki komutu çalıştırabilirsiniz:
+
+```bash
+cp .env.example .env # anahtarınızı bu dosyaya girin
+npm run update:market
+```
+
+Komut, EVDS servisinden son 10 günün USD, EUR, GBP, CHF, CNY ve altın alış kurlarını alır, yüzde değişimleri hesaplar ve ticker bileşeni tarafından kullanılan JSON çıktısını üretir.
+
 ## Netlify üzerinde yayınlamak
 
 1. Bir [Netlify](https://www.netlify.com/) hesabı oluşturun.
