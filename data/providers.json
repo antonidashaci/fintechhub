@@ -379,6 +379,214 @@
       "minCommitment": "Yok"
     },
     "supportsCommissionCalculator": false
+  },
+  {
+    "id": "garanti-bbva",
+    "name": "Garanti BBVA",
+    "logo": "GAR",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka Ödeme Çözümleri",
+    "rating": 4.7,
+    "reviews": 284,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "cardDescription": "Bankacılık destekli sanal POS, tahsilat yönetimi ve API altyapısı ile yüksek hacimli işletmeler için entegre ödeme çözümleri.",
+    "modalSummary": "Garanti BBVA Ödeme Sistemleri, kurumsal ve KOBİ segmentlerine yönelik POS, tahsilat ve açık bankacılık çözümleri sunar. Kampanya yönetimi, taksit desteği ve gelişmiş raporlama ile öne çıkar.",
+    "features": ["Sanal POS", "Taksit Kampanyaları", "Dinamik POS", "Kur Risk Yönetimi"],
+    "differentiators": ["Açık bankacılık API'leri", "Entegre treasury ürünleri", "24/7 destek", "Çoklu döviz desteği"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.39 + ₺0.19",
+      "feeModel": { "percentage": 2.39, "fixed": 0.19, "subscription": 0, "currency": "TRY", "installment": 0.35 },
+      "tiers": [
+        { "label": "₺0 - ₺500K", "value": "%2.39 + ₺0.19" },
+        { "label": "₺500K - ₺2M", "value": "%2.19 + ₺0.15" },
+        { "label": "₺2M+", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Taksit başına ek komisyon uygulanır."
+    },
+    "campaign": { "label": "Kampanya", "text": "Yeni açık bankacılık API entegrasyonunda 6 ay ücretsiz", "expires": "30 Haziran 2025" },
+    "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.92", "successRate": "%99.4" },
+    "keywords": ["garanti", "bbva", "sanal pos", "banka", "pos"],
+    "addedAt": "2024-10-20",
+    "resources": [
+      { "label": "Kurumsal POS", "url": "https://www.garantibbva.com.tr/kurumsal/odeme-sistemleri", "icon": "fa-credit-card" },
+      { "label": "API Dokümantasyonu", "url": "https://developer.garantibbva.com.tr", "icon": "fa-book" }
+    ],
+    "contact": { "email": "kurumsal@garantibbva.com.tr", "phone": "+90 (444) 0 333" },
+    "comparison": {
+      "goLive": "2-3 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP", "SDK"],
+      "minCommitment": "₺100K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "akbank",
+    "name": "Akbank Axess POS & API",
+    "logo": "AKB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka Ödeme Geçidi",
+    "rating": 4.6,
+    "reviews": 312,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Axess Üye İşyeri"],
+    "cardDescription": "E-ticaret ve fiziksel POS kanallarını tek panelde yöneten, kampanya yönetimi ve taksitli satış desteği sunan banka çözümü.",
+    "modalSummary": "Akbank, Axess kampanya yönetimi ve taksitli satış desteğiyle e-ticaret sitelerine yüksek dönüşüm sağlar. Gelişmiş raporlama ve iade otomasyonuyla ön plana çıkar.",
+    "features": ["Axess POS", "Omnichannel POS", "Kampanya Motoru", "Gelişmiş Raporlama"],
+    "differentiators": ["Kampanya yönetimi", "Yüksek limit", "Kullanıcı dostu arayüz", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.49 + ₺0.25",
+      "feeModel": { "percentage": 2.49, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "QR Kod Ödemesi", "value": "%1.99" },
+        { "label": "Standart İşlem", "value": "%2.49 + ₺0.25" },
+        { "label": "Yüksek Hacim", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Axess kampanya entegrasyonu ek maliyet gerektirmez."
+    },
+    "campaign": { "label": "Kampanya", "text": "İlk 1000 işlemde komisyon yok", "expires": "28 Şubat 2025" },
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.8", "successRate": "%98.7" },
+    "keywords": ["akbank", "axess", "pos", "banka"],
+    "addedAt": "2024-11-01",
+    "resources": [
+      { "label": "İşyeri Başvurusu", "url": "https://www.akbank.com/sanal-pos", "icon": "fa-store" }
+    ],
+    "contact": { "email": "kurumsal@akbank.com", "phone": "+90 (444) 2 525" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "Mobil SDK", "Web SDK"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "isbankasi",
+    "name": "Türkiye İş Bankası POS",
+    "logo": "İŞB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 267,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Yerli Banka"],
+    "cardDescription": "Maximum Kart destekli sanal POS, e-ticaret entegrasyonları ve güvenilir ödeme altyapısı.",
+    "modalSummary": "Türkiye İş Bankası, Maximum Kart altyapısı ve güçlü banka geçmişiyle işletmelere güvenilir ödeme çözümleri sunar. E-ticaret ve fiziksel kanal entegrasyonu kolaydır.",
+    "features": ["Maximum POS", "3D Secure", "E-ticaret Entegrasyonu", "İade Yönetimi"],
+    "differentiators": ["Güvenilir banka", "Geniş şube ağı", "Kolay entegrasyon", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.59 + ₺0.25",
+      "feeModel": { "percentage": 2.59, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.59 + ₺0.25" },
+        { "label": "Kurumsal", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Maximum kartlarda özel kampanya komisyonları uygulanır."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24", "uptime": "%99.7", "successRate": "%98.9" },
+    "keywords": ["isbank", "isbankasi", "maximum", "pos"],
+    "addedAt": "2024-09-15",
+    "resources": [
+      { "label": "Sanal POS Başvurusu", "url": "https://www.isbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "contact": { "email": "sanalposs@isbank.com.tr", "phone": "+90 (444) 0 724" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "yapi-kredi",
+    "name": "Yapı Kredi Ödeme Kuruluşu",
+    "logo": "YKR",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 198,
+    "featured": false,
+    "isNew": false,
+    "badges": ["World Kartı"],
+    "cardDescription": "Worldcard uyumlu taksit kampanyaları, tokenizasyon ve çoklu para birimi desteğiyle işletme dostu ödeme sistemi.",
+    "modalSummary": "Yapı Kredi Ödeme Kuruluşu, World kartı taksit kampanyaları ve token ödeme ile kullanıcı deneyimini artırır. Güvenli altyapı ve hızlı entegrasyon sunar.",
+    "features": ["World POS", "Tokenizasyon", "Taksit Kampanyası", "Çoklu Para Birimi"],
+    "differentiators": ["World kampanyaları", "Hızlı entegrasyon", "Modern arayüz", "API first yaklaşım"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.45 + ₺0.18",
+      "feeModel": { "percentage": 2.45, "fixed": 0.18, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart İşlem", "value": "%2.45 + ₺0.18" },
+        { "label": "Yüksek Hacim", "value": "Özel fiyat" }
+      ],
+      "notes": "İlk 3 ay ücretsiz deneme. Transfer ve para çekme işlemleri ücretsiz."
+    },
+    "campaign": { "label": "Başlangıç", "text": "Yeni üye işyerlerine ilk 3 ay %20 komisyon indirimi", "expires": "31 Mart 2025" },
+    "metrics": { "settlement": "T+1", "support": "7/24 Chat Destek", "uptime": "%99.6", "successRate": "%99.0" },
+    "keywords": ["yapı kredi", "world", "pos"],
+    "addedAt": "2024-10-10",
+    "resources": [
+      { "label": "POS Başvurusu", "url": "https://www.yapikredi.com.tr/sanal-pos", "icon": "fa-file-alt" }
+    ],
+    "contact": { "email": "isyeri@yapikredi.com.tr", "phone": "+90 (444) 0 444" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "Webhooks"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "qnb-finansbank",
+    "name": "QNB Finansbank POS",
+    "logo": "QNB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 176,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "cardDescription": "Güvenilir bankacılık altyapısı ve kapsamlı ödeme çözümleriyle kurumsal işletmeler için ideal POS sistemi.",
+    "modalSummary": "QNB Finansbank, kurumsal segment odaklı sanal POS çözümleri ve finansbank geçmişiyle işletmelere güvenli ödeme altyapısı sunar.",
+    "features": ["Sanal POS", "3D Secure 2.0", "Çoklu Para Birimi", "API Entegrasyonu"],
+    "differentiators": ["Kurumsal destek", "Güvenilir altyapı", "Esnek fiyatlandırma", "Hızlı settlement"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.55 + ₺0.20",
+      "feeModel": { "percentage": 2.55, "fixed": 0.20, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.55 + ₺0.20" },
+        { "label": "Kurumsal", "value": "Özel fiyat" }
+      ],
+      "notes": "Kurumsal paketlerde özel fiyatlandırma."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.5", "successRate": "%98.8" },
+    "keywords": ["qnb", "finansbank", "pos"],
+    "addedAt": "2024-09-20",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.qnbfinansbank.com/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "contact": { "email": "sanalposs@qnbfinans.com", "phone": "+90 (444) 0 333" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "₺50K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
   }
 ]
 
