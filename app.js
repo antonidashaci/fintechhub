@@ -720,6 +720,17 @@ const AUTH_STORAGE_KEYS = {
   PERSIST: "fintechhub_auth_persist_v1"
 };
 
+const MARKET_RATES = [
+  { symbol: "USD/TRY", value: "30,52", change: "+0,37%", direction: "up", icon: "fa-dollar-sign" },
+  { symbol: "EUR/TRY", value: "32,87", change: "-0,14%", direction: "down", icon: "fa-euro-sign" },
+  { symbol: "GBP/TRY", value: "38,24", change: "+0,22%", direction: "up", icon: "fa-sterling-sign" },
+  { symbol: "CHF/TRY", value: "33,18", change: "+0,05%", direction: "up", icon: "fa-money-bill-wave" },
+  { symbol: "CNY/TRY", value: "4,25", change: "-0,31%", direction: "down", icon: "fa-yen-sign" },
+  { symbol: "GAU/TRY", value: "2.115", change: "+0,48%", direction: "up", icon: "fa-coins" }
+];
+
+const MARKET_LAST_UPDATED = "14 Şubat 2025 10:00";
+
 let activeCategory = "all";
 let searchQuery = "";
 let sortOption = "featured";
@@ -742,6 +753,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initForms();
   initBusinessTools();
+  initMarketTicker();
   initAuth();
 });
 
@@ -1306,18 +1318,6 @@ function initForms() {
     });
   }
 
-  const bankAdvisoryForm = document.getElementById("bank-advisory-form");
-  if (bankAdvisoryForm) {
-    bankAdvisoryForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      submitForm(bankAdvisoryForm, {
-        endpoint: DEMO_ENDPOINT,
-        successMessage: "Danışmanlık talebiniz alındı. 48 saat içinde banka raporunuzu paylaşacağız.",
-        errorMessage: "Talep gönderilirken bir sorun oluştu. Lütfen tekrar deneyin."
-      });
-    });
-  }
-
   const loginForm = document.getElementById("login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", (event) => {
@@ -1658,7 +1658,6 @@ function initBusinessTools() {
   populateCommissionSelect();
   initCommissionCalculator();
   populateComparisonSelector();
-  populateIntegrationResources();
 }
 
 function populateCommissionSelect() {
@@ -1803,70 +1802,41 @@ function updateComparisonTable(selectedProviders) {
     .join("");
 }
 
-function populateIntegrationResources() {
-  const stepsContainer = document.getElementById("integration-steps");
-  const resourcesContainer = document.getElementById("integration-resources");
-  if (stepsContainer) {
-    const steps = [
-      {
-        title: "Sandbox Ortamını Kurun",
-        description: "Sağlayıcının developer portalından API anahtarlarını alın, test kullanıcıları ve kart bilgilerini tanımlayın."
-      },
-      {
-        title: "Webhook ve Bildirimleri Doğrulayın",
-        description: "Webhook URL'lerinizi kaydedin, imza doğrulaması ve hata yönetimi için tekrar deneme politikalarını test edin."
-      },
-      {
-        title: "Güvenlik Kontrolleri",
-        description: "KVKK ve PCI DSS gereksinimleri doğrultusunda loglama, maskeleme ve erişim kontrollerini gözden geçirin."
-      }
-    ];
-    stepsContainer.innerHTML = steps
-      .map(
-        (step, index) => `
-          <div class="integration-step">
-            <span class="step-index">${index + 1}</span>
-            <div>
-              <h4>${step.title}</h4>
-              <p>${step.description}</p>
-            </div>
-          </div>
-        `
-      )
-      .join("");
+function initMarketTicker() {
+  const tickers = document.querySelectorAll("[data-market-ticker]");
+  if (!tickers.length) {
+    return;
   }
 
-  if (resourcesContainer) {
-    const featuredResources = [
-      {
-        label: "API Entegrasyon Kontrol Listesi",
-        url: "https://fintechhubturkiye.com/resources/api-checklist.pdf",
-        icon: "fa-clipboard-check"
-      },
-      {
-        label: "PCI DSS 4.0 Uyumluluk Rehberi",
-        url: "https://fintechhubturkiye.com/resources/pci-dss-4-guide.pdf",
-        icon: "fa-shield-halved"
-      },
-      {
-        label: "Fintech Hukuki Sözleşme Şablonları",
-        url: "https://fintechhubturkiye.com/resources/legal-templates.zip",
-        icon: "fa-file-contract"
-      }
-    ];
-    resourcesContainer.innerHTML = featuredResources
-      .map(
-        (resource) => `
-          <li>
-            <a href="${resource.url}" target="_blank" rel="noopener">
-              <i class="fas ${resource.icon}"></i>
-              ${resource.label}
-            </a>
-          </li>
-        `
-      )
-      .join("");
-  }
+  tickers.forEach((ticker) => {
+    const updated = ticker.querySelector("[data-market-updated]");
+    if (updated && MARKET_LAST_UPDATED) {
+      updated.textContent = MARKET_LAST_UPDATED;
+    }
+
+    const track = ticker.querySelector(".market-ticker-track");
+    if (!track) {
+      return;
+    }
+
+    const itemsMarkup = MARKET_RATES.map((rate) => {
+      const trendClass = rate.direction === "down" ? "negative" : "positive";
+      const iconMarkup = rate.icon ? `<i class="fas ${rate.icon}" aria-hidden="true"></i>` : "";
+      const symbolMarkup = iconMarkup ? `${iconMarkup} ${rate.symbol}` : rate.symbol;
+      return `
+        <div class="ticker-item ${trendClass}" role="listitem">
+          <span class="ticker-symbol">${symbolMarkup}</span>
+          <span class="ticker-value">${rate.value}</span>
+          <span class="ticker-change ${trendClass}">${rate.change}</span>
+        </div>
+      `;
+    }).join("");
+
+    track.innerHTML = `${itemsMarkup}${itemsMarkup}`;
+    const duration = Math.max(20, MARKET_RATES.length * 4);
+    track.style.setProperty("--ticker-duration", `${duration}s`);
+    ticker.classList.add("is-active");
+  });
 }
 
 function initScrollAnimations() {

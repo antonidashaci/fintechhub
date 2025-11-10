@@ -59,6 +59,19 @@
         </div>
     </header>
 
+    <section class="market-ticker" data-market-ticker aria-label="TCMB güncel döviz kurları">
+        <div class="container">
+            <div class="ticker-label">
+                <i class="fas fa-money-bill-trend-up" aria-hidden="true"></i>
+                <span class="ticker-title">TCMB Referans Kurları</span>
+                <span class="ticker-updated" data-market-updated>14 Şubat 2025 · 10:00</span>
+            </div>
+            <div class="ticker-track-wrapper" aria-live="polite">
+                <div class="market-ticker-track" role="list"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="hero animate-on-scroll">
         <div class="container">
             <div class="hero-content">
@@ -183,15 +196,6 @@
                     <h3>Çözüm Karşılaştırma</h3>
                     <p>3 sağlayıcıya kadar seçerek özellik ve fiyatlarını yan yana görün.</p>
                     <button class="btn-primary" type="button" data-modal-target="#comparison-modal">Karşılaştır</button>
-                </article>
-
-                <article class="tool-card" data-modal-target="#integration-modal">
-                    <div class="tool-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Hızlı Entegrasyon</h3>
-                    <p>Sandbox ortamı, test kartları ve entegrasyon kontrol listelerine erişin.</p>
-                    <button class="btn-primary" type="button" data-modal-target="#integration-modal">Başla</button>
                 </article>
             </div>
         </div>
@@ -712,9 +716,6 @@
                     <button class="btn-secondary account-action-btn" type="button" data-account-open-modal="#commission-modal">
                         <i class="fas fa-calculator"></i> Komisyon Hesapla
                     </button>
-                    <button class="btn-secondary account-action-btn" type="button" data-account-open-modal="#integration-modal">
-                        <i class="fas fa-rocket"></i> Entegrasyon Adımlarını Gör
-                    </button>
                 </div>
                 <div class="account-footer">
                     <button class="btn-outline" type="button" id="account-logout-btn">
@@ -907,31 +908,6 @@
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="integration-modal" aria-hidden="true">
-        <div class="modal-backdrop" data-modal-dismiss></div>
-        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="integration-modal-title" tabindex="-1">
-            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
-                <i class="fas fa-xmark"></i>
-            </button>
-            <header class="modal-header">
-                <div class="modal-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <div>
-                    <h3 id="integration-modal-title">Hızlı Entegrasyon Başlangıcı</h3>
-                    <p class="modal-subtitle">Teknik ekipler için hazır kontrol listeleri</p>
-                </div>
-            </header>
-            <div class="modal-body">
-                <div class="integration-steps" id="integration-steps"></div>
-                <section class="modal-resources">
-                    <h4>Önerilen Kaynaklar</h4>
-                    <ul id="integration-resources" class="modal-resource-list"></ul>
-                </section>
             </div>
         </div>
     </div>

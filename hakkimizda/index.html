@@ -57,6 +57,19 @@
         </div>
     </header>
 
+    <section class="market-ticker" data-market-ticker aria-label="TCMB güncel döviz kurları">
+        <div class="container">
+            <div class="ticker-label">
+                <i class="fas fa-money-bill-trend-up" aria-hidden="true"></i>
+                <span class="ticker-title">TCMB Referans Kurları</span>
+                <span class="ticker-updated" data-market-updated>14 Şubat 2025 · 10:00</span>
+            </div>
+            <div class="ticker-track-wrapper" aria-live="polite">
+                <div class="market-ticker-track" role="list"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="subpage-hero about-hero animate-on-scroll">
         <div class="container">
             <div class="subpage-hero-content">
@@ -147,7 +160,7 @@
             </div>
             <div class="team-grid">
                 <article class="team-card">
-                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" alt="Elif Demir" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Elif Demir" loading="lazy">
                     <h3>Elif Demir</h3>
                     <p>Kurucu Ortak &amp; CEO</p>
                     <p class="team-bio">BDDK ve TCMB projelerinde görev aldı, ödeme kuruluşlarının lisanslanma süreçlerini yönetti.</p>
@@ -157,7 +170,7 @@
                     </div>
                 </article>
                 <article class="team-card">
-                    <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=400&q=80" alt="Mert Yalçın" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" alt="Mert Yalçın" loading="lazy">
                     <h3>Mert Yalçın</h3>
                     <p>CTO</p>
                     <p class="team-bio">Ödeme geçidi ve açık bankacılık API projelerinde 12 yıllık deneyime sahip tam yığın mühendis.</p>
@@ -167,7 +180,7 @@
                     </div>
                 </article>
                 <article class="team-card">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=400&q=80" alt="Selin Aksoy" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&w=400&q=80" alt="Selin Aksoy" loading="lazy">
                     <h3>Selin Aksoy</h3>
                     <p>Regülasyon &amp; Uyum Direktörü</p>
                     <p class="team-bio">Uluslararası hukuk firmalarında görev aldı, PSD2 ve KVKK uyum projelerine liderlik etti.</p>
@@ -438,9 +451,6 @@
                     <button class="btn-secondary" type="button" data-account-open-modal="#comparison-modal">
                         <i class="fas fa-table-columns"></i> Çözüm karşılaştırma
                     </button>
-                    <button class="btn-secondary" type="button" data-account-open-modal="#integration-modal">
-                        <i class="fas fa-rocket"></i> Entegrasyon rehberi
-                    </button>
                     <button class="btn-outline" type="button" id="account-logout-btn">
                         <i class="fas fa-right-from-bracket"></i> Çıkış yap
                     </button>
@@ -624,31 +634,6 @@
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="integration-modal" aria-hidden="true">
-        <div class="modal-backdrop" data-modal-dismiss></div>
-        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="integration-modal-title" tabindex="-1">
-            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
-                <i class="fas fa-xmark"></i>
-            </button>
-            <header class="modal-header">
-                <div class="modal-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <div>
-                    <h3 id="integration-modal-title">Hızlı Entegrasyon Başlangıcı</h3>
-                    <p class="modal-subtitle">Teknik ekipler için hazır kontrol listeleri</p>
-                </div>
-            </header>
-            <div class="modal-body">
-                <div class="integration-steps" id="integration-steps"></div>
-                <section class="modal-resources">
-                    <h4>Önerilen Kaynaklar</h4>
-                    <ul id="integration-resources" class="modal-resource-list"></ul>
-                </section>
             </div>
         </div>
     </div>

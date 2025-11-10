@@ -186,6 +186,112 @@ p {
     gap: 1rem;
 }
 
+.market-ticker {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(18px);
+}
+
+.market-ticker .container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 2.75rem;
+}
+
+.ticker-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    white-space: nowrap;
+}
+
+.ticker-label i {
+    color: var(--primary-color);
+}
+
+.ticker-title {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.ticker-updated {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.ticker-track-wrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.market-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: max-content;
+    animation: ticker-scroll var(--ticker-duration, 28s) linear infinite;
+    animation-play-state: paused;
+}
+
+.market-ticker.is-active .market-ticker-track {
+    animation-play-state: running;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.ticker-symbol {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--gray-600);
+    letter-spacing: 0.06em;
+}
+
+.ticker-symbol i {
+    color: var(--primary-color);
+}
+
+.ticker-value {
+    font-variant-numeric: tabular-nums;
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+.ticker-change {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
+.ticker-change.positive {
+    color: var(--success-color);
+}
+
+.ticker-change.negative {
+    color: var(--danger-color);
+}
+
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -1261,21 +1367,6 @@ p {
     background: var(--gray-100);
     font-weight: 600;
     color: var(--gray-700);
-}
-
-.integration-steps {
-    display: grid;
-    gap: 1rem;
-}
-
-.integration-step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--gray-200);
-    background: var(--gray-100);
 }
 
 .step-index {
