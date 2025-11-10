@@ -17,12 +17,12 @@
     'payflex': 'https://logo.clearbit.com/payflex.com.tr',
     'tosla': 'https://tosla.com/assets/logo.svg',
     'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
-    // Banks
-    'garanti-bbva': 'https://logo.clearbit.com/garantibbva.com.tr',
-    'akbank': 'https://logo.clearbit.com/akbank.com',
-    'isbankasi': 'https://logo.clearbit.com/isbank.com.tr',
-    'yapi-kredi': 'https://logo.clearbit.com/yapikredi.com.tr',
-    'qnb-finansbank': 'https://logo.clearbit.com/qnbfinansbank.com'
+    // Banks - direct from official websites
+    'garanti-bbva': 'https://www.garantibbva.com.tr/Content/img/garanti-bbva-logo.svg',
+    'akbank': 'https://www.akbank.com/SiteAssets/img/akbank-logo-desktop.svg',
+    'isbankasi': 'https://www.isbank.com.tr/StaticContent/img/is-bankasi-logo.svg',
+    'yapi-kredi': 'https://www.yapikredi.com.tr/Resources/img/yapi-kredi-logo.svg',
+    'qnb-finansbank': 'https://www.qnbfinansbank.com/assets/images/qnb-logo.svg'
   };
 
   function getProviderLogoUrl(providerId) {
