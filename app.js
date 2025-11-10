@@ -1951,12 +1951,12 @@ const providerLogos = {
   // Neo Bank
   'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
 
-  // Banks
-  'garanti-bbva': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Garanti_BBVA_logo.svg/200px-Garanti_BBVA_logo.svg.png',
-  'akbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Akbank_logo.svg/200px-Akbank_logo.svg.png',
-  'isbankasi': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/200px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png',
-  'yapi-kredi': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Yap%C4%B1_Kredi_logo.svg/200px-Yap%C4%B1_Kredi_logo.svg.png',
-  'qnb-finansbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/QNB_Finansbank_logo.svg/200px-QNB_Finansbank_logo.svg.png'
+  // Banks - using Clearbit and direct CDN links for better reliability
+  'garanti-bbva': 'https://logo.clearbit.com/garantibbva.com.tr',
+  'akbank': 'https://logo.clearbit.com/akbank.com',
+  'isbankasi': 'https://logo.clearbit.com/isbank.com.tr',
+  'yapi-kredi': 'https://logo.clearbit.com/yapikredi.com.tr',
+  'qnb-finansbank': 'https://logo.clearbit.com/qnbfinansbank.com'
 };
 
 function getProviderLogoUrl(providerId) {

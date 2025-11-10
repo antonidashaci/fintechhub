@@ -16,7 +16,13 @@
     'moka': 'https://moka.com/assets/img/moka-logo.svg',
     'payflex': 'https://logo.clearbit.com/payflex.com.tr',
     'tosla': 'https://tosla.com/assets/logo.svg',
-    'kolektif': 'https://kolektifhouse.co/assets/logo.svg'
+    'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
+    // Banks
+    'garanti-bbva': 'https://logo.clearbit.com/garantibbva.com.tr',
+    'akbank': 'https://logo.clearbit.com/akbank.com',
+    'isbankasi': 'https://logo.clearbit.com/isbank.com.tr',
+    'yapi-kredi': 'https://logo.clearbit.com/yapikredi.com.tr',
+    'qnb-finansbank': 'https://logo.clearbit.com/qnbfinansbank.com'
   };
 
   function getProviderLogoUrl(providerId) {
