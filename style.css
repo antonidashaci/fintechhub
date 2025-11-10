@@ -763,20 +763,68 @@ p {
 .provider-logo {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: white;
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.5rem;
     position: relative;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
 }
 
 .logo-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: 0.875rem;
     letter-spacing: 0.5px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+/* Real logo images */
+.provider-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+/* Specific provider logo backgrounds */
+.provider-logo[data-provider="iyzico"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="papara-business"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="payflex"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="garanti-bbva"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="akbank"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="isbankasi"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="yapi-kredi"] {
+    background: #fff;
+}
+
+.provider-logo[data-provider="qnb-finansbank"] {
+    background: #fff;
 }
 
 .featured-provider {

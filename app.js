@@ -860,13 +860,19 @@ function createProviderCard(provider) {
     .map((feature) => `<span class="feature-tag">${feature}</span>`)
     .join("");
 
+  // Get logo URL or use fallback
+  const logoUrl = getProviderLogoUrl(provider.id);
+  const logoHtml = logoUrl 
+    ? `<img src="${logoUrl}" alt="${provider.name} logo" onerror="this.parentElement.innerHTML='<div class=\\'logo-img\\'>${provider.logo}</div>'">`
+    : `<div class="logo-img">${provider.logo}</div>`;
+
   return `
     <article class="provider-card ${provider.featured ? "featured-provider" : ""}" data-category="${provider.categories.join(
       " "
     )}">
       <header class="provider-header">
-        <div class="provider-logo">
-          <div class="logo-img">${provider.logo}</div>
+        <div class="provider-logo" data-provider="${provider.id}">
+          ${logoHtml}
         </div>
         <div class="provider-info">
           <h3>${provider.name}</h3>
@@ -1167,7 +1173,15 @@ function populateProviderModal(provider) {
   const demoButton = document.getElementById("provider-modal-demo-btn");
   const contactLink = document.getElementById("provider-modal-contact-link");
 
-  if (logo) logo.textContent = provider.logo;
+  if (logo) {
+    const logoUrl = getProviderLogoUrl(provider.id);
+    if (logoUrl) {
+      logo.innerHTML = `<img src="${logoUrl}" alt="${provider.name} logo" style="width: 100%; height: 100%; object-fit: contain; padding: 4px;" onerror="this.parentElement.textContent='${provider.logo}'">`;
+      logo.style.background = '#fff';
+    } else {
+      logo.textContent = provider.logo;
+    }
+  }
   if (title) title.textContent = provider.name;
   if (type) type.textContent = provider.type;
   if (summary) summary.textContent = provider.modalSummary || provider.cardDescription;
@@ -1912,6 +1926,45 @@ function formatCurrency(value) {
     currency: "TRY",
     maximumFractionDigits: 2
   }).format(value || 0);
+}
+
+// Logo URL mapping for providers and banks
+const providerLogos = {
+  // Payment Gateways
+  'iyzico': 'https://www.iyzico.com/assets/images/content/iyzico-one-line.svg',
+  'payflex': 'https://logo.clearbit.com/payflex.com.tr',
+  
+  // Digital Wallets
+  'papara-business': 'https://www.papara.com/images/papara-logo.svg',
+  
+  // Open Banking
+  'apiconnect': 'https://logo.clearbit.com/apiconnect.com',
+  
+  // Cloud Collection
+  'bulut-tahsilat': 'https://logo.clearbit.com/buluttahsilat.com',
+  
+  // Financial Management
+  'ledgerly': 'https://logo.clearbit.com/ledgerly.com',
+  
+  // BNPL
+  'bnpl-max': 'https://logo.clearbit.com/bnplmax.com',
+  
+  // Insurtech
+  'neo-sigorta': 'https://logo.clearbit.com/neosigorta.com',
+  
+  // AI Risk
+  'riskvision': 'https://logo.clearbit.com/riskvision.ai',
+  
+  // Banks
+  'garanti-bbva': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Garanti_BBVA_logo.svg/200px-Garanti_BBVA_logo.svg.png',
+  'akbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Akbank_logo.svg/200px-Akbank_logo.svg.png',
+  'isbankasi': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/200px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png',
+  'yapi-kredi': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Yap%C4%B1_Kredi_logo.svg/200px-Yap%C4%B1_Kredi_logo.svg.png',
+  'qnb-finansbank': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/QNB_Finansbank_logo.svg/200px-QNB_Finansbank_logo.svg.png'
+};
+
+function getProviderLogoUrl(providerId) {
+  return providerLogos[providerId] || null;
 }
 
 function initCharts() {
