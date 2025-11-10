@@ -23,12 +23,12 @@
     // Neo Bank
     'kolektif': 'https://kolektifhouse.co/assets/logo.svg',
 
-    // Banks - direct from bank websites
-    'garanti-bbva': 'https://www.garantibbva.com.tr/Content/img/garanti-bbva-logo.svg',
-    'akbank': 'https://www.akbank.com/SiteAssets/img/akbank-logo-desktop.svg',
-    'isbankasi': 'https://www.isbank.com.tr/StaticContent/img/is-bankasi-logo.svg',
-    'yapi-kredi': 'https://www.yapikredi.com.tr/Resources/img/yapi-kredi-logo.svg',
-    'qnb-finansbank': 'https://www.qnbfinansbank.com/assets/images/qnb-logo.svg'
+    // Banks - locally hosted
+    'garanti-bbva': '/assets/logos/banks/garanti-bbva.svg',
+    'akbank': '/assets/logos/banks/akbank.svg',
+    'isbankasi': '/assets/logos/banks/isbank.svg',
+    'yapi-kredi': '/assets/logos/banks/yapi-kredi.svg',
+    'qnb-finansbank': '/assets/logos/banks/qnb-finansbank.svg'
   };
 
   function getProviderLogoUrl(providerId) {
