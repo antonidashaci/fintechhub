@@ -920,7 +920,8 @@ function bindProviderCardEvents() {
   document.querySelectorAll(".provider-detail-btn").forEach((button) => {
     button.addEventListener("click", (event) => {
       const providerId = event.currentTarget.getAttribute("data-provider");
-      openProviderModal(providerId);
+      // Navigate to provider detail page
+      window.location.href = `/provider/?id=${providerId}`;
     });
   });
 
