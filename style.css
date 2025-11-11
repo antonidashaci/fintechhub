@@ -44,9 +44,16 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: min(100%, 1280px);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 2rem;
+    }
 }
 
 /* Typography */
@@ -1915,7 +1922,7 @@ form.is-loading {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .site-header {
         position: static;
         box-shadow: none;
@@ -1924,7 +1931,9 @@ form.is-loading {
     .market-ticker {
         position: static;
     }
+}
 
+@media (max-width: 768px) {
     .announcement-bar {
         flex-direction: column;
         align-items: flex-start;
