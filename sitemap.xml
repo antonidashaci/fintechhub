@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://fintechhubturkiye.com/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Bankalar -->
+  <url>
+    <loc>https://fintechhubturkiye.com/bankalar/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Hakkımızda -->
+  <url>
+    <loc>https://fintechhubturkiye.com/hakkimizda/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- İletişim -->
+  <url>
+    <loc>https://fintechhubturkiye.com/iletisim/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Gizlilik Politikası -->
+  <url>
+    <loc>https://fintechhubturkiye.com/gizlilik-politikasi/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Kullanım Şartları -->
+  <url>
+    <loc>https://fintechhubturkiye.com/kullanim-sartlari/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Çerez Politikası -->
+  <url>
+    <loc>https://fintechhubturkiye.com/cerez-politikasi/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Karşılaştırma -->
+  <url>
+    <loc>https://fintechhubturkiye.com/karsilastir/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog -->
+  <url>
+    <loc>https://fintechhubturkiye.com/blog/</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Provider Detail Pages -->
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=iyzico</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=paytr</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=papara-business</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=param</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=moka</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=bkm-express</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=tosla</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=payflex</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://fintechhubturkiye.com/provider/?id=kolektif</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
+

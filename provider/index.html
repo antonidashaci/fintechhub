@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title id="page-title">Sağlayıcı Detay | Fintech Hub Türkiye</title>
+    <meta name="description" id="page-description" content="Fintech sağlayıcısı hakkında detaylı bilgi, ürünler, fiyatlandırma ve kampanyalar." />
+    <meta name="keywords" id="page-keywords" content="fintech, ödeme, türkiye" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" id="og-title" content="Sağlayıcı Detay | Fintech Hub Türkiye" />
+    <meta property="og:description" id="og-description" content="Fintech sağlayıcısı hakkında detaylı bilgi" />
+    <meta property="og:url" id="og-url" content="https://fintechub.com.tr/provider/" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" id="twitter-title" content="Sağlayıcı Detay | Fintech Hub Türkiye" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      /* Provider Detail Specific Styles */
+      .provider-detail-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .provider-hero {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      
+      .provider-hero-logo {
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        padding: 1rem;
+      }
+      
+      .provider-hero-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      
+      .provider-hero-content {
+        flex: 1;
+      }
+      
+      .provider-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .provider-hero-meta {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .provider-hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .provider-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.85);
+        color: #ffffff;
+        font-size: 0.85rem;
+        border: 1px solid rgba(15, 23, 42, 0.95);
+      }
+
+      .provider-chip.neutral {
+        background: #dbeafe;
+        color: #1e3a8a;
+        border-color: #93c5fd;
+      }
+
+      .provider-last-updated {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+      
+      .provider-last-updated i {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      
+      .provider-rating {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .provider-badges {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      
+      .provider-badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+      }
+      
+      .provider-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--gray-200);
+        flex-wrap: wrap;
+      }
+      
+      .provider-tab {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gray-600);
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+        position: relative;
+        top: 2px;
+      }
+      
+      .provider-tab.active {
+        color: var(--primary-color);
+        border-bottom-color: var(--primary-color);
+      }
+      
+      .provider-tab:hover:not(.active) {
+        color: var(--gray-800);
+      }
+      
+      .tab-content {
+        display: none;
+      }
+      
+      .tab-content.active {
+        display: block;
+      }
+      
+      .info-section {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 2rem;
+      }
+      
+      .info-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--gray-800);
+      }
+      
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .info-label {
+        font-weight: 600;
+        color: var(--gray-600);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .info-value {
+        color: var(--gray-800);
+        font-size: 1rem;
+      }
+      
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        background: var(--gray-50);
+        border-radius: var(--border-radius);
+      }
+      
+      .source-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.75rem;
+      }
+      
+      .source-list li a {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      
+      .source-list li span {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--gray-500);
+      }
+      
+      .pricing-meta {
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .pricing-meta a {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      
+      .feature-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      
+      .campaign-banner {
+        background: linear-gradient(135deg, #ffd700, #ffed4e);
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: var(--shadow-md);
+      }
+      
+      .campaign-icon {
+        font-size: 2rem;
+      }
+      
+      .campaign-content h3 {
+        margin: 0 0 0.5rem 0;
+        color: var(--gray-800);
+      }
+      
+      .campaign-content p {
+        margin: 0;
+        color: var(--gray-700);
+      }
+      
+      .campaign-expires {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: var(--gray-600);
+      }
+      
+      .pricing-tiers {
+        margin-top: 1.5rem;
+      }
+      
+      .pricing-tier {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+      }
+      
+      .pricing-tier:last-child {
+        border-bottom: none;
+      }
+      
+      .pricing-label {
+        font-weight: 600;
+        color: var(--gray-700);
+      }
+      
+      .pricing-value {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+      
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .resource-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--gray-50);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        color: var(--gray-800);
+        transition: all 0.3s;
+      }
+      
+      .resource-card:hover {
+        background: var(--gray-100);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+      
+      .resource-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 3rem 2rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        color: white;
+        margin-top: 2rem;
+      }
+      
+      .cta-section h2 {
+        margin-bottom: 1rem;
+        color: white;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      .cta-button {
+        padding: 1rem 2rem;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        border: 2px solid white;
+      }
+      
+      .cta-button-primary {
+        background: white;
+        color: var(--primary-color);
+      }
+      
+      .cta-button-primary:hover {
+        background: var(--gray-100);
+      }
+      
+      .cta-button-secondary {
+        background: transparent;
+        color: white;
+      }
+      
+      .cta-button-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      .loading {
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+      
+      .error {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: #fee;
+        border-radius: var(--border-radius);
+        margin: 2rem;
+      }
+      
+      @media (max-width: 768px) {
+        .provider-hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .provider-hero h1 {
+          font-size: 1.75rem;
+        }
+        
+        .provider-tabs {
+          overflow-x: auto;
+          flex-wrap: nowrap;
+        }
+        
+        .provider-tab {
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <i class="fas fa-chart-line"></i>
+          <span>Fintech Hub <span class="logo-tr">TR</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Ana Sayfa</a>
+          <a href="/#providers" class="nav-link">Sağlayıcılar</a>
+          <a href="/hakkimizda/" class="nav-link">Hakkımızda</a>
+          <a href="/iletisim/" class="nav-link">İletişim</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="provider-detail-container">
+      <!-- Loading State -->
+      <div id="loading-state" class="loading">
+        <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--primary-color);"></i>
+        <p style="margin-top: 1rem; color: var(--gray-600);">Yükleniyor...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="error-state" class="error" style="display: none;">
+        <i class="fas fa-exclamation-triangle fa-3x" style="color: #c00;"></i>
+        <h2>Sağlayıcı Bulunamadı</h2>
+        <p>Aradığınız sağlayıcı bulunamadı veya kaldırılmış olabilir.</p>
+        <a href="/" class="cta-button cta-button-primary" style="display: inline-block; margin-top: 1rem;">Ana Sayfaya Dön</a>
+      </div>
+
+      <!-- Provider Content (will be populated by JS) -->
+      <div id="provider-content" style="display: none;">
+        <!-- Provider Hero Section -->
+        <section class="provider-hero">
+          <div class="provider-hero-logo" id="hero-logo"></div>
+          <div class="provider-hero-content">
+            <h1 id="hero-name"></h1>
+            <p id="hero-type" style="font-size: 1.125rem; opacity: 0.9;"></p>
+            <div class="provider-hero-meta">
+              <div class="provider-rating">
+                <i class="fas fa-star" style="color: #ffd700;"></i>
+                <span id="hero-rating"></span>
+                <span id="hero-reviews" style="opacity: 0.8;"></span>
+              </div>
+              <div class="provider-badges" id="hero-badges"></div>
+              <div class="provider-last-updated" id="hero-last-updated" hidden>
+                <i class="fas fa-clock"></i>
+                <span id="hero-last-updated-text"></span>
+              </div>
+            </div>
+            <div class="provider-hero-tags" id="hero-segments" hidden></div>
+            <div class="provider-hero-tags" id="hero-compliance" hidden></div>
+          </div>
+        </section>
+
+        <!-- Campaign Banner (if exists) -->
+        <div id="campaign-banner" style="display: none;">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Tabs -->
+        <div class="provider-tabs">
+          <button class="provider-tab active" data-tab="overview">
+            <i class="fas fa-info-circle"></i> Genel Bakış
+          </button>
+          <button class="provider-tab" data-tab="features">
+            <i class="fas fa-list-check"></i> Özellikler
+          </button>
+          <button class="provider-tab" data-tab="pricing">
+            <i class="fas fa-tag"></i> Fiyatlandırma
+          </button>
+          <button class="provider-tab" data-tab="integration">
+            <i class="fas fa-code"></i> Entegrasyon
+          </button>
+          <button class="provider-tab" data-tab="contact">
+            <i class="fas fa-phone"></i> İletişim
+          </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="tab-overview" class="tab-content active">
+          <!-- Overview content populated by JS -->
+        </div>
+
+        <div id="tab-features" class="tab-content">
+          <!-- Features content populated by JS -->
+        </div>
+
+        <div id="tab-pricing" class="tab-content">
+          <!-- Pricing content populated by JS -->
+        </div>
+
+        <div id="tab-integration" class="tab-content">
+          <!-- Integration content populated by JS -->
+        </div>
+
+        <div id="tab-contact" class="tab-content">
+          <!-- Contact content populated by JS -->
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+          <h2>Hemen Başlayın</h2>
+          <p id="cta-text">İşletmeniz için en uygun çözümü keşfedin</p>
+          <div class="cta-buttons">
+            <a href="#" id="cta-primary" class="cta-button cta-button-primary" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Websitesini Ziyaret Et
+            </a>
+            <a href="#contact" class="cta-button cta-button-secondary">
+              <i class="fas fa-envelope"></i> İletişime Geç
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-chart-line"></i> Fintech Hub TR</h3>
+          <p>Türkiye'nin en kapsamlı fintech sağlayıcı rehberi</p>
+        </div>
+        <div class="footer-section">
+          <h4>Kurumsal</h4>
+          <a href="/hakkimizda/">Hakkımızda</a>
+          <a href="/iletisim/">İletişim</a>
+        </div>
+        <div class="footer-section">
+          <h4>Yasal</h4>
+          <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
+          <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+          <a href="/cerez-politikasi/">Çerez Politikası</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fintech Hub Türkiye. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/provider/provider-detail.js"></script>
+  </body>
+</html>
+

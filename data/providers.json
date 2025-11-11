@@ -1,0 +1,974 @@
+[
+  {
+    "id": "iyzico",
+    "name": "iyzico",
+    "logo": "IYZ",
+    "categories": ["payment-gateway"],
+    "type": "Ödeme Geçidi",
+    "rating": 4.8,
+    "reviews": 326,
+    "featured": true,
+    "isNew": false,
+    "badges": ["En Popüler"],
+    "segments": ["Pazar Yeri", "Kurumsal", "SaaS"],
+    "cardDescription": "210+ banka entegrasyonu, PCI DSS 4.0 uyumu ve gelişmiş fraud yönetimiyle en kapsamlı ödeme geçidi.",
+    "modalSummary": "iyzico, yüksek işlem hacimli perakende ve pazaryeri platformları için optimize edilmiş ödeme geçidi sunar. PCI DSS 4.0 uyumu, PSD2 hazır mimarisi ve güçlü fraud yönetim panelleriyle ölçeklenebilirlik sağlar.",
+    "features": ["PCI DSS Level 1", "3D Secure 2.2", "REST & GraphQL API", "Webhook Retry"],
+    "differentiators": ["210+ banka/kart entegrasyonu", "T+1 ödeme döngüsü", "Gelişmiş fraud ekranı", "Dinamik kur oranı yönetimi"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.99 + ₺0.49",
+      "feeModel": { "percentage": 2.99, "fixed": 0.49, "subscription": 0, "currency": "TRY", "installment": 0.45 },
+      "tiers": [
+        { "label": "Standart Paket", "value": "%2.99 + ₺0.49" },
+        { "label": "Hacim Bazlı (>₺500K)", "value": "%2.49 + ₺0.39" },
+        { "label": "Enterprise", "value": "Teklif Üzerine" }
+      ],
+      "notes": "Yerel kart ve tek çekim komisyonudur. Taksitli işlemlerde +%0.45 uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.iyzico.com/iyzico-sanal-pos"
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.95", "successRate": "%99.2" },
+    "keywords": ["iyzico", "ödeme geçidi", "sanal pos", "fraud", "checkout"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2024-11-15",
+    "resources": [
+      { "label": "Dokümantasyon", "url": "https://docs.iyzico.com", "icon": "fa-book" },
+      { "label": "Sandbox", "url": "https://sandbox.iyzico.com", "icon": "fa-flask" },
+      { "label": "Durum Sayfası", "url": "https://status.iyzico.com", "icon": "fa-signal" }
+    ],
+    "sources": [
+      { "label": "Fiyatlandırma", "url": "https://www.iyzico.com/iyzico-sanal-pos" },
+      { "label": "Ürünler", "url": "https://www.iyzico.com/urunler" }
+    ],
+    "contact": { "email": "sales@iyzico.com", "phone": "+90 (212) 900 00 00" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS 4.0", "KVKK", "PSD2"],
+      "integrations": ["Shopify", "Magento", "WooCommerce", "SAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "paytr",
+    "name": "PayTR",
+    "logo": "PAY",
+    "categories": ["payment-gateway"],
+    "type": "Ödeme Geçidi",
+    "rating": 4.7,
+    "reviews": 284,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Yerli Üretim"],
+    "segments": ["KOBİ", "E-ticaret", "Abonelik"],
+    "cardDescription": "KOBİ dostu ödeme geçidi, düşük komisyonlar ve kolay entegrasyon. 150+ banka desteği.",
+    "modalSummary": "PayTR, özellikle küçük ve orta ölçekli işletmeler için optimize edilmiş Türk ödeme geçidi çözümüdür. Basit entegrasyon, rekabetçi fiyatlandırma ve hızlı müşteri desteğiyle öne çıkar.",
+    "features": ["3D Secure 2.0", "Sanal POS", "Link ile Ödeme", "Toplu Ödeme"],
+    "differentiators": ["Türkçe 7/24 destek", "KOBİ odaklı çözümler", "Hızlı onay süreci", "Esnek entegrasyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%1.99 + ₺0.29",
+      "feeModel": { "percentage": 1.99, "fixed": 0.29, "subscription": 0, "currency": "TRY", "installment": 0.35 },
+      "tiers": [
+        { "label": "Standart Paket", "value": "%1.99 + ₺0.29" },
+        { "label": "₺100K+", "value": "%1.89 + ₺0.25" },
+        { "label": "₺500K+", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Yurtiçi kart, tek çekim işlemler için liste fiyatıdır. Taksit ve yabancı kartlarda oranlar değişebilir.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.paytr.com/sanal-pos-ucretleri"
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+2", "support": "7/24 Türkçe", "uptime": "%99.9", "successRate": "%98.5" },
+    "keywords": ["paytr", "ödeme", "sanal pos", "kobi"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-01-05",
+    "resources": [
+      { "label": "API Dokümantasyonu", "url": "https://www.paytr.com/dokumanlar", "icon": "fa-book" },
+      { "label": "Entegrasyon Örnekleri", "url": "https://www.paytr.com/entegrasyon", "icon": "fa-code" }
+    ],
+    "sources": [
+      { "label": "Fiyatlandırma", "url": "https://www.paytr.com/sanal-pos-ucretleri" },
+      { "label": "Başvuru", "url": "https://www.paytr.com/sanal-pos-basvuru" }
+    ],
+    "contact": { "email": "destek@paytr.com", "phone": "+90 (850) 885 0 885" },
+    "comparison": {
+      "goLive": "1-3 gün",
+      "compliance": ["PCI DSS", "KVKK"],
+      "integrations": ["WooCommerce", "Magento", "Opencart", "Ticimax"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "papara-business",
+    "name": "Papara Business",
+    "logo": "PPR",
+    "categories": ["digital-wallet", "payment-gateway"],
+    "type": "Dijital Cüzdan & Ödeme",
+    "rating": 4.9,
+    "reviews": 412,
+    "featured": true,
+    "isNew": false,
+    "badges": ["En Çok Tercih Edilen", "Hızlı Transfer"],
+    "segments": ["Kurumsal Finans", "İK & Muhasebe", "Marketplace"],
+    "cardDescription": "FAST entegre dijital cüzdan, toplu ödeme ve kurumsal kart programı. Anında para transferi.",
+    "modalSummary": "Papara Business, kurumların maaş, tedarikçi ve toplu ödeme işlemlerini dijitalleştirir. FAST, IBAN ve sanal kart desteğiyle finans ekiplerine tam kontrol sunar.",
+    "features": ["FAST Transfer", "Toplu Ödeme", "Kurumsal Kart", "API Entegrasyonu"],
+    "differentiators": ["Anında bakiye yükleme", "Geniş kullanıcı tabanı", "7/24 canlı destek", "Otomatik mutabakat"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%1.49",
+      "feeModel": { "percentage": 1.49, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart İşlemler", "value": "%1.49" },
+        { "label": "Toplu Ödeme", "value": "₺0.50/işlem" },
+        { "label": "FAST Transfer", "value": "₺1.50/transfer" }
+      ],
+      "notes": "FAST ve Papara kullanıcıları arası transferlerde anlık işlem yapılır; yüksek hacimlerde özel fiyatlandırma uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://merchant.papara.com"
+    },
+    "campaign": null,
+    "metrics": { "settlement": "Anlık", "support": "7/24 Canlı Destek", "uptime": "%99.97", "successRate": "%99.8" },
+    "keywords": ["papara", "dijital cüzdan", "toplu ödeme", "fast", "wallet"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2024-12-10",
+    "resources": [
+      { "label": "API Dokümantasyonu", "url": "https://developer.papara.com", "icon": "fa-book" },
+      { "label": "Entegrasyon Rehberi", "url": "https://merchant.papara.com", "icon": "fa-life-ring" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Ücretler", "url": "https://merchant.papara.com" },
+      { "label": "Sıkça Sorulan Sorular", "url": "https://www.papara.com/yardim/isletmeler" }
+    ],
+    "contact": { "email": "kurumsal@papara.com", "phone": "+90 (850) 885 0 727" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["MASAK", "KVKK", "PSD2"],
+      "integrations": ["REST API", "Webhook", "Dashboard"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "param",
+    "name": "Param",
+    "logo": "PRM",
+    "categories": ["digital-wallet"],
+    "type": "Dijital Cüzdan",
+    "rating": 4.6,
+    "reviews": 189,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Banka Destekli"],
+    "segments": ["KOBİ", "Perakende", "Finans"],
+    "cardDescription": "Türkiye İş Bankası altyapılı dijital cüzdan. QR kod ödemesi ve para transferi.",
+    "modalSummary": "Param, Türkiye İş Bankası'nın dijital ödeme platformudur. QR kod ile ödeme, anlık transfer ve geniş işyeri ağı ile kullanıcılarına hızlı ve güvenli ödeme deneyimi sunar.",
+    "features": ["QR Kod Ödeme", "Anlık Transfer", "Kampanya Yönetimi", "Fatura Ödeme"],
+    "differentiators": ["İş Bankası güvencesi", "Geniş bayi ağı", "Kullanıcı dostu arayüz", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%1.99",
+      "feeModel": { "percentage": 1.99, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "QR Kod Ödemesi", "value": "%1.99" },
+        { "label": "Anlık Transfer", "value": "₺1.00/işlem" }
+      ],
+      "notes": "Kurumsal hesaplar için özel fiyatlandırma mevcut."
+    },
+    "campaign": { "label": "Kampanya", "text": "İlk 1000 işlemde komisyon yok", "expires": "28 Şubat 2025" },
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.8", "successRate": "%98.7" },
+    "keywords": ["param", "qr kod", "dijital cüzdan", "işbankası"],
+    "addedAt": "2025-01-08",
+    "resources": [
+      { "label": "İşyeri Başvurusu", "url": "https://param.com.tr/isyeri", "icon": "fa-store" }
+    ],
+    "contact": { "email": "destek@param.com.tr", "phone": "+90 (850) 222 0 724" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["Mobil SDK", "Web API"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "moka",
+    "name": "Moka",
+    "logo": "MKA",
+    "categories": ["mpos", "payment-gateway"],
+    "type": "mPOS & Ödeme",
+    "rating": 4.8,
+    "reviews": 567,
+    "featured": true,
+    "isNew": false,
+    "badges": ["En İyi mPOS"],
+    "segments": ["Fiziksel Mağaza", "Mobil Satış", "KOBİ"],
+    "cardDescription": "Mobil POS ve online ödeme çözümleri. Fiziksel ve dijital işletmeler için entegre platform.",
+    "modalSummary": "Moka, küçük işletmelerden büyük zincirlere kadar her ölçekte mobil ve online ödeme kabul etmenizi sağlar. mPOS cihazı, web entegrasyonu ve yönetim paneli ile eksiksiz ödeme deneyimi sunar.",
+    "features": ["mPOS Cihazı", "Online Ödeme", "Stok Yönetimi", "Raporlama"],
+    "differentiators": ["Uygun fiyatlı mPOS", "Kolay kurulum", "Entegre yönetim", "Müşteri sadakati programı"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.79",
+      "feeModel": { "percentage": 2.79, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "mPOS Kullanımı", "value": "%2.79" },
+        { "label": "Online Ödeme", "value": "%2.79 + ₺0.25" }
+      ],
+      "notes": "mPOS cihazı ücretsiz, aylık minimum ciro şartı yok."
+    },
+    "campaign": { "label": "Yeni Üye", "text": "İlk ay komisyonsuz işlem", "expires": "31 Mart 2025" },
+    "metrics": { "settlement": "T+1", "support": "7/24 Canlı Destek", "uptime": "%99.9", "successRate": "%99.1" },
+    "keywords": ["moka", "mpos", "mobil pos", "ödeme"],
+    "addedAt": "2024-11-20",
+    "resources": [
+      { "label": "mPOS Başvurusu", "url": "https://moka.com/basvuru", "icon": "fa-mobile-alt" },
+      { "label": "API Dokümantasyonu", "url": "https://developer.moka.com", "icon": "fa-book" }
+    ],
+    "contact": { "email": "destek@moka.com", "phone": "+90 (850) 265 00 65" },
+    "comparison": {
+      "goLive": "3-5 gün",
+      "compliance": ["PCI DSS", "KVKK"],
+      "integrations": ["iOS/Android SDK", "REST API", "Wordpress", "Shopify"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "bkm-express",
+    "name": "BKM Express",
+    "logo": "BKM",
+    "categories": ["payment-gateway"],
+    "type": "Hızlı Ödeme",
+    "rating": 4.7,
+    "reviews": 892,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Banka Ortak"],
+    "segments": ["E-ticaret", "Bankalar", "Ödeme Geçidi"],
+    "cardDescription": "Bankalar arası konsorsiyum BKM tarafından sunulan hızlı ve güvenli ödeme sistemi.",
+    "modalSummary": "BKM Express, Türkiye'deki tüm bankaların ortak ödeme platformudur. Kullanıcılar kayıtlı kartlarıyla tek tıkla güvenli ödeme yapabilir. E-ticaret siteleri için yüksek dönüşüm oranı sağlar.",
+    "features": ["Tek Tıkla Ödeme", "Banka Garantisi", "Yüksek Güvenlik", "Hızlı Entegrasyon"],
+    "differentiators": ["Tüm bankalar dahil", "Kullanıcı dostu", "Yüksek dönüşüm", "Güvenli altyapı"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%1.99",
+      "feeModel": { "percentage": 1.99, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart İşlem", "value": "%1.99" },
+        { "label": "Yüksek Hacim", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "BKM Express entegrasyonu için mevcut ödeme altyapınız üzerinden çalışır."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.95", "successRate": "%99.3" },
+    "keywords": ["bkm", "express", "hızlı ödeme", "bankalar"],
+    "addedAt": "2024-10-15",
+    "resources": [
+      { "label": "Entegrasyon Kılavuzu", "url": "https://bkmexpress.com.tr/entegrasyon", "icon": "fa-book" },
+      { "label": "Test Ortamı", "url": "https://bkmexpress.com.tr/test", "icon": "fa-flask" }
+    ],
+    "contact": { "email": "destek@bkmexpress.com.tr", "phone": "+90 (212) 340 00 00" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "BDDK", "ISO 27001"],
+      "integrations": ["REST API", "JavaScript SDK"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "tosla",
+    "name": "Tosla",
+    "logo": "TSL",
+    "categories": ["bnpl"],
+    "type": "BNPL (Şimdi Al Sonra Öde)",
+    "rating": 4.5,
+    "reviews": 234,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Yeni", "Taksitli"],
+    "segments": ["Genç Kullanıcı", "E-ticaret", "BNPL"],
+    "cardDescription": "Kredi kartı olmadan taksitli alışveriş imkanı. Genç kullanıcılar için ideal BNPL çözümü.",
+    "modalSummary": "Tosla, kullanıcıların kredi kartı olmadan taksitli alışveriş yapmasını sağlar. E-ticaret siteleri için satış artışı ve yeni müşteri kazanımı fırsatı sunar.",
+    "features": ["Anında Onay", "4 Eşit Taksit", "Kredi Puanı Yok", "Kolay Entegrasyon"],
+    "differentiators": ["Genç hedef kitle", "Yüksek onay oranı", "Sıfır faiz seçeneği", "Hızlı ödeme döngüsü"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%4.99",
+      "feeModel": { "percentage": 4.99, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart İşlem", "value": "%4.99" },
+        { "label": "Yüksek Hacim", "value": "%3.99" }
+      ],
+      "notes": "İşletme risk primi dahildir. Ödeme garantili."
+    },
+    "campaign": { "label": "Lansma", "text": "İlk 100 işlemde %50 komisyon iadesi", "expires": "15 Ocak 2025" },
+    "metrics": { "settlement": "T+7", "support": "Hafta içi 10:00-19:00", "uptime": "%99.5", "successRate": "%96.8" },
+    "keywords": ["tosla", "bnpl", "taksit", "kredisiz"],
+    "addedAt": "2025-01-15",
+    "resources": [
+      { "label": "Entegrasyon Rehberi", "url": "https://tosla.com/docs", "icon": "fa-book" }
+    ],
+    "contact": { "email": "iletisim@tosla.com", "phone": "+90 (850) 885 0 867" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["KVKK", "KKB"],
+      "integrations": ["REST API", "Checkout Widget"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "payflex",
+    "name": "PayFlex",
+    "logo": "PFX",
+    "categories": ["bnpl"],
+    "type": "BNPL (Şimdi Al Sonra Öde)",
+    "rating": 4.6,
+    "reviews": 312,
+    "featured": false,
+    "isNew": false,
+    "badges": ["İtibar Yönetimi"],
+    "segments": ["Kurumsal", "BNPL", "Elektronik Ticaret"],
+    "cardDescription": "QNB Finansbank destekli taksitli ödeme çözümü. Güvenilir BNPL platformu.",
+    "modalSummary": "PayFlex, QNB Finansbank altyapısı ile taksitli alışveriş imkanı sunar. E-ticaret sitelerinde sepet büyüklüğünü artırır ve dönüşüm oranlarını yükseltir.",
+    "features": ["3-12 Ay Taksit", "Anında Onay", "Ödeme Garantisi", "Dashboard"],
+    "differentiators": ["Banka güvencesi", "Esnek taksit seçenekleri", "Yüksek limit", "Risk yönetimi"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%4.49",
+      "feeModel": { "percentage": 4.49, "fixed": 0, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "3-6 Ay Taksit", "value": "%4.49" },
+        { "label": "9-12 Ay Taksit", "value": "%5.49" }
+      ],
+      "notes": "Komisyon oranları işlem hacmine göre değişkenlik gösterebilir."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+3", "support": "7/24 Müşteri Hizmetleri", "uptime": "%99.7", "successRate": "%97.5" },
+    "keywords": ["payflex", "bnpl", "qnb", "taksit"],
+    "addedAt": "2024-12-01",
+    "resources": [
+      { "label": "Merchant Portal", "url": "https://merchant.payflex.com.tr", "icon": "fa-dashboard" },
+      { "label": "API Dokümantasyonu", "url": "https://docs.payflex.com.tr", "icon": "fa-book" }
+    ],
+    "contact": { "email": "merchants@payflex.com.tr", "phone": "+90 (850) 333 0 555" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["Shopify", "WooCommerce", "Magento", "REST API"],
+      "minCommitment": "₺50K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "kolektif",
+    "name": "Kolektif House",
+    "logo": "KLF",
+    "categories": ["neobank"],
+    "type": "Dijital Banka",
+    "rating": 4.4,
+    "reviews": 156,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Yeni", "Girişimci Dostu"],
+    "segments": ["Startup", "KOBİ", "SaaS"],
+    "cardDescription": "Girişimciler ve KOBİ'ler için dijital bankacılık platformu. Modern finans yönetimi.",
+    "modalSummary": "Kolektif, startup'lar ve küçük işletmeler için tasarlanmış dijital bankadır. IBAN, şirket kartları, harcama yönetimi ve muhasebe entegrasyonu ile modern işletmelere hizmet verir.",
+    "features": ["Şirket Hesabı", "Sanal Kartlar", "Harcama Takibi", "Muhasebe Entegrasyonu"],
+    "differentiators": ["Startup odaklı", "Hızlı hesap açılışı", "Modern arayüz", "API first yaklaşım"],
+    "pricing": {
+      "label": "Ücretlendirme:",
+      "headline": "₺299/ay",
+      "feeModel": { "percentage": 0, "fixed": 0, "subscription": 299, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Başlangıç Paketi", "value": "₺299/ay" },
+        { "label": "Büyüme Paketi", "value": "₺599/ay" },
+        { "label": "Kurumsal", "value": "Özel fiyat" }
+      ],
+      "notes": "İlk 3 ay ücretsiz deneme. Transfer ve para çekme işlemleri ücretsiz."
+    },
+    "campaign": { "label": "Başlangıç", "text": "İlk 3 ay ücretsiz kullanım", "expires": "Süresiz" },
+    "metrics": { "settlement": "Anlık", "support": "7/24 Chat Destek", "uptime": "%99.6", "successRate": "%99.0" },
+    "keywords": ["kolektif", "neobank", "dijital banka", "startup"],
+    "addedAt": "2025-01-12",
+    "resources": [
+      { "label": "Başvuru Formu", "url": "https://kolektifhouse.co/basvuru", "icon": "fa-file-alt" },
+      { "label": "API Dokümantasyonu", "url": "https://docs.kolektifhouse.co", "icon": "fa-code" }
+    ],
+    "contact": { "email": "hello@kolektifhouse.co", "phone": "+90 (850) 308 0 308" },
+    "comparison": {
+      "goLive": "24 saat",
+      "compliance": ["BDDK Lisansı", "KVKK", "ISO 27001"],
+      "integrations": ["Muhasebe yazılımları", "REST API", "Webhooks"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": false
+  },
+  {
+    "id": "garanti-bbva",
+    "name": "Garanti BBVA",
+    "logo": "GAR",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka Ödeme Çözümleri",
+    "rating": 4.7,
+    "reviews": 284,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "segments": ["Kurumsal", "Çoklu Kanal", "Pazar Yeri"],
+    "cardDescription": "Bankacılık destekli sanal POS, tahsilat yönetimi ve API altyapısı ile yüksek hacimli işletmeler için entegre ödeme çözümleri.",
+    "modalSummary": "Garanti BBVA Ödeme Sistemleri, kurumsal ve KOBİ segmentlerine yönelik POS, tahsilat ve açık bankacılık çözümleri sunar. Kampanya yönetimi, taksit desteği ve gelişmiş raporlama ile öne çıkar.",
+    "features": ["Sanal POS", "Taksit Kampanyaları", "Dinamik POS", "Kur Risk Yönetimi"],
+    "differentiators": ["Açık bankacılık API'leri", "Entegre treasury ürünleri", "24/7 destek", "Çoklu döviz desteği"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.39 + ₺0.19",
+      "feeModel": { "percentage": 2.39, "fixed": 0.19, "subscription": 0, "currency": "TRY", "installment": 0.35 },
+      "tiers": [
+        { "label": "₺0 - ₺500K", "value": "%2.39 + ₺0.19" },
+        { "label": "₺500K - ₺2M", "value": "%2.19 + ₺0.15" },
+        { "label": "₺2M+", "value": "Teklif Üzerine" }
+      ],
+      "notes": "Liste oranlarıdır; nihai komisyonlar sektör ve hacme göre Garanti BBVA tarafından özelleştirilir. Taksitli işlemlerde ek oranlar uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos"
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.92", "successRate": "%99.4" },
+    "keywords": ["garanti", "bbva", "sanal pos", "banka", "pos"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2024-10-20",
+    "resources": [
+      { "label": "Kurumsal POS", "url": "https://www.garantibbva.com.tr/kurumsal/odeme-sistemleri", "icon": "fa-credit-card" },
+      { "label": "API Dokümantasyonu", "url": "https://developer.garantibbva.com.tr", "icon": "fa-book" }
+    ],
+    "sources": [
+      { "label": "Sanal POS", "url": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos" },
+      { "label": "Dinamik POS", "url": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/dinamik-pos" }
+    ],
+    "contact": { "email": "kurumsal@garantibbva.com.tr", "phone": "+90 (444) 0 333" },
+    "comparison": {
+      "goLive": "2-3 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP", "SDK"],
+      "minCommitment": "₺100K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "akbank",
+    "name": "Akbank Axess POS & API",
+    "logo": "AKB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka Ödeme Geçidi",
+    "rating": 4.6,
+    "reviews": 312,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Axess Üye İşyeri"],
+    "segments": ["E-ticaret", "Perakende", "Pazar Yeri"],
+    "cardDescription": "E-ticaret ve fiziksel POS kanallarını tek panelde yöneten, kampanya yönetimi ve taksitli satış desteği sunan banka çözümü.",
+    "modalSummary": "Akbank, Axess kampanya yönetimi ve taksitli satış desteğiyle e-ticaret sitelerine yüksek dönüşüm sağlar. Gelişmiş raporlama ve iade otomasyonuyla ön plana çıkar.",
+    "features": ["Axess POS", "Omnichannel POS", "Kampanya Motoru", "Gelişmiş Raporlama"],
+    "differentiators": ["Kampanya yönetimi", "Yüksek limit", "Kullanıcı dostu arayüz", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.49 + ₺0.25",
+      "feeModel": { "percentage": 2.49, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0.35 },
+      "tiers": [
+        { "label": "QR Kod Ödeme", "value": "%1.99" },
+        { "label": "Standart İşlem", "value": "%2.49 + ₺0.25" },
+        { "label": "Yüksek Hacim", "value": "Teklif Üzerine" }
+      ],
+      "notes": "Liste oranıdır; Akbank, Axess kampanyaları ve sektör kırılımlarına göre özel teklif sunar.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.akbank.com/tr-tr/isletme/sanal-pos"
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.8", "successRate": "%98.7" },
+    "keywords": ["akbank", "axess", "pos", "banka"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2024-11-01",
+    "resources": [
+      { "label": "İşyeri Başvurusu", "url": "https://www.akbank.com/sanal-pos", "icon": "fa-store" }
+    ],
+    "sources": [
+      { "label": "Sanal POS", "url": "https://www.akbank.com/tr-tr/isletme/sanal-pos" },
+      { "label": "Axess Üye İşyeri", "url": "https://www.akbank.com/tr-tr/isletme/uye-is-yeri" }
+    ],
+    "contact": { "email": "kurumsal@akbank.com", "phone": "+90 (444) 2 525" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "Mobil SDK", "Web SDK"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "isbankasi",
+    "name": "Türkiye İş Bankası POS",
+    "logo": "İŞB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 267,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Yerli Banka"],
+    "segments": ["KOBİ", "Perakende", "Franchise"],
+    "cardDescription": "Maximum Kart destekli sanal POS, e-ticaret entegrasyonları ve güvenilir ödeme altyapısı.",
+    "modalSummary": "Türkiye İş Bankası, Maximum Kart altyapısı ve güçlü banka geçmişiyle işletmelere güvenilir ödeme çözümleri sunar. E-ticaret ve fiziksel kanal entegrasyonu kolaydır.",
+    "features": ["Maximum POS", "3D Secure", "E-ticaret Entegrasyonu", "İade Yönetimi"],
+    "differentiators": ["Güvenilir banka", "Geniş şube ağı", "Kolay entegrasyon", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.59 + ₺0.25",
+      "feeModel": { "percentage": 2.59, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.59 + ₺0.25" },
+        { "label": "Kurumsal", "value": "Özel fiyatlandırma" }
+      ],
+      "notes": "Maximum kartlarda özel kampanya komisyonları uygulanır."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24", "uptime": "%99.7", "successRate": "%98.9" },
+    "keywords": ["isbank", "isbankasi", "maximum", "pos"],
+    "addedAt": "2024-09-15",
+    "resources": [
+      { "label": "Sanal POS Başvurusu", "url": "https://www.isbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "contact": { "email": "sanalposs@isbank.com.tr", "phone": "+90 (444) 0 724" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "yapi-kredi",
+    "name": "Yapı Kredi Ödeme Kuruluşu",
+    "logo": "YKR",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 198,
+    "featured": false,
+    "isNew": false,
+    "badges": ["World Kartı"],
+    "segments": ["E-ticaret", "Kurumsal", "Perakende"],
+    "cardDescription": "Worldcard uyumlu taksit kampanyaları, tokenizasyon ve çoklu para birimi desteğiyle işletme dostu ödeme sistemi.",
+    "modalSummary": "Yapı Kredi Ödeme Kuruluşu, World kartı taksit kampanyaları ve token ödeme ile kullanıcı deneyimini artırır. Güvenli altyapı ve hızlı entegrasyon sunar.",
+    "features": ["World POS", "Tokenizasyon", "Taksit Kampanyası", "Çoklu Para Birimi"],
+    "differentiators": ["World kampanyaları", "Hızlı entegrasyon", "Modern arayüz", "API first yaklaşım"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.45 + ₺0.18",
+      "feeModel": { "percentage": 2.45, "fixed": 0.18, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart İşlem", "value": "%2.45 + ₺0.18" },
+        { "label": "Yüksek Hacim", "value": "Özel fiyat" }
+      ],
+      "notes": "İlk 3 ay ücretsiz deneme. Transfer ve para çekme işlemleri ücretsiz."
+    },
+    "campaign": { "label": "Başlangıç", "text": "Yeni üye işyerlerine ilk 3 ay %20 komisyon indirimi", "expires": "31 Mart 2025" },
+    "metrics": { "settlement": "T+1", "support": "7/24 Chat Destek", "uptime": "%99.6", "successRate": "%99.0" },
+    "keywords": ["yapı kredi", "world", "pos"],
+    "addedAt": "2024-10-10",
+    "resources": [
+      { "label": "POS Başvurusu", "url": "https://www.yapikredi.com.tr/sanal-pos", "icon": "fa-file-alt" }
+    ],
+    "contact": { "email": "isyeri@yapikredi.com.tr", "phone": "+90 (444) 0 444" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "Webhooks"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "qnb-finansbank",
+    "name": "QNB Finansbank POS",
+    "logo": "QNB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 176,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "segments": ["Kurumsal", "Franchise", "Perakende"],
+    "cardDescription": "Güvenilir bankacılık altyapısı ve kapsamlı ödeme çözümleriyle kurumsal işletmeler için ideal POS sistemi.",
+    "modalSummary": "QNB Finansbank, kurumsal segment odaklı sanal POS çözümleri ve finansbank geçmişiyle işletmelere güvenli ödeme altyapısı sunar.",
+    "features": ["Sanal POS", "3D Secure 2.0", "Çoklu Para Birimi", "API Entegrasyonu"],
+    "differentiators": ["Kurumsal destek", "Güvenilir altyapı", "Esnek fiyatlandırma", "Hızlı settlement"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.55 + ₺0.20",
+      "feeModel": { "percentage": 2.55, "fixed": 0.20, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.55 + ₺0.20" },
+        { "label": "Kurumsal", "value": "Özel fiyat" }
+      ],
+      "notes": "Kurumsal paketlerde özel fiyatlandırma."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.5", "successRate": "%98.8" },
+    "keywords": ["qnb", "finansbank", "pos"],
+    "addedAt": "2024-09-20",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.qnbfinansbank.com/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "contact": { "email": "sanalposs@qnbfinans.com", "phone": "+90 (444) 0 333" },
+    "comparison": {
+      "goLive": "2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "₺50K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "ziraat-bankasi",
+    "name": "Ziraat Bankası POS",
+    "logo": "ZRT",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 421,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Devlet Güvencesi", "En Yaygın"],
+    "segments": ["KOBİ", "Kurumsal", "Perakende", "Franchise"],
+    "cardDescription": "Türkiye'nin en büyük banka şubesi ağı ve devlet güvencesiyle işletmelere güvenilir ödeme altyapısı.",
+    "modalSummary": "Ziraat Bankası, 1900+ şubesiyle Türkiye'nin en yaygın bankacılık ağına sahiptir. KOBİ'ler ve perakende sektörüne özel kampanyalar ve uygun komisyon oranları sunar.",
+    "features": ["Fiziksel + Sanal POS", "3D Secure", "Taksit İmkanı", "Mobil POS"],
+    "differentiators": ["1900+ şube desteği", "KOBİ dostu", "Devlet garantili", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.19 + ₺0.25",
+      "feeModel": { "percentage": 2.19, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "KOBİ Paketi", "value": "%2.19 + ₺0.25" },
+        { "label": "Standart", "value": "%2.49 + ₺0.25" },
+        { "label": "Kurumsal", "value": "Özel fiyat" }
+      ],
+      "notes": "KOBİ'lere özel düşük komisyon. Taksit seçenekleri mevcut."
+    },
+    "campaign": {
+      "label": "KOBİ Fırsatı",
+      "text": "İlk 6 ay %1.99 komisyon"
+    },
+    "metrics": { "settlement": "T+1", "support": "Şube desteği + 444 0 100", "uptime": "%99.7", "successRate": "%99.1" },
+    "keywords": ["ziraat", "ziraat bankası", "pos", "kobi"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.ziraatbank.com.tr/tr/kurumsal/sanal-pos", "icon": "fa-credit-card" },
+      { "label": "İletişim", "url": "https://www.ziraatbank.com.tr/tr/iletisim", "icon": "fa-phone" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Bankacılık", "url": "https://www.ziraatbank.com.tr/tr/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@ziraatbank.com.tr", "phone": "+90 (444) 0 100" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP", "SDK"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "halkbank",
+    "name": "Halkbank POS",
+    "logo": "HLK",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 312,
+    "featured": false,
+    "isNew": false,
+    "badges": ["KOBİ Dostu"],
+    "segments": ["KOBİ", "Esnaf", "Perakende"],
+    "cardDescription": "Esnaf ve KOBİ'lere özel avantajlı POS çözümleri ve yerel müşteri desteğiyle güvenilir ödeme sistemi.",
+    "modalSummary": "Halkbank, esnaf ve KOBİ segmentine odaklanmış banka POS çözümleri sunar. Kampanyalı komisyon oranları ve şube bazlı yerel destek ile öne çıkar.",
+    "features": ["Sanal POS", "Mobil POS", "3D Secure", "Paraf Kart Entegrasyonu"],
+    "differentiators": ["Esnaf dostu", "Kampanyalı komisyon", "Şube desteği", "Kredi paketleri"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.29 + ₺0.20",
+      "feeModel": { "percentage": 2.29, "fixed": 0.20, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Esnaf Paketi", "value": "%2.29 + ₺0.20" },
+        { "label": "Standart", "value": "%2.59 + ₺0.25" }
+      ],
+      "notes": "Esnaf ve KOBİ'lere özel indirimli komisyon."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Şube desteği + 444 0 400", "uptime": "%99.5", "successRate": "%98.9" },
+    "keywords": ["halkbank", "pos", "esnaf", "kobi"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.halkbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.halkbank.com.tr/tr/kurumsal-bankacılık" }
+    ],
+    "contact": { "email": "kurumsal@halkbank.com.tr", "phone": "+90 (444) 0 400" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "teb",
+    "name": "TEB Sanal POS",
+    "logo": "TEB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.7,
+    "reviews": 267,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "segments": ["Kurumsal", "E-ticaret", "SaaS"],
+    "cardDescription": "Kurumsal işletmeler için gelişmiş API entegrasyonu ve esnek ödeme çözümleri sunan banka POS sistemi.",
+    "modalSummary": "TEB, kurumsal ve teknoloji şirketlerine özel RESTful API, webhook desteği ve gelişmiş raporlama araçlarıyla ön plana çıkan sanal POS çözümleri sunar.",
+    "features": ["RESTful API", "3D Secure 2.0", "Webhook", "Gelişmiş Raporlama"],
+    "differentiators": ["Teknik dokümantasyon", "Sandbox ortamı", "API-first yaklaşım", "Hızlı entegrasyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.45 + ₺0.30",
+      "feeModel": { "percentage": 2.45, "fixed": 0.30, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.45 + ₺0.30" },
+        { "label": "Kurumsal (>₺1M)", "value": "%2.19 + ₺0.25" }
+      ],
+      "notes": "Yüksek hacimli işletmeler için özel fiyatlandırma."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24 Teknik Destek", "uptime": "%99.8", "successRate": "%99.3" },
+    "keywords": ["teb", "sanal pos", "api", "kurumsal"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "API Dokümantasyonu", "url": "https://www.teb.com.tr/api-docs", "icon": "fa-book" },
+      { "label": "Sanal POS", "url": "https://www.teb.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Çözümler", "url": "https://www.teb.com.tr/kurumsal" }
+    ],
+    "contact": { "email": "sanalposs@teb.com.tr", "phone": "+90 (444) 0 666" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "BDDK", "PSD2"],
+      "integrations": ["REST API", "Webhook", "SDK"],
+      "minCommitment": "₺100K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "denizbank",
+    "name": "DenizBank Sanal POS",
+    "logo": "DNZ",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 198,
+    "featured": false,
+    "isNew": false,
+    "badges": [],
+    "segments": ["E-ticaret", "Perakende", "Kurumsal"],
+    "cardDescription": "E-ticaret odaklı sanal POS çözümleri ve esnek ödeme seçenekleriyle online satış yapan işletmeler için ideal.",
+    "modalSummary": "DenizBank, e-ticaret sitelerine özel hazır entegrasyon paketleri ve çoklu kart destekleriyle hızlı başlangıç imkanı sağlar.",
+    "features": ["Sanal POS", "3D Secure", "E-ticaret Paketleri", "Hızlı Kurulum"],
+    "differentiators": ["E-ticaret odaklı", "Kolay entegrasyon", "Çoklu kart desteği", "Pazaryeri çözümleri"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.69 + ₺0.25",
+      "feeModel": { "percentage": 2.69, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "E-ticaret Paketi", "value": "%2.69 + ₺0.25" },
+        { "label": "Standart", "value": "%2.89 + ₺0.30" }
+      ],
+      "notes": "E-ticaret işletmelerine özel paketler."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+2", "support": "Hafta içi 09:00-18:00", "uptime": "%99.4", "successRate": "%98.7" },
+    "keywords": ["denizbank", "sanal pos", "e-ticaret"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.denizbank.com/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.denizbank.com/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@denizbank.com", "phone": "+90 (444) 0 900" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK"],
+      "integrations": ["REST API", "WooCommerce", "OpenCart"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "vakifbank",
+    "name": "VakıfBank Sanal POS",
+    "logo": "VKF",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 389,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Güvenilir"],
+    "segments": ["KOBİ", "Kurumsal", "Perakende"],
+    "cardDescription": "Geniş şube ağı ve kurumsal destek ile işletmelere güvenilir sanal POS çözümleri sunan köklü banka.",
+    "modalSummary": "VakıfBank, KOBİ ve kurumsal segmente yönelik kapsamlı sanal POS hizmetleri sunar. World Card entegrasyonu ve kampanyalı dönemlerde avantajlı komisyon oranları ile öne çıkar.",
+    "features": ["Sanal POS", "World Card", "3D Secure", "Mobil POS"],
+    "differentiators": ["Geniş şube ağı", "World Card avantajları", "KOBİ kampanyaları", "Müşteri desteği"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.39 + ₺0.25",
+      "feeModel": { "percentage": 2.39, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "KOBİ", "value": "%2.39 + ₺0.25" },
+        { "label": "Standart", "value": "%2.59 + ₺0.30" }
+      ],
+      "notes": "World Card işlemlerinde ek indirim."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Şube + 444 0 724", "uptime": "%99.6", "successRate": "%99.0" },
+    "keywords": ["vakıfbank", "vakıf", "pos", "world card"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.vakifbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.vakifbank.com.tr/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@vakifbank.com.tr", "phone": "+90 (444) 0 724" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "payme",
+    "name": "Payme",
+    "logo": "PAY",
+    "categories": ["payment-gateway", "digital-wallet"],
+    "type": "Ödeme Kuruluşu",
+    "rating": 4.4,
+    "reviews": 142,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Yeni Nesil"],
+    "segments": ["E-ticaret", "SaaS", "Dijital Hizmetler"],
+    "cardDescription": "Hızlı entegrasyon ve modern API'ler ile yeni nesil işletmeler için optimize edilmiş ödeme altyapısı.",
+    "modalSummary": "Payme, startup ve SaaS şirketlerine özel geliştirilmiş ödeme gateway'i sunar. No-code entegrasyon, düşük komisyon ve hızlı onboarding ile dikkat çeker.",
+    "features": ["REST API", "No-code Widget", "Webhook", "Dashboard"],
+    "differentiators": ["15 dakikada canlı", "No-code entegrasyon", "Startup dostu", "Esnek fiyatlandırma"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.79 + ₺0.39",
+      "feeModel": { "percentage": 2.79, "fixed": 0.39, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Starter", "value": "%2.79 + ₺0.39" },
+        { "label": "Growth (>₺250K)", "value": "%2.49 + ₺0.29" }
+      ],
+      "notes": "İlk ₺50K işlem hacmine kadar %0 komisyon kampanyası."
+    },
+    "campaign": {
+      "label": "Startup Kampanyası",
+      "text": "İlk ₺50K'ya %0 komisyon"
+    },
+    "metrics": { "settlement": "T+1", "support": "Email + Chat", "uptime": "%99.9", "successRate": "%99.1" },
+    "keywords": ["payme", "ödeme", "startup", "api"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Dokümantasyon", "url": "https://docs.payme.com.tr", "icon": "fa-book" },
+      { "label": "Dashboard", "url": "https://dashboard.payme.com.tr", "icon": "fa-chart-line" }
+    ],
+    "sources": [
+      { "label": "Ürünler", "url": "https://www.payme.com.tr" }
+    ],
+    "contact": { "email": "hello@payme.com.tr", "phone": "+90 (212) 123 45 67" },
+    "comparison": {
+      "goLive": "1 gün",
+      "compliance": ["PCI DSS", "KVKK"],
+      "integrations": ["REST API", "Widget", "Shopify", "WooCommerce"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "craftgate",
+    "name": "Craftgate",
+    "logo": "CRF",
+    "categories": ["payment-gateway"],
+    "type": "Ödeme Geçidi",
+    "rating": 4.7,
+    "reviews": 94,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Gelişmiş API"],
+    "segments": ["Pazar Yeri", "SaaS", "Platform"],
+    "cardDescription": "Pazar yeri ve platform işletmeleri için split payment ve sub-merchant yönetimi özellikleriyle güçlü ödeme altyapısı.",
+    "modalSummary": "Craftgate, çok taraflı pazar yerleri için split payment, escrow ve alt üye işyeri yönetimi gibi gelişmiş özelliklere sahip modern ödeme gateway'idir.",
+    "features": ["Split Payment", "Sub-merchant Yönetimi", "Escrow", "RESTful API", "Webhook"],
+    "differentiators": ["Pazar yeri odaklı", "Split payment", "Alt üye işyeri", "Modern dokümantasyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.89 + ₺0.49",
+      "feeModel": { "percentage": 2.89, "fixed": 0.49, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Platform", "value": "%2.89 + ₺0.49" },
+        { "label": "Enterprise", "value": "Özel fiyat" }
+      ],
+      "notes": "Alt üye işyeri her biri için +%0.20 ek komisyon."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Email + Slack", "uptime": "%99.95", "successRate": "%99.4" },
+    "keywords": ["craftgate", "marketplace", "split payment", "pazar yeri"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "API Docs", "url": "https://developer.craftgate.io", "icon": "fa-book" },
+      { "label": "Sandbox", "url": "https://sandbox.craftgate.io", "icon": "fa-flask" }
+    ],
+    "sources": [
+      { "label": "Ürünler", "url": "https://craftgate.io" }
+    ],
+    "contact": { "email": "sales@craftgate.io", "phone": "+90 (212) 456 78 90" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "KVKK", "PSD2"],
+      "integrations": ["REST API", "Webhook", "SDK (PHP, Node, Python)"],
+      "minCommitment": "₺200K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  }
+]
+

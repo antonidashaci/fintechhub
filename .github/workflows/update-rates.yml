@@ -1,0 +1,57 @@
+name: Update TCMB Rates
+
+on:
+  schedule:
+    # Run every day at 16:00 Turkey time (13:00 UTC)
+    # TCMB publishes rates at 15:30, so 16:00 gives enough time
+    - cron: '0 13 * * 1-5'  # Monday to Friday only
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Fetch TCMB rates
+        env:
+          EVDS_API_KEY: ${{ secrets.EVDS_API_KEY }}
+        run: |
+          node scripts/fetch_tcmb_rates.js
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet data/market-rates.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/market-rates.json
+          git commit -m "chore: Update TCMB exchange rates [skip ci]
+
+          Automated daily update of exchange rates from TCMB EVDS API.
+          
+          Updated: $(date +'%Y-%m-%d %H:%M:%S %Z')"
+          git push
+      
+      - name: No changes
+        if: steps.check_changes.outputs.changed == 'false'
+        run: |
+          echo "No changes detected in rates data"
+

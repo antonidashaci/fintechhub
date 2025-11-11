@@ -1,0 +1,98 @@
+{
+  "providers": {
+    "iyzico": {
+      "name": "iyzico",
+      "logoUrl": "https://www.iyzico.com/assets/images/logo.svg",
+      "clearbitDomain": "iyzico.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "payflex": {
+      "name": "PayFlex",
+      "clearbitDomain": "payflex.com.tr",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "papara-business": {
+      "name": "Papara Business",
+      "logoUrl": "https://www.papara.com/img/logo.svg",
+      "clearbitDomain": "papara.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "apiconnect": {
+      "name": "APIConnect",
+      "clearbitDomain": "apiconnect.com.tr",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "bulut-tahsilat": {
+      "name": "Bulut Tahsilat",
+      "clearbitDomain": "buluttahsilat.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "ledgerly": {
+      "name": "Ledgerly",
+      "clearbitDomain": "ledgerly.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "bnpl-max": {
+      "name": "BNPL Max",
+      "clearbitDomain": "bnplmax.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "neo-sigorta": {
+      "name": "NeoSigorta",
+      "clearbitDomain": "neosigorta.com",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "riskvision": {
+      "name": "RiskVision AI",
+      "clearbitDomain": "riskvision.ai",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    }
+  },
+  "banks": {
+    "garanti-bbva": {
+      "name": "Garanti BBVA",
+      "logoUrl": "https://www.garantibbva.com.tr/content/dam/garanti-bbva/logo/gb-logo.svg",
+      "clearbitDomain": "garantibbva.com.tr",
+      "backgroundColor": "#008f4d",
+      "textColor": "#ffffff"
+    },
+    "akbank": {
+      "name": "Akbank",
+      "logoUrl": "https://www.akbank.com/SiteAssets/img/akbank-logo.svg",
+      "clearbitDomain": "akbank.com",
+      "backgroundColor": "#d71921",
+      "textColor": "#ffffff"
+    },
+    "isbankasi": {
+      "name": "Türkiye İş Bankası",
+      "logoUrl": "https://www.isbank.com.tr/SiteAssets/img/logo.svg",
+      "clearbitDomain": "isbank.com.tr",
+      "backgroundColor": "#00447c",
+      "textColor": "#ffffff"
+    },
+    "yapi-kredi": {
+      "name": "Yapı Kredi",
+      "logoUrl": "https://www.yapikredi.com.tr/assets/img/logo.svg",
+      "clearbitDomain": "yapikredi.com.tr",
+      "backgroundColor": "#0066b3",
+      "textColor": "#ffffff"
+    },
+    "qnb-finansbank": {
+      "name": "QNB Finansbank",
+      "logoUrl": "https://www.qnbfinansbank.com/favicon.svg",
+      "clearbitDomain": "qnbfinansbank.com",
+      "backgroundColor": "#4a1c71",
+      "textColor": "#ffffff"
+    }
+  }
+}
+

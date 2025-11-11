@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sağlayıcı Karşılaştırma | Fintech Hub Türkiye</title>
+    <meta name="description" content="Fintech sağlayıcılarını yan yana karşılaştırın. Fiyat, özellik ve performans metriklerini detaylıca inceleyin." />
+    <meta name="keywords" content="fintech karşılaştırma, ödeme geçidi karşılaştırma, fintech fiyat karşılaştırma" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .comparison-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .comparison-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .comparison-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--gray-800);
+      }
+      
+      .comparison-header p {
+        font-size: 1.125rem;
+        color: var(--gray-600);
+      }
+      
+      .provider-selector {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 2rem;
+      }
+      
+      .provider-selector h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+      }
+      
+      .selector-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+      
+      .provider-select-card {
+        border: 2px solid var(--gray-200);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+      }
+      
+      .provider-select-card:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+      
+      .provider-select-card.selected {
+        border-color: var(--primary-color);
+        background: var(--primary-light);
+      }
+      
+      .provider-select-logo {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 0.5rem;
+        border: 1px solid var(--gray-200);
+        padding: 0.5rem;
+      }
+      
+      .provider-select-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      .comparison-table-container {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        overflow-x: auto;
+      }
+      
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .comparison-table thead {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+      }
+      
+      .comparison-table th {
+        padding: 1.5rem 1rem;
+        text-align: left;
+        border-bottom: 2px solid var(--gray-200);
+        font-weight: 700;
+        color: var(--gray-800);
+        white-space: nowrap;
+      }
+      
+      .comparison-table th:first-child {
+        min-width: 200px;
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 11;
+      }
+      
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray-100);
+        vertical-align: top;
+      }
+      
+      .comparison-table td:first-child {
+        font-weight: 600;
+        color: var(--gray-700);
+        background: var(--gray-50);
+        position: sticky;
+        left: 0;
+        z-index: 9;
+      }
+      
+      .comparison-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      
+      .provider-column {
+        text-align: center;
+        min-width: 250px;
+      }
+      
+      .provider-header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      
+      .provider-header-logo {
+        width: 80px;
+        height: 80px;
+        background: white;
+        border: 2px solid var(--gray-200);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem;
+      }
+      
+      .provider-header-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      .provider-rating-display {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+      
+      .check-icon {
+        color: var(--success-color);
+        font-size: 1.25rem;
+      }
+      
+      .cross-icon {
+        color: var(--error-color);
+        font-size: 1.25rem;
+      }
+      
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+      
+      .feature-list li {
+        padding: 0.25rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .feature-list li:before {
+        content: "•";
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+      
+      .pricing-display {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      
+      .cta-compare {
+        margin-top: 1rem;
+      }
+      
+      .cta-compare .btn-primary {
+        width: 100%;
+      }
+      
+      @media (max-width: 768px) {
+        .comparison-header h1 {
+          font-size: 1.75rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.75rem 0.5rem;
+          font-size: 0.875rem;
+        }
+        
+        .provider-column {
+          min-width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <i class="fas fa-chart-line"></i>
+          <span>Fintech Hub <span class="logo-tr">TR</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Ana Sayfa</a>
+          <a href="/#providers" class="nav-link">Sağlayıcılar</a>
+          <a href="/karsilastir/" class="nav-link active">Karşılaştır</a>
+          <a href="/hakkimizda/" class="nav-link">Hakkımızda</a>
+          <a href="/iletisim/" class="nav-link">İletişim</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="comparison-container">
+      <header class="comparison-header">
+        <h1>🔄 Sağlayıcı Karşılaştırma</h1>
+        <p>Fintech sağlayıcılarını yan yana koyun, özellikleri ve fiyatları karşılaştırın.</p>
+      </header>
+
+      <!-- Provider Selector -->
+      <section class="provider-selector">
+        <h2>Karşılaştırmak İstediğiniz Sağlayıcıları Seçin (En fazla 4)</h2>
+        <div class="selector-grid" id="provider-selector-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Comparison Table -->
+      <section id="comparison-section" style="display: none;">
+        <div class="comparison-table-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Özellik</th>
+                <!-- Provider columns populated by JS -->
+              </tr>
+            </thead>
+            <tbody id="comparison-table-body">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Empty State -->
+      <section id="empty-state" class="info-section" style="text-align: center; margin-top: 2rem;">
+        <i class="fas fa-hand-pointer fa-3x" style="color: var(--primary-color); margin-bottom: 1rem;"></i>
+        <h2>Karşılaştırma Başlatın</h2>
+        <p>Yukarıdan en az 2 sağlayıcı seçerek karşılaştırmaya başlayın.</p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-chart-line"></i> Fintech Hub TR</h3>
+          <p>Türkiye'nin en kapsamlı fintech sağlayıcı rehberi</p>
+        </div>
+        <div class="footer-section">
+          <h4>Kurumsal</h4>
+          <a href="/hakkimizda/">Hakkımızda</a>
+          <a href="/iletisim/">İletişim</a>
+        </div>
+        <div class="footer-section">
+          <h4>Yasal</h4>
+          <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
+          <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+          <a href="/cerez-politikasi/">Çerez Politikası</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fintech Hub Türkiye. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/karsilastir/comparison.js"></script>
+  </body>
+</html>
+

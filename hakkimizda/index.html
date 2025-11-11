@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | Fintech Hub Türkiye</title>
+    <meta name="description" content="Fintech Hub Türkiye hakkında bilgi edinin. Misyonumuz, danışman ekibimiz ve fintech ekosistemine sağladığımız değerler.">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+    <header class="site-header">
+        <div class="container">
+            <div class="announcement-bar">
+                <span class="announcement-text"><i class="fas fa-star"></i> Fintech Hub Türkiye, 2025'te EY Fintech Alliance partneri seçildi.</span>
+                <a href="#timeline" class="announcement-link">Gelişimimizi inceleyin</a>
+            </div>
+            <div class="header-top">
+                <a class="logo" href="/">
+                    <i class="fas fa-coins" aria-hidden="true"></i>
+                    <div class="logo-text">
+                        <h1>Fintech Hub Türkiye</h1>
+                        <p class="logo-tagline">Ekosistemin güvenilir bilgi ve danışmanlık kaynağı</p>
+                    </div>
+                </a>
+                <div class="header-actions">
+                    <div class="auth-buttons" id="auth-buttons">
+                        <button class="btn-secondary" type="button" data-modal-target="#login-modal">
+                            <i class="fas fa-right-to-bracket"></i> Giriş Yap
+                        </button>
+                        <button class="btn-primary" type="button" data-modal-target="#signup-modal">
+                            <i class="fas fa-user-plus"></i> Üye Ol
+                        </button>
+                    </div>
+                    <div class="auth-logged-in" id="auth-logged-in" hidden>
+                        <button class="account-icon-button" id="account-shortcut" type="button" data-modal-target="#account-modal" aria-label="Hesap panelini aç">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Ana menü">
+                <ul class="nav-list">
+                    <li><a href="/"><i class="fas fa-house"></i> Ana Sayfa</a></li>
+                    <li><a href="/bankalar/"><i class="fas fa-building-columns"></i> Bankalar</a></li>
+                    <li><a href="/#providers"><i class="fas fa-credit-card"></i> Sağlayıcılar</a></li>
+                    <li><a href="/#analytics"><i class="fas fa-chart-line"></i> Sektör Analizi</a></li>
+                    <li><a href="/hakkimizda/" aria-current="page"><i class="fas fa-people-group"></i> Hakkımızda</a></li>
+                    <li><a href="/iletisim/"><i class="fas fa-headset"></i> İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="market-ticker" data-market-ticker aria-label="TCMB güncel döviz kurları">
+        <div class="container">
+            <div class="ticker-label">
+                <i class="fas fa-money-bill-trend-up" aria-hidden="true"></i>
+                <span class="ticker-title">TCMB Referans Kurları</span>
+                <span class="ticker-updated" data-market-updated>Güncelleniyor…</span>
+            </div>
+            <div class="ticker-track-wrapper" aria-live="polite">
+                <div class="market-ticker-track" role="list"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subpage-hero about-hero animate-on-scroll">
+        <div class="container">
+            <div class="subpage-hero-content">
+                <div class="subpage-hero-text">
+                    <h2>Fintech Hub Türkiye ile güvenilir büyüme yolculuğu</h2>
+                    <p>Fintech Hub Türkiye, finansal teknolojilerde ürün geliştirme, regülasyon ve büyüme stratejilerini hızlandıran danışmanlık ve veri platformudur. Bankalar, elektronik para kuruluşları ve yüksek büyüme hedefi olan girişimlerle çalışıyoruz.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#team"><i class="fas fa-users"></i> Ekiple tanışın</a>
+                        <a class="btn-secondary" href="#values"><i class="fas fa-heart"></i> Değerlerimizi keşfedin</a>
+                    </div>
+                </div>
+                <div class="subpage-hero-metrics">
+                    <div class="metric-card">
+                        <span class="metric-label">Kuruluş</span>
+                        <span class="metric-value">2018</span>
+                        <span class="metric-footnote">İstanbul</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label">Danışmanlık projesi</span>
+                        <span class="metric-value">120+</span>
+                        <span class="metric-footnote">Ödeme, kredi ve BNPL</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label">Partner banka</span>
+                        <span class="metric-value">17</span>
+                        <span class="metric-footnote">2025 itibarıyla</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-mission subpage-section animate-on-scroll">
+        <div class="container">
+            <div class="mission-grid">
+                <article class="mission-card">
+                    <h3><i class="fas fa-compass"></i> Misyon</h3>
+                    <p>Türkiye fintech ekosistemindeki tüm paydaşların sürdürülebilir büyümesini hızlandırmak. Bunu veri odaklı karar alma, düzenleyici uyum ve iş birliği kültürüyle sağlıyoruz.</p>
+                </article>
+                <article class="mission-card">
+                    <h3><i class="fas fa-eye"></i> Vizyon</h3>
+                    <p>2028 yılına kadar EMEA bölgesinde fintech danışmanlığında referans platform olmak ve 1.000+ şirketin ürün yolculuğuna destek sağlamak.</p>
+                </article>
+                <article class="mission-card">
+                    <h3><i class="fas fa-handshake"></i> Yaklaşım</h3>
+                    <p>Ürün stratejisi, teknolojik entegrasyon ve mevzuatın kesişiminde çalışan hibrit ekiplerle sahada yer alıyor; her aşamada ölçülebilir etki üretmeye odaklanıyoruz.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="about-timeline subpage-section animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-road"></i> Yolculuğumuz</h2>
+                <p>Fintech Hub Türkiye'nin geçmişten bugüne önemli dönüm noktaları.</p>
+            </div>
+            <div class="timeline-grid">
+                <article class="timeline-item">
+                    <span class="timeline-year">2018</span>
+                    <h3>Kuruluş ve ilk regülasyon rehberi</h3>
+                    <p>İstanbul'da kurulan Fintech Hub Türkiye, elektronik para lisans sürecini anlatan ilk kapsamlı rehberini yayınladı.</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-year">2020</span>
+                    <h3>Banka iş birlikleri</h3>
+                    <p>Garanti BBVA ve Yapı Kredi ile açık bankacılık sandbox entegrasyonlarına öncülük ederek 100+ geliştiriciye eğitim sağladık.</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-year">2022</span>
+                    <h3>Fintech Insight Platformu</h3>
+                    <p>65+ sağlayıcıyı kapsayan canlı veri platformu devreye alınarak komisyon oranları ve SLA takibi gerçek zamanlı hale getirildi.</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-year">2025</span>
+                    <h3>EY Fintech Alliance partnerliği</h3>
+                    <p>Regülasyon ve ürün stratejisini birleştiren 3 aşamalı hızlandırıcı programımızla 25 fintech'e uluslararası açılım sağladık.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="about-team subpage-section animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Liderlik Ekibi</h2>
+                <p>Finans, teknoloji ve regülasyon alanlarında 15+ yıl deneyime sahip multidisipliner kadro.</p>
+            </div>
+            <div class="team-grid">
+                <article class="team-card">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Elif Demir" loading="lazy">
+                    <h3>Elif Demir</h3>
+                    <p>Kurucu Ortak &amp; CEO</p>
+                    <p class="team-bio">BDDK ve TCMB projelerinde görev aldı, ödeme kuruluşlarının lisanslanma süreçlerini yönetti.</p>
+                    <div class="team-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" alt="Mert Yalçın" loading="lazy">
+                    <h3>Mert Yalçın</h3>
+                    <p>CTO</p>
+                    <p class="team-bio">Ödeme geçidi ve açık bankacılık API projelerinde 12 yıllık deneyime sahip tam yığın mühendis.</p>
+                    <div class="team-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&w=400&q=80" alt="Selin Aksoy" loading="lazy">
+                    <h3>Selin Aksoy</h3>
+                    <p>Regülasyon &amp; Uyum Direktörü</p>
+                    <p class="team-bio">Uluslararası hukuk firmalarında görev aldı, PSD2 ve KVKK uyum projelerine liderlik etti.</p>
+                    <div class="team-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" class="about-values subpage-section animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-heart"></i> Değerlerimiz</h2>
+                <p>Her projede tekrar ettiğimiz ilkeler.</p>
+            </div>
+            <div class="values-grid">
+                <article class="value-card">
+                    <h3>Şeffaflık</h3>
+                    <p>Tüm fiyatlandırma ve proje teslim planları net; müşterilerimiz gerçek zamanlı ilerleme raporlarına erişebilir.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Veri Odaklılık</h3>
+                    <p>Karar süreçlerinde veri setleri ve KPI'lar merkezde; hipotez testleri ve A/B denemeleri standarttır.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Ekosistem İş Birliği</h3>
+                    <p>Bankalar, regülatörler ve startuplar arasında köprü kurar; ortak inovasyon projelerini teşvik ederiz.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Sürdürülebilirlik</h3>
+                    <p>Uzun vadeli stratejik ortaklıklar kurar, sürdürülebilir finans ve kapsayıcılık ilkelerini gözetiriz.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-impact subpage-section animate-on-scroll">
+        <div class="container">
+            <div class="impact-grid">
+                <article class="impact-card">
+                    <h3><i class="fas fa-chart-line"></i> Ekonomik Etki</h3>
+                    <p>2024'te danışmanlığını yürüttüğümüz projelerin toplam işlem hacmi ₺4.2 milyarı aştı.</p>
+                </article>
+                <article class="impact-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Eğitim Programları</h3>
+                    <p>Her yıl 1.200+ katılımcıya düzenleyici gereklilikler, ürün yönetimi ve teknik entegrasyon eğitimleri veriyoruz.</p>
+                </article>
+                <article class="impact-card">
+                    <h3><i class="fas fa-earth-europe"></i> Bölgesel Yayılım</h3>
+                    <p>Türkiye dışında Azerbaycan, Birleşik Arap Emirlikleri ve Almanya'da yerel partner ağları kurduk.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta subpage-section animate-on-scroll" id="about-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ekibimizle çalışmak ister misiniz?</h2>
+                    <p>Fintech ürününüzü pazara çıkarmak veya banka entegrasyonlarını hızlandırmak için 30 dakikalık ön görüşme planlayın.</p>
+                    <ul class="cta-list">
+                        <li><i class="fas fa-check"></i> 48 saat içinde özelleştirilmiş yol haritası</li>
+                        <li><i class="fas fa-check"></i> Regülasyon ve teknik ekipten ortak değerlendirme</li>
+                        <li><i class="fas fa-check"></i> Partner bankalarla tanıştırma</li>
+                    </ul>
+                </div>
+                <div class="cta-form">
+                    <form id="about-contact-form" class="modal-form stacked" novalidate>
+                        <div class="form-group">
+                            <label for="about-name">Ad Soyad</label>
+                            <input id="about-name" name="name" type="text" placeholder="Adınız" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-email">E-posta</label>
+                            <input id="about-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-company">Şirket</label>
+                            <input id="about-company" name="company" type="text" placeholder="Şirket adınız" autocomplete="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-needs">Öncelikleriniz</label>
+                            <textarea id="about-needs" name="needs" rows="3" placeholder="Ödeme, kredi, BNPL veya regülasyon ihtiyaçlarınızı paylaşın"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Fintech Hub Türkiye - Hakkımızda formu">
+                        <button type="submit" class="btn-primary"><i class="fas fa-calendar"></i> Görüşme planla</button>
+                        <div class="form-status" id="about-contact-status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-coins"></i>
+                        <h3>Fintech Hub Türkiye</h3>
+                    </div>
+                    <p>Türkiye fintech ekosistemine dair güncel raporlar, danışmanlık ve iş birliği fırsatlarını tek noktada sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Sayfalar</h4>
+                    <ul>
+                        <li><a href="/">Ana Sayfa</a></li>
+                        <li><a href="/bankalar/">Bankalar</a></li>
+                        <li><a href="/hakkimizda/" aria-current="page">Hakkımızda</a></li>
+                        <li><a href="/iletisim/">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programlar</h4>
+                    <ul>
+                        <li><a href="#timeline">Fintech hızlandırıcı</a></li>
+                        <li><a href="#team">Danışman ekibi</a></li>
+                        <li><a href="#values">Değerlerimiz</a></li>
+                        <li><a href="#about-cta">Başvuru formu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bülten</h4>
+                    <p>Ekosistem raporları, regülasyon güncellemeleri ve etkinlik davetleri her ay e-posta kutunuzda.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <label for="newsletter-email" class="sr-only">E-posta adresiniz</label>
+                        <input id="newsletter-email" name="email" type="email" placeholder="E-posta adresiniz" autocomplete="email" required>
+                        <input type="hidden" name="_subject" value="Fintech Hub Türkiye - Hakkımızda bülteni">
+                        <button type="submit" class="btn-primary">Abone Ol</button>
+                        <div class="form-status" id="newsletter-form-status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Fintech Hub Türkiye – Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Kullanım Şartları</a>
+                        <a href="#">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared modals -->
+    <div class="modal" id="login-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="login-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-right-to-bracket"></i>
+                </div>
+                <div>
+                    <h3 id="login-modal-title">Fintech Hub Hesabınıza Giriş Yapın</h3>
+                    <p class="modal-subtitle">Demo hesabımızla platformu hemen deneyebilirsiniz</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="login-form" class="modal-form" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">E-posta</label>
+                        <input id="login-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Şifre</label>
+                        <input id="login-password" name="password" type="password" placeholder="Şifreniz" autocomplete="current-password" minlength="6" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox">
+                            <input id="login-remember" name="remember" type="checkbox">
+                            <span>Beni hatırla</span>
+                        </label>
+                        <button class="link-button" type="button" id="forgot-password-btn">Şifremi unuttum</button>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-arrow-right"></i> Giriş Yap
+                    </button>
+                    <p class="form-helper">Demo hesap: <strong>demo@fintechhubturkiye.com</strong> / <strong>Fintech!2025</strong></p>
+                    <div class="form-status" id="login-form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="signup-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div>
+                    <h3 id="signup-modal-title">Fintech Hub'a Katılın</h3>
+                    <p class="modal-subtitle">Ekosistem içgörüleri ve özel içeriklere erişin</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="signup-form" class="modal-form" novalidate>
+                    <div class="form-group">
+                        <label for="signup-name">Ad Soyad</label>
+                        <input id="signup-name" name="name" type="text" placeholder="Adınız" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">E-posta</label>
+                        <input id="signup-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-company">Şirket</label>
+                        <input id="signup-company" name="company" type="text" placeholder="Şirket adınız" autocomplete="organization" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Şifre</label>
+                        <input id="signup-password" name="password" type="password" placeholder="En az 8 karakter" minlength="8" required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-user-check"></i> Hesap Oluştur
+                    </button>
+                    <div class="form-status" id="signup-form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="account-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="account-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div>
+                    <h3 id="account-modal-title">Hesabım</h3>
+                    <p class="modal-subtitle">Fintech araçlarına hızlı erişim</p>
+                </div>
+            </header>
+            <div class="modal-body account-body">
+                <div class="account-summary">
+                    <h4 id="account-user-name">Üye</h4>
+                    <p id="account-user-email">demo@fintechhubturkiye.com</p>
+                    <p id="account-user-company">Fintech Hub Türkiye</p>
+                    <span class="account-status" id="account-status">Aktif üye</span>
+                </div>
+                <div class="account-actions">
+                    <button class="btn-secondary" type="button" data-account-open-modal="#commission-modal">
+                        <i class="fas fa-calculator"></i> Komisyon hesaplayıcı
+                    </button>
+                    <button class="btn-secondary" type="button" data-account-open-modal="#comparison-modal">
+                        <i class="fas fa-table-columns"></i> Çözüm karşılaştırma
+                    </button>
+                    <button class="btn-outline" type="button" id="account-logout-btn">
+                        <i class="fas fa-right-from-bracket"></i> Çıkış yap
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="provider-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="provider-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <span id="provider-modal-logo">LOGO</span>
+                </div>
+                <div>
+                    <h3 id="provider-modal-title">Sağlayıcı Adı</h3>
+                    <p class="modal-subtitle" id="provider-modal-type">Tür</p>
+                </div>
+            </header>
+            <div class="modal-body provider-modal-body">
+                <p id="provider-modal-summary"></p>
+                <div class="provider-modal-grid">
+                    <div>
+                        <h4>Performans</h4>
+                        <ul>
+                            <li><strong>Puan:</strong> <span id="provider-modal-rating"></span></li>
+                            <li><strong>Settlement:</strong> <span id="provider-modal-settlement"></span></li>
+                            <li><strong>Destek:</strong> <span id="provider-modal-support"></span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Öne Çıkan Özellikler</h4>
+                        <ul id="provider-modal-features"></ul>
+                    </div>
+                </div>
+                <div class="provider-modal-section">
+                    <h4>Fark Yaratanlar</h4>
+                    <ul id="provider-modal-differentiators"></ul>
+                </div>
+                <div class="provider-modal-section">
+                    <h4>Ücretlendirme</h4>
+                    <div id="provider-modal-pricing"></div>
+                </div>
+                <div class="provider-modal-section">
+                    <h4>Kaynaklar</h4>
+                    <ul id="provider-modal-resources" class="provider-resource-list"></ul>
+                </div>
+                <div class="provider-modal-footer">
+                    <button class="btn-primary" type="button" id="provider-modal-demo-btn" data-provider="">
+                        <i class="fas fa-video"></i> Demo talep et
+                    </button>
+                    <a class="btn-secondary" id="provider-modal-contact-link" href="#about-cta">
+                        <i class="fas fa-envelope"></i> Satışla iletişime geç
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="demo-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div>
+                    <h3 id="demo-modal-title">Demo planlayın</h3>
+                    <p class="modal-subtitle" id="demo-modal-provider">Tercih ettiğiniz sağlayıcı</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="demo-request-form" class="modal-form" novalidate>
+                    <div class="form-group">
+                        <label for="demo-provider-input">Sağlayıcı</label>
+                        <input id="demo-provider-input" name="provider" type="text" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-name">Ad Soyad</label>
+                        <input id="demo-name" name="name" type="text" placeholder="Adınız" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-email">E-posta</label>
+                        <input id="demo-email" name="email" type="email" placeholder="ornek@firma.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-company">Şirket</label>
+                        <input id="demo-company" name="company" type="text" placeholder="Şirket adınız" autocomplete="organization" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-notes">Notlar</label>
+                        <textarea id="demo-notes" name="notes" rows="3" placeholder="Beklentileriniz veya sorularınız"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Talep Gönder
+                    </button>
+                    <div class="form-status" id="demo-form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="commission-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="commission-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div>
+                    <h3 id="commission-modal-title">Komisyon Hesaplayıcı</h3>
+                    <p class="modal-subtitle">Sağlayıcılara göre maliyetinizi görün</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <form id="commission-form" class="modal-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="commission-provider">Sağlayıcı</label>
+                            <select id="commission-provider" name="provider" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="commission-volume">Aylık İşlem Hacmi (₺)</label>
+                            <input id="commission-volume" name="volume" type="number" min="0" step="1000" placeholder="Örn. 500000" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="commission-average">Ortalama Sepet (₺)</label>
+                            <input id="commission-average" name="average" type="number" min="1" step="1" placeholder="Örn. 850" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commission-payments">Taksit Oranı (%)</label>
+                            <input id="commission-payments" name="installment" type="number" min="0" max="100" step="1" value="35">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Maliyeti Hesapla</button>
+                </form>
+                <div class="calc-result" id="commission-result" aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="comparison-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-dismiss></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="comparison-modal-title" tabindex="-1">
+            <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <header class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div>
+                    <h3 id="comparison-modal-title">Çözüm Karşılaştırma</h3>
+                    <p class="modal-subtitle">Maksimum 3 sağlayıcı seçebilirsiniz</p>
+                </div>
+            </header>
+            <div class="modal-body">
+                <div id="comparison-selector" class="comparison-selector"></div>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table" id="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Özellik</th>
+                                <th data-column="0"></th>
+                                <th data-column="1"></th>
+                                <th data-column="2"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+</html>
