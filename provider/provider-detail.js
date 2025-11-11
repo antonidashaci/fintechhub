@@ -35,6 +35,30 @@
     return providerLogos[providerId] || null;
   }
 
+  const turkishDateFormatter = new Intl.DateTimeFormat('tr-TR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+
+  function formatDate(dateString) {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    if (Number.isNaN(date.getTime())) {
+      return dateString;
+    }
+    return turkishDateFormatter.format(date);
+  }
+
+  function getHostname(url) {
+    if (!url) return '';
+    try {
+      return new URL(url).hostname.replace(/^www\./, '');
+    } catch (error) {
+      return '';
+    }
+  }
+
   // Get provider ID from URL
   function getProviderIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
@@ -65,6 +89,8 @@
   function renderHero(provider) {
     const logoUrl = getProviderLogoUrl(provider.id);
     const logoElement = document.getElementById('hero-logo');
+    const lastUpdatedContainer = document.getElementById('hero-last-updated');
+    const lastUpdatedText = document.getElementById('hero-last-updated-text');
     
     if (logoUrl) {
       logoElement.innerHTML = `<img src="${logoUrl}" alt="${provider.name} logo" onerror="this.parentElement.innerHTML='<div style=\\'font-size: 2rem; font-weight: 700;\\'>${provider.logo}</div>'">`;
@@ -82,6 +108,15 @@
       badgesContainer.innerHTML = provider.badges
         .map(badge => `<span class="provider-badge">${badge}</span>`)
         .join('');
+    }
+
+    if (lastUpdatedContainer && lastUpdatedText) {
+      if (provider.lastUpdated) {
+        lastUpdatedText.textContent = `Son güncelleme: ${formatDate(provider.lastUpdated)}`;
+        lastUpdatedContainer.hidden = false;
+      } else {
+        lastUpdatedContainer.hidden = true;
+      }
     }
     
     // Update page meta
@@ -134,6 +169,11 @@
             <span class="info-label">Kullanıcı Yorumu</span>
             <span class="info-value">${provider.reviews} değerlendirme</span>
           </div>
+          ${provider.lastUpdated ? `
+          <div class="info-item">
+            <span class="info-label">Son Güncelleme</span>
+            <span class="info-value">${formatDate(provider.lastUpdated)}</span>
+          </div>` : ''}
           ${provider.metrics?.settlement ? `
           <div class="info-item">
             <span class="info-label">Ödeme Döngüsü</span>
@@ -165,6 +205,21 @@
             </div>
           `).join('')}
         </div>
+      </div>` : ''}
+      
+      ${provider.sources && provider.sources.length > 0 ? `
+      <div class="info-section">
+        <h2><i class="fas fa-link"></i> Resmi Kaynaklar</h2>
+        <ul class="source-list">
+          ${provider.sources.map(source => `
+          <li>
+            <a href="${source.url}" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> ${source.label}
+            </a>
+            ${getHostname(source.url) ? `<span style="display: block; font-size: 0.75rem; color: var(--gray-500);">${getHostname(source.url)}</span>` : ''}
+          </li>
+          `).join('')}
+        </ul>
       </div>` : ''}
     `;
   }
@@ -254,6 +309,12 @@
         <p style="margin-top: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: var(--border-radius); font-size: 0.875rem; color: var(--gray-600);">
           <i class="fas fa-info-circle"></i> ${provider.pricing.notes}
         </p>` : ''}
+        
+        ${(provider.pricing.lastVerified || provider.pricing.source) ? `
+        <div class="pricing-meta">
+          ${provider.pricing.lastVerified ? `<span><i class="fas fa-clock"></i> Son doğrulama: ${formatDate(provider.pricing.lastVerified)}</span>` : ''}
+          ${provider.pricing.source ? `<a href="${provider.pricing.source}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Resmi fiyatlandırma sayfasını görüntüle</a>` : ''}
+        </div>` : ''}
       </div>
     `;
   }

@@ -1,8 +1,8 @@
-const providers = [
+const providerSeedData = [
   {
     id: "iyzico",
     name: "iyzico",
-    logo: "iyz",
+    logo: "IYZ",
     categories: ["payment-gateway"],
     type: "Ödeme Geçidi",
     rating: 4.8,
@@ -23,23 +23,30 @@ const providers = [
     ],
     pricing: {
       label: "Komisyon:",
-      headline: "%2.79 + ₺0.19",
-      feeModel: { percentage: 2.79, fixed: 0.19, subscription: 0, currency: "TRY", installment: 0.45 },
+      headline: "%2.99 + ₺0.49",
+      feeModel: { percentage: 2.99, fixed: 0.49, subscription: 0, currency: "TRY", installment: 0.45 },
       tiers: [
-        { label: "₺0 - ₺250K", value: "%2.79 + ₺0.19" },
-        { label: "₺250K - ₺750K", value: "%2.59 + ₺0.15" },
-        { label: "₺750K+", value: "Özel fiyatlandırma" }
+        { label: "Standart Paket", value: "%2.99 + ₺0.49" },
+        { label: "Hacim Bazlı (>₺500K)", value: "%2.49 + ₺0.39" },
+        { label: "Enterprise", value: "Teklif Üzerine" }
       ],
-      notes: "Taksit başına +%0.45 maliyet uygulanır."
+      notes: "Yerel kart ve tek çekim komisyonudur. Taksitli işlemlerde +%0.45 uygulanır.",
+      lastVerified: "2025-02-11",
+      source: "https://www.iyzico.com/iyzico-sanal-pos"
     },
-    campaign: { label: "Kampanya", text: "Yeni POS entegrasyonunda %25 indirim", expires: "31 Mart 2025" },
+    campaign: null,
     metrics: { settlement: "T+1", support: "7/24 Türkçe", uptime: "%99.95", successRate: "%99.2" },
     keywords: ["iyzico", "ödeme geçidi", "sanal pos", "fraud", "checkout"],
+    lastUpdated: "2025-02-11",
     addedAt: "2024-11-15",
     resources: [
       { label: "Dokümantasyon", url: "https://docs.iyzico.com", icon: "fa-book" },
       { label: "Sandbox", url: "https://sandbox.iyzico.com", icon: "fa-flask" },
       { label: "Durum Sayfası", url: "https://status.iyzico.com", icon: "fa-signal" }
+    ],
+    sources: [
+      { label: "Fiyatlandırma", url: "https://www.iyzico.com/iyzico-sanal-pos" },
+      { label: "Ürünler", url: "https://www.iyzico.com/urunler" }
     ],
     contact: { email: "sales@iyzico.com", phone: "+90 (212) 900 00 00" },
     comparison: {
@@ -124,21 +131,29 @@ const providers = [
     ],
     pricing: {
       label: "Komisyon:",
-      headline: "%1.99",
-      feeModel: { percentage: 1.99, fixed: 0, subscription: 0, currency: "TRY", installment: 0 },
+      headline: "%1.49",
+      feeModel: { percentage: 1.49, fixed: 0, subscription: 0, currency: "TRY", installment: 0 },
       tiers: [
-        { label: "Standart", value: "%1.99" },
-        { label: "Kurumsal", value: "Özel fiyatlandırma" }
+        { label: "Standart İşlemler", value: "%1.49" },
+        { label: "Toplu Ödeme", value: "₺0.50/işlem" },
+        { label: "FAST Transfer", value: "₺1.50/transfer" }
       ],
-      notes: "Toplu ödeme başına ₺0.75 hizmet bedeli."
+      notes: "FAST ve Papara kullanıcıları arası transferlerde anlık işlem yapılır; yüksek hacimlerde özel fiyatlandırma uygulanır.",
+      lastVerified: "2025-02-11",
+      source: "https://merchant.papara.com"
     },
     campaign: null,
     metrics: { settlement: "Anlık", support: "7/24 Canlı Destek", uptime: "%99.97", successRate: "%99.5" },
     keywords: ["papara", "dijital cüzdan", "toplu ödeme", "wallet"],
+    lastUpdated: "2025-02-11",
     addedAt: "2024-08-04",
     resources: [
       { label: "Developer Portal", url: "https://developer.papara.com", icon: "fa-code" },
       { label: "Kart Programı", url: "https://papara.com/business/cards", icon: "fa-id-card" }
+    ],
+    sources: [
+      { label: "Kurumsal Ücretler", url: "https://merchant.papara.com" },
+      { label: "SSS", url: "https://www.papara.com/yardim/isletmeler" }
     ],
     contact: { email: "enterprise@papara.com", phone: "+90 (212) 900 50 00" },
     comparison: {
@@ -469,21 +484,28 @@ const providers = [
     pricing: {
       label: "POS Komisyonu:",
       headline: "%2.39 + ₺0.19",
-      feeModel: { percentage: 2.39, fixed: 0.19, subscription: 0, currency: "TRY", installment: 0.4 },
+      feeModel: { percentage: 2.39, fixed: 0.19, subscription: 0, currency: "TRY", installment: 0.35 },
       tiers: [
         { label: "₺0 - ₺1M", value: "%2.59 + ₺0.19" },
         { label: "₺1M - ₺3M", value: "%2.39 + ₺0.15" },
-        { label: "₺3M+", value: "Özel fiyatlandırma" }
+        { label: "₺3M+", value: "Teklif Üzerine" }
       ],
-      notes: "Kur garantili tahsilat ve döviz hesaplaması opsiyoneldir."
+      notes: "Liste oranlarıdır; nihai komisyonlar sektör ve hacme göre Garanti BBVA tarafından özelleştirilir. Taksitli işlemlerde ek oranlar uygulanır.",
+      lastVerified: "2025-02-11",
+      source: "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos"
     },
-    campaign: { label: "Teşvik", text: "Yeni Açık Bankacılık API'lerinde ilk 6 ay ücretsiz", expires: "30 Haziran 2025" },
+    campaign: null,
     metrics: { settlement: "T+1/T+2", support: "Özel müşteri temsilcisi", uptime: "%99.98", successRate: "%99.1" },
     keywords: ["garanti", "banka pos", "açık bankacılık", "tahsilat"],
+    lastUpdated: "2025-02-11",
     addedAt: "2024-06-10",
     resources: [
       { label: "API Portal", url: "https://developers.garantibbva.com.tr", icon: "fa-code" },
       { label: "POS Başvuru", url: "https://www.garantibbva.com.tr/isletme/sanal-pos", icon: "fa-file-signature" }
+    ],
+    sources: [
+      { label: "Sanal POS", url: "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos" },
+      { label: "Dinamik POS", url: "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/dinamik-pos" }
     ],
     contact: { email: "fintech@garantibbva.com.tr", phone: "+90 (212) 318 18 18" },
     comparison: {
@@ -521,19 +543,26 @@ const providers = [
       headline: "%2.49 + ₺0.25",
       feeModel: { percentage: 2.49, fixed: 0.25, subscription: 0, currency: "TRY", installment: 0.35 },
       tiers: [
-        { label: "₺0 - ₺500K", value: "%2.79 + ₺0.29" },
-        { label: "₺500K - ₺1.5M", value: "%2.49 + ₺0.25" },
-        { label: "₺1.5M+", value: "Özel teklif" }
+        { label: "QR Kod Ödeme", value: "%1.99" },
+        { label: "Standart İşlem", value: "%2.49 + ₺0.25" },
+        { label: "Yüksek Hacim", value: "Teklif Üzerine" }
       ],
-      notes: "Taksit başına ek %0.35 maliyet uygulanır."
+      notes: "Liste oranıdır; Akbank, Axess kampanyaları ve sektör kırılımlarına göre özel teklif sunar.",
+      lastVerified: "2025-02-11",
+      source: "https://www.akbank.com/tr-tr/isletme/sanal-pos"
     },
-    campaign: { label: "Kampanya", text: "Axess üye işyerlerine 12 aya kadar faizsiz taksit", expires: "31 Temmuz 2025" },
+    campaign: null,
     metrics: { settlement: "T+1", support: "7/24 Çağrı Merkezi", uptime: "%99.94", successRate: "%98.9" },
     keywords: ["akbank", "axess", "pos", "kampanya"],
+    lastUpdated: "2025-02-11",
     addedAt: "2024-03-18",
     resources: [
       { label: "POS Başvuru", url: "https://www.akbank.com/tr-tr/isletme/sanal-pos", icon: "fa-credit-card" },
       { label: "Teknik Döküman", url: "https://developer.akbank.com", icon: "fa-book" }
+    ],
+    sources: [
+      { label: "Sanal POS", url: "https://www.akbank.com/tr-tr/isletme/sanal-pos" },
+      { label: "Üye İşyeri", url: "https://www.akbank.com/tr-tr/isletme/uye-is-yeri" }
     ],
     contact: { email: "pos@akbank.com", phone: "+90 (212) 385 77 77" },
     comparison: {
@@ -696,6 +725,8 @@ const providers = [
   }
 ];
 
+let providers = [...providerSeedData];
+
 const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/info@fintechhubturkiye.com";
 const NEWSLETTER_ENDPOINT = "https://formsubmit.co/ajax/newsletter@fintechhubturkiye.com";
 const DEMO_ENDPOINT = "https://formsubmit.co/ajax/demo@fintechhubturkiye.com";
@@ -747,10 +778,33 @@ const modalFocusTrapHandlers = new Map();
 let cachedAuthUsers = null;
 let cachedSessionUser = null;
 
-document.addEventListener("DOMContentLoaded", () => {
+async function loadProviders() {
+  try {
+    const response = await fetch("/data/providers.json", { cache: "no-cache" });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    if (Array.isArray(data) && data.length) {
+      providers = data;
+      return;
+    }
+    console.warn("Sağlayıcı verisi beklenen formatta değil, seed verisi kullanılacak.");
+  } catch (error) {
+    console.error("Sağlayıcı verileri yüklenemedi, seed verisine dönülüyor:", error);
+  }
+  providers = [...providerSeedData];
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
   initCharts();
   initScrollAnimations();
   initSmoothScroll();
+  try {
+    await loadProviders();
+  } catch (error) {
+    console.error("Sağlayıcı verileri yüklenirken hata oluştu:", error);
+  }
   initProviders();
   initSearch();
   initCategoryTabs();

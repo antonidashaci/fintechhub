@@ -2,7 +2,7 @@
   {
     "id": "iyzico",
     "name": "iyzico",
-    "logo": "iyz",
+    "logo": "IYZ",
     "categories": ["payment-gateway"],
     "type": "Ödeme Geçidi",
     "rating": 4.8,
@@ -16,23 +16,30 @@
     "differentiators": ["210+ banka/kart entegrasyonu", "T+1 ödeme döngüsü", "Gelişmiş fraud ekranı", "Dinamik kur oranı yönetimi"],
     "pricing": {
       "label": "Komisyon:",
-      "headline": "%2.79 + ₺0.19",
-      "feeModel": { "percentage": 2.79, "fixed": 0.19, "subscription": 0, "currency": "TRY", "installment": 0.45 },
+      "headline": "%2.99 + ₺0.49",
+      "feeModel": { "percentage": 2.99, "fixed": 0.49, "subscription": 0, "currency": "TRY", "installment": 0.45 },
       "tiers": [
-        { "label": "₺0 - ₺250K", "value": "%2.79 + ₺0.19" },
-        { "label": "₺250K - ₺750K", "value": "%2.59 + ₺0.15" },
-        { "label": "₺750K+", "value": "Özel fiyatlandırma" }
+        { "label": "Standart Paket", "value": "%2.99 + ₺0.49" },
+        { "label": "Hacim Bazlı (>₺500K)", "value": "%2.49 + ₺0.39" },
+        { "label": "Enterprise", "value": "Teklif Üzerine" }
       ],
-      "notes": "Taksit başına +%0.45 maliyet uygulanır."
+      "notes": "Yerel kart ve tek çekim komisyonudur. Taksitli işlemlerde +%0.45 uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.iyzico.com/iyzico-sanal-pos"
     },
-    "campaign": { "label": "Kampanya", "text": "Yeni POS entegrasyonunda %25 indirim", "expires": "31 Mart 2025" },
+    "campaign": null,
     "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.95", "successRate": "%99.2" },
     "keywords": ["iyzico", "ödeme geçidi", "sanal pos", "fraud", "checkout"],
+    "lastUpdated": "2025-02-11",
     "addedAt": "2024-11-15",
     "resources": [
       { "label": "Dokümantasyon", "url": "https://docs.iyzico.com", "icon": "fa-book" },
       { "label": "Sandbox", "url": "https://sandbox.iyzico.com", "icon": "fa-flask" },
       { "label": "Durum Sayfası", "url": "https://status.iyzico.com", "icon": "fa-signal" }
+    ],
+    "sources": [
+      { "label": "Fiyatlandırma", "url": "https://www.iyzico.com/iyzico-sanal-pos" },
+      { "label": "Ürünler", "url": "https://www.iyzico.com/urunler" }
     ],
     "contact": { "email": "sales@iyzico.com", "phone": "+90 (212) 900 00 00" },
     "comparison": {
@@ -46,7 +53,7 @@
   {
     "id": "paytr",
     "name": "PayTR",
-    "logo": "PTR",
+    "logo": "PAY",
     "categories": ["payment-gateway"],
     "type": "Ödeme Geçidi",
     "rating": 4.7,
@@ -60,22 +67,29 @@
     "differentiators": ["Türkçe 7/24 destek", "KOBİ odaklı çözümler", "Hızlı onay süreci", "Esnek entegrasyon"],
     "pricing": {
       "label": "Komisyon:",
-      "headline": "%2.49 + ₺0.25",
-      "feeModel": { "percentage": 2.49, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0.35 },
+      "headline": "%1.99 + ₺0.29",
+      "feeModel": { "percentage": 1.99, "fixed": 0.29, "subscription": 0, "currency": "TRY", "installment": 0.35 },
       "tiers": [
-        { "label": "Başlangıç", "value": "%2.49 + ₺0.25" },
-        { "label": "₺100K+", "value": "%2.29 + ₺0.20" },
+        { "label": "Standart Paket", "value": "%1.99 + ₺0.29" },
+        { "label": "₺100K+", "value": "%1.89 + ₺0.25" },
         { "label": "₺500K+", "value": "Özel fiyatlandırma" }
       ],
-      "notes": "İlk 3 ay %20 indirimli komisyon."
+      "notes": "Yurtiçi kart, tek çekim işlemler için liste fiyatıdır. Taksit ve yabancı kartlarda oranlar değişebilir.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.paytr.com/sanal-pos-ucretleri"
     },
-    "campaign": { "label": "Yeni Üye", "text": "İlk 3 ay komisyonda %20 indirim", "expires": "Süresiz" },
+    "campaign": null,
     "metrics": { "settlement": "T+2", "support": "7/24 Türkçe", "uptime": "%99.9", "successRate": "%98.5" },
     "keywords": ["paytr", "ödeme", "sanal pos", "kobi"],
+    "lastUpdated": "2025-02-11",
     "addedAt": "2025-01-05",
     "resources": [
       { "label": "API Dokümantasyonu", "url": "https://www.paytr.com/dokumanlar", "icon": "fa-book" },
       { "label": "Entegrasyon Örnekleri", "url": "https://www.paytr.com/entegrasyon", "icon": "fa-code" }
+    ],
+    "sources": [
+      { "label": "Fiyatlandırma", "url": "https://www.paytr.com/sanal-pos-ucretleri" },
+      { "label": "Başvuru", "url": "https://www.paytr.com/sanal-pos-basvuru" }
     ],
     "contact": { "email": "destek@paytr.com", "phone": "+90 (850) 885 0 885" },
     "comparison": {
@@ -108,17 +122,24 @@
       "tiers": [
         { "label": "Standart İşlemler", "value": "%1.49" },
         { "label": "Toplu Ödeme", "value": "₺0.50/işlem" },
-        { "label": "FAST Transferi", "value": "₺1.50/transfer" }
+        { "label": "FAST Transfer", "value": "₺1.50/transfer" }
       ],
-      "notes": "Kurumsal paketlerde özel fiyatlandırma."
+      "notes": "FAST ve Papara kullanıcıları arası transferlerde anlık işlem yapılır; yüksek hacimlerde özel fiyatlandırma uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://merchant.papara.com"
     },
     "campaign": null,
     "metrics": { "settlement": "Anlık", "support": "7/24 Canlı Destek", "uptime": "%99.97", "successRate": "%99.8" },
     "keywords": ["papara", "dijital cüzdan", "toplu ödeme", "fast", "wallet"],
+    "lastUpdated": "2025-02-11",
     "addedAt": "2024-12-10",
     "resources": [
       { "label": "API Dokümantasyonu", "url": "https://developer.papara.com", "icon": "fa-book" },
       { "label": "Entegrasyon Rehberi", "url": "https://merchant.papara.com", "icon": "fa-life-ring" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Ücretler", "url": "https://merchant.papara.com" },
+      { "label": "Sıkça Sorulan Sorular", "url": "https://www.papara.com/yardim/isletmeler" }
     ],
     "contact": { "email": "kurumsal@papara.com", "phone": "+90 (850) 885 0 727" },
     "comparison": {
@@ -402,17 +423,24 @@
       "tiers": [
         { "label": "₺0 - ₺500K", "value": "%2.39 + ₺0.19" },
         { "label": "₺500K - ₺2M", "value": "%2.19 + ₺0.15" },
-        { "label": "₺2M+", "value": "Özel fiyatlandırma" }
+        { "label": "₺2M+", "value": "Teklif Üzerine" }
       ],
-      "notes": "Taksit başına ek komisyon uygulanır."
+      "notes": "Liste oranlarıdır; nihai komisyonlar sektör ve hacme göre Garanti BBVA tarafından özelleştirilir. Taksitli işlemlerde ek oranlar uygulanır.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos"
     },
-    "campaign": { "label": "Kampanya", "text": "Yeni açık bankacılık API entegrasyonunda 6 ay ücretsiz", "expires": "30 Haziran 2025" },
+    "campaign": null,
     "metrics": { "settlement": "T+1", "support": "7/24 Türkçe", "uptime": "%99.92", "successRate": "%99.4" },
     "keywords": ["garanti", "bbva", "sanal pos", "banka", "pos"],
+    "lastUpdated": "2025-02-11",
     "addedAt": "2024-10-20",
     "resources": [
       { "label": "Kurumsal POS", "url": "https://www.garantibbva.com.tr/kurumsal/odeme-sistemleri", "icon": "fa-credit-card" },
       { "label": "API Dokümantasyonu", "url": "https://developer.garantibbva.com.tr", "icon": "fa-book" }
+    ],
+    "sources": [
+      { "label": "Sanal POS", "url": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/sanal-pos" },
+      { "label": "Dinamik POS", "url": "https://www.garantibbva.com.tr/tr/kurumsal/odeme-sistemleri/dinamik-pos" }
     ],
     "contact": { "email": "kurumsal@garantibbva.com.tr", "phone": "+90 (444) 0 333" },
     "comparison": {
@@ -441,20 +469,27 @@
     "pricing": {
       "label": "Komisyon:",
       "headline": "%2.49 + ₺0.25",
-      "feeModel": { "percentage": 2.49, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "feeModel": { "percentage": 2.49, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0.35 },
       "tiers": [
-        { "label": "QR Kod Ödemesi", "value": "%1.99" },
+        { "label": "QR Kod Ödeme", "value": "%1.99" },
         { "label": "Standart İşlem", "value": "%2.49 + ₺0.25" },
-        { "label": "Yüksek Hacim", "value": "Özel fiyatlandırma" }
+        { "label": "Yüksek Hacim", "value": "Teklif Üzerine" }
       ],
-      "notes": "Axess kampanya entegrasyonu ek maliyet gerektirmez."
+      "notes": "Liste oranıdır; Akbank, Axess kampanyaları ve sektör kırılımlarına göre özel teklif sunar.",
+      "lastVerified": "2025-02-11",
+      "source": "https://www.akbank.com/tr-tr/isletme/sanal-pos"
     },
-    "campaign": { "label": "Kampanya", "text": "İlk 1000 işlemde komisyon yok", "expires": "28 Şubat 2025" },
+    "campaign": null,
     "metrics": { "settlement": "T+1", "support": "Hafta içi 09:00-18:00", "uptime": "%99.8", "successRate": "%98.7" },
     "keywords": ["akbank", "axess", "pos", "banka"],
+    "lastUpdated": "2025-02-11",
     "addedAt": "2024-11-01",
     "resources": [
       { "label": "İşyeri Başvurusu", "url": "https://www.akbank.com/sanal-pos", "icon": "fa-store" }
+    ],
+    "sources": [
+      { "label": "Sanal POS", "url": "https://www.akbank.com/tr-tr/isletme/sanal-pos" },
+      { "label": "Axess Üye İşyeri", "url": "https://www.akbank.com/tr-tr/isletme/uye-is-yeri" }
     ],
     "contact": { "email": "kurumsal@akbank.com", "phone": "+90 (444) 2 525" },
     "comparison": {

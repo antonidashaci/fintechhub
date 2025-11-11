@@ -54,6 +54,9 @@
   - Komisyon oranlarını güncelle
   - Kampanya bilgilerini kontrol et
   - İletişim bilgilerini doğrula
+- [ ] **Veri takvimi kontrolü**
+  - `docs/data-refresh-playbook.md` ile uyumlu mu?
+  - Takvimde gecikme varsa Notion'a işlenir
 - [ ] **Gerçek logo görselleri ekle**
   - Şu anki SVG logolar geçici
   - Resmi logolarını indir ve ekle
