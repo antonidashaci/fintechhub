@@ -142,6 +142,7 @@
         </div>
     </header>
 
+    <main id="main-content" role="main">
     <section class="market-ticker" data-market-ticker aria-label="TCMB güncel döviz kurları">
         <div class="container">
             <div class="ticker-label">
@@ -213,6 +214,112 @@
                 <div class="hero-chart">
                     <canvas id="paymentVolumeChart"></canvas>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-providers-section animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Öne Çıkan Sağlayıcılar</h2>
+                <p>Sponsorlu ve editör seçimlerimizle işinizi hızla dönüştürebileceğiniz ödeme altyapılarını keşfedin.</p>
+            </div>
+            <div class="featured-providers-grid">
+                <a class="featured-provider-card sponsor" href="/provider/?id=iyzico">
+                    <div class="featured-badge"><i class="fas fa-bullhorn"></i> Sponsorlu</div>
+                    <div class="featured-logo">iyzico</div>
+                    <h3>iyzico</h3>
+                    <p>210+ banka entegrasyonu, gelişmiş fraud ekranı ve PSD2 hazır mimariyle ölçeklenebilir ödeme geçidi.</p>
+                    <ul class="featured-meta">
+                        <li><i class="fas fa-percent"></i> %2.99 + ₺0.49</li>
+                        <li><i class="fas fa-hourglass-half"></i> T+1 ödeme döngüsü</li>
+                    </ul>
+                </a>
+                <a class="featured-provider-card sponsor" href="/provider/?id=garanti-bbva">
+                    <div class="featured-badge"><i class="fas fa-bullhorn"></i> Sponsorlu</div>
+                    <div class="featured-logo">Garanti BBVA</div>
+                    <h3>Garanti BBVA Ödeme Sistemleri</h3>
+                    <p>Kurumsal seviyede sanal POS, tahsilat API'leri ve çoklu döviz desteği ile yüksek hacimli işletmeler için çözüm.</p>
+                    <ul class="featured-meta">
+                        <li><i class="fas fa-percent"></i> %2.39 + ₺0.19</li>
+                        <li><i class="fas fa-network-wired"></i> Açık bankacılık API'leri</li>
+                    </ul>
+                </a>
+                <a class="featured-provider-card recommended" href="/provider/?id=paytr">
+                    <div class="featured-badge neutral"><i class="fas fa-thumbs-up"></i> Editör Seçimi</div>
+                    <div class="featured-logo">PayTR</div>
+                    <h3>PayTR</h3>
+                    <p>KOBİ odaklı fiyatlandırma, link ile ödeme ve hızlı onay süreçleriyle büyüyen işletmeler için ideal.</p>
+                    <ul class="featured-meta">
+                        <li><i class="fas fa-percent"></i> %1.99 + ₺0.29</li>
+                        <li><i class="fas fa-headset"></i> 7/24 Türkçe destek</li>
+                    </ul>
+                </a>
+                <a class="featured-provider-card recommended" href="/provider/?id=papara-business">
+                    <div class="featured-badge neutral"><i class="fas fa-thumbs-up"></i> Editör Seçimi</div>
+                    <div class="featured-logo">Papara</div>
+                    <h3>Papara Business</h3>
+                    <p>FAST destekli dijital cüzdan, toplu ödeme ve kurumsal kart programıyla finans ekiplerine tam kontrol sağlar.</p>
+                    <ul class="featured-meta">
+                        <li><i class="fas fa-percent"></i> %1.49 başlıyor</li>
+                        <li><i class="fas fa-bolt"></i> Anlık bakiye yükleme</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="use-cases-section animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-briefcase"></i> Kullanım Senaryoları</h2>
+                <p>Farklı işletme modelleri için kürasyonlu sağlayıcı listeleri ve entegrasyon rehberleri.</p>
+            </div>
+            <div class="use-case-grid">
+                <article class="use-case-card">
+                    <div class="use-case-icon ecommerce"><i class="fas fa-store"></i></div>
+                    <h3>E-ticaret Markaları</h3>
+                    <p>Taksitli satış, sepette kur yönetimi ve linkle ödeme için optimize edilmiş çözümler.</p>
+                    <ul>
+                        <li>Önerilen sağlayıcılar: iyzico, PayTR, Akbank Axess POS</li>
+                        <li>Entegrasyon süresi: 1-2 hafta</li>
+                        <li>Başlıca ihtiyaç: Fraud yönetimi & rate-limiting</li>
+                    </ul>
+                    <a class="use-case-cta" href="/karsilastir/">Karşılaştırmayı aç <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="use-case-card">
+                    <div class="use-case-icon saas"><i class="fas fa-cloud"></i></div>
+                    <h3>SaaS Platformları</h3>
+                    <p>Abonelik, tekrarlı tahsilat ve açık bankacılık API'leri için entegre altyapı.</p>
+                    <ul>
+                        <li>Önerilen sağlayıcılar: PayFlex, APIConnect, Bulut Tahsilat</li>
+                        <li>Entegrasyon süresi: 2-4 hafta</li>
+                        <li>Başlıca ihtiyaç: Düşük churn ve otomatik faturalama</li>
+                    </ul>
+                    <a class="use-case-cta" href="/provider/?id=apiconnect">Rehberi incele <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="use-case-card">
+                    <div class="use-case-icon marketplace"><i class="fas fa-diagram-project"></i></div>
+                    <h3>Pazar Yerleri</h3>
+                    <p>Çoklu satıcı hesap yönetimi, split payment ve regülasyon uyumu için hazır entegrasyonlar.</p>
+                    <ul>
+                        <li>Önerilen sağlayıcılar: iyzico Marketplace, Papara Business, Param</li>
+                        <li>Entegrasyon süresi: 3-5 hafta</li>
+                        <li>Başlıca ihtiyaç: MASAK raporlaması & hızlı settlement</li>
+                    </ul>
+                    <a class="use-case-cta" href="/blog/">Rehberleri oku <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="use-case-card">
+                    <div class="use-case-icon retail"><i class="fas fa-credit-card-front"></i></div>
+                    <h3>Fiziksel Mağazalar</h3>
+                    <p>mPOS çözümleri, sadakat entegrasyonu ve çevrimdışı satış için omni-channel POS.</p>
+                    <ul>
+                        <li>Önerilen sağlayıcılar: Moka, Garanti BBVA Dinamik POS, QNB Finansbank POS</li>
+                        <li>Entegrasyon süresi: 1 hafta</li>
+                        <li>Başlıca ihtiyaç: Çoklu terminal yönetimi & raporlama</li>
+                    </ul>
+                    <a class="use-case-cta" href="/provider/?id=moka">Detayları gör <i class="fas fa-arrow-right"></i></a>
+                </article>
             </div>
         </div>
     </section>
@@ -616,6 +723,7 @@
         </div>
     </section>
 
+    </main>
     <footer class="site-footer animate-on-scroll">
         <div class="container">
             <div class="footer-content">
@@ -681,7 +789,7 @@
         </div>
     </footer>
 
-    <div class="modal" id="login-modal" aria-hidden="true">
+    <div class="modal" id="login-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="login-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
@@ -723,7 +831,7 @@
         </div>
     </div>
 
-    <div class="modal" id="signup-modal" aria-hidden="true">
+    <div class="modal" id="signup-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="signup-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
@@ -768,7 +876,7 @@
         </div>
     </div>
 
-    <div class="modal" id="account-modal" aria-hidden="true">
+    <div class="modal" id="account-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="account-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
@@ -810,14 +918,14 @@
         </div>
     </div>
 
-    <div class="modal" id="provider-modal" aria-hidden="true">
+    <div class="modal" id="provider-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="provider-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
                 <i class="fas fa-xmark"></i>
             </button>
             <header class="modal-header">
-                <div class="modal-logo" id="provider-modal-logo" aria-hidden="true"></div>
+                <div class="modal-logo" id="provider-modal-logo"></div>
                 <div>
                     <h3 id="provider-modal-title"></h3>
                     <p id="provider-modal-type" class="modal-subtitle"></p>
@@ -869,7 +977,7 @@
         </div>
     </div>
 
-    <div class="modal" id="demo-modal" aria-hidden="true">
+    <div class="modal" id="demo-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
@@ -917,7 +1025,7 @@
         </div>
     </div>
 
-    <div class="modal" id="commission-modal" aria-hidden="true">
+    <div class="modal" id="commission-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="commission-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">
@@ -961,7 +1069,7 @@
         </div>
     </div>
 
-    <div class="modal" id="comparison-modal" aria-hidden="true">
+    <div class="modal" id="comparison-modal" hidden>
         <div class="modal-backdrop" data-modal-dismiss></div>
         <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="comparison-modal-title" tabindex="-1">
             <button class="modal-close" type="button" data-modal-dismiss aria-label="Pencereyi kapat">

@@ -10,6 +10,7 @@ const providerSeedData = [
     featured: true,
     isNew: false,
     badges: ["En Popüler"],
+    segments: ["Pazar Yeri", "Kurumsal", "SaaS"],
     cardDescription:
       "210+ banka entegrasyonu, PCI DSS 4.0 uyumu ve gelişmiş fraud yönetimiyle en kapsamlı ödeme geçidi.",
     modalSummary:
@@ -68,6 +69,7 @@ const providerSeedData = [
     featured: true,
     isNew: true,
     badges: ["Yeni Kampanya"],
+    segments: ["SaaS", "Abonelik", "Platform"],
     cardDescription:
       "Dinamik komisyonlar, abonelik ve çoklu para birimi yönetimiyle omnichannel POS deneyimi.",
     modalSummary:
@@ -118,6 +120,7 @@ const providerSeedData = [
     featured: true,
     isNew: false,
     badges: ["En Çok Tercih Edilen"],
+    segments: ["Kurumsal Finans", "İK & Muhasebe", "Marketplace"],
     cardDescription:
       "FAST uyumlu dijital cüzdan, toplu ödeme ve kart programı ile ölçeklenebilir kurumsal altyapı.",
     modalSummary:
@@ -175,6 +178,7 @@ const providerSeedData = [
     featured: false,
     isNew: false,
     badges: ["PSD2 Uyumlu"],
+    segments: ["Açık Bankacılık", "Finans Kurumları", "SaaS"],
     cardDescription:
       "PSD2 uyumlu hesap bilgisi, ödeme başlatma ve kimlik doğrulama hizmetlerini tek API ile sunar.",
     modalSummary:
@@ -225,6 +229,7 @@ const providerSeedData = [
     featured: false,
     isNew: false,
     badges: ["Kurumsal Tercih"],
+    segments: ["Kurumsal Tahsilat", "Bayi Ağı", "Enerji & Telekom"],
     cardDescription:
       "Kurumsal tahsilat süreçleri için FAST destekli, ERP entegrasyonlu bulut tahsilat platformu.",
     modalSummary:
@@ -274,6 +279,7 @@ const providerSeedData = [
     featured: false,
     isNew: true,
     badges: ["AI Destekli"],
+    segments: ["Finans Ekipleri", "SaaS", "Kurumsal"],
     cardDescription:
       "Otomatik mutabakat, IFRS raporlama ve AI tahminleriyle finans ekiplerine tek panel sunar.",
     modalSummary:
@@ -323,6 +329,7 @@ const providerSeedData = [
     featured: false,
     isNew: false,
     badges: ["Risk Skoru 92"],
+    segments: ["Perakende", "E-ticaret", "Elektronik"],
     cardDescription:
       "Şimdi al sonra öde altyapısı, risk skorlama ve satıcı paneliyle sepet ortalamasını artırır.",
     modalSummary:
@@ -372,6 +379,7 @@ const providerSeedData = [
     featured: false,
     isNew: false,
     badges: ["API Öncelikli"],
+    segments: ["Sigorta Acenteleri", "Bankasurans", "B2B2C"],
     cardDescription:
       "Gerçek zamanlı teklif üretimi ve otomatik yenileme ile poliçe satışlarını dijitalleştirir.",
     modalSummary:
@@ -470,6 +478,9 @@ const providerSeedData = [
     featured: true,
     isNew: false,
     badges: ["Kurumsal"],
+    segments: ["Kurumsal", "Franchise", "Perakende"],
+    segments: ["Kurumsal", "Çoklu Kanal", "Pazar Yeri"],
+    segments: ["RegTech", "Bankalar", "Kurumsal Güvenlik"],
     cardDescription:
       "Bankacılık destekli sanal POS, tahsilat yönetimi ve API altyapısı ile yüksek hacimli işletmelere güvenli çözümler sunar.",
     modalSummary:
@@ -527,6 +538,7 @@ const providerSeedData = [
     featured: true,
     isNew: false,
     badges: ["Axess"],
+    segments: ["E-ticaret", "Perakende", "Pazar Yeri"],
     cardDescription:
       "E-ticaret ve fiziki POS kanallarını tek panelde yöneten, kampanya yönetimi ve taksitli satış desteği sağlayan banka çözümü.",
     modalSummary:
@@ -584,6 +596,7 @@ const providerSeedData = [
     featured: false,
     isNew: false,
     badges: ["MaxiPOS"],
+    segments: ["KOBİ", "Perakende", "Franchise"],
     cardDescription:
       "MaxiPOS paneliyle dijital tahsilat, linkle ödeme ve kurumsal raporlama çözümleri sunan banka altyapısı.",
     modalSummary:
@@ -634,6 +647,7 @@ const providerSeedData = [
     featured: false,
     isNew: true,
     badges: ["World"],
+    segments: ["E-ticaret", "Kurumsal", "Perakende"],
     cardDescription:
       "Worldcard uyumlu taksit kampanyaları, tokenizasyon ve çoklu para birimi desteği sunan banka geçidi.",
     modalSummary:
@@ -844,7 +858,8 @@ function applyFilters() {
       provider.cardDescription,
       ...(provider.features || []),
       ...(provider.differentiators || []),
-      ...(provider.keywords || [])
+      ...(provider.keywords || []),
+      ...(provider.segments || [])
     ]
       .map((item) => normalizeText(item))
       .join(" ");
@@ -914,6 +929,13 @@ function createProviderCard(provider) {
     .slice(0, 4)
     .map((feature) => `<span class="feature-tag">${feature}</span>`)
     .join("");
+  const segmentsHtml =
+    provider.segments && provider.segments.length
+      ? `<div class="provider-segments">${provider.segments
+          .slice(0, 3)
+          .map((segment) => `<span class="segment-chip">${segment}</span>`)
+          .join("")}</div>`
+      : "";
 
   // Get logo URL or use fallback
   const logoUrl = getProviderLogoUrl(provider.id);
@@ -940,6 +962,7 @@ function createProviderCard(provider) {
         </div>
       </header>
       <p class="provider-description">${provider.cardDescription}</p>
+      ${segmentsHtml}
       <div class="provider-features">${features}</div>
       <div class="provider-pricing">
         <span class="pricing-label">${provider.pricing?.label || "Ücretlendirme:"}</span>
@@ -1046,6 +1069,11 @@ function updateSuggestions(query, forceClose = false) {
         results.add(feature);
       }
     });
+    (provider.segments || []).forEach((segment) => {
+      if (normalizeText(segment).includes(normalized)) {
+        results.add(segment);
+      }
+    });
     (provider.keywords || []).forEach((keyword) => {
       if (normalizeText(keyword).includes(normalized)) {
         results.add(keyword);
@@ -1143,7 +1171,7 @@ function openModal(modal) {
   lastFocusedElement = document.activeElement;
   activeModal = modal;
   modal.classList.add("is-active");
-  modal.setAttribute("aria-hidden", "false");
+  modal.removeAttribute("hidden");
   document.body.classList.add("modal-open");
   const focusableElements = getFocusableElements(modal);
   const modalContainer = modal.querySelector(".modal-container");
@@ -1179,7 +1207,7 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("is-active");
-  modal.setAttribute("aria-hidden", "true");
+  modal.setAttribute("hidden", "hidden");
   document.body.classList.remove("modal-open");
   activeModal = null;
   const trapHandler = modalFocusTrapHandlers.get(modal);
@@ -1195,7 +1223,7 @@ function closeModal(modal) {
 function getFocusableElements(modal) {
   return Array.from(modal.querySelectorAll(FOCUSABLE_SELECTOR)).filter((element) => {
     const isDisabled = element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
-    const isHidden = element.getAttribute("aria-hidden") === "true" || element.classList.contains("is-hidden");
+    const isHidden = element.hasAttribute("hidden") || element.classList.contains("is-hidden") || element.closest("[hidden]");
     const styles = window.getComputedStyle(element);
     const isDisplayNone = styles.display === "none";
     const isVisibilityHidden = styles.visibility === "hidden";

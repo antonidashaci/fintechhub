@@ -574,6 +574,197 @@ p {
     outline: none;
 }
 
+.featured-providers-section {
+    padding: 3.5rem 0;
+    background: linear-gradient(180deg, rgba(226, 237, 255, 0.35) 0%, rgba(255, 255, 255, 0.85) 100%);
+}
+
+.featured-providers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.featured-provider-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: var(--border-radius-lg);
+    background: white;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-provider-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.featured-provider-card.sponsor {
+    background: linear-gradient(160deg, rgba(37, 99, 235, 0.08), rgba(96, 165, 250, 0.12));
+}
+
+.featured-provider-card.recommended {
+    background: linear-gradient(160deg, rgba(16, 185, 129, 0.08), rgba(56, 189, 248, 0.08));
+}
+
+.featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    width: fit-content;
+}
+
+.featured-badge.neutral {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.featured-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
+}
+
+.featured-provider-card h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+}
+
+.featured-provider-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.featured-meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+.featured-meta li i {
+    color: var(--primary-color);
+    margin-right: 0.4rem;
+}
+
+.use-cases-section {
+    padding: 3.5rem 0;
+}
+
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.use-case-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: var(--border-radius-lg);
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.use-case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.use-case-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.use-case-icon.ecommerce {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+}
+
+.use-case-icon.saas {
+    background: linear-gradient(135deg, #14b8a6, #22d3ee);
+}
+
+.use-case-icon.marketplace {
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.use-case-icon.retail {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+.use-case-card h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+}
+
+.use-case-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.use-case-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.use-case-card ul li::before {
+    content: '\f111';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.use-case-cta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.use-case-cta:hover {
+    color: var(--secondary-color);
+}
+
 .hero-actions {
     display: flex;
     gap: 1rem;
@@ -934,6 +1125,23 @@ p {
 .provider-description {
     margin-bottom: 1.5rem;
     color: var(--gray-600);
+}
+
+.provider-segments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.segment-chip {
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #93c5fd;
 }
 
 .provider-features {

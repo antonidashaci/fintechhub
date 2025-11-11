@@ -91,6 +91,8 @@
     const logoElement = document.getElementById('hero-logo');
     const lastUpdatedContainer = document.getElementById('hero-last-updated');
     const lastUpdatedText = document.getElementById('hero-last-updated-text');
+    const segmentsContainer = document.getElementById('hero-segments');
+    const complianceContainer = document.getElementById('hero-compliance');
     
     if (logoUrl) {
       logoElement.innerHTML = `<img src="${logoUrl}" alt="${provider.name} logo" onerror="this.parentElement.innerHTML='<div style=\\'font-size: 2rem; font-weight: 700;\\'>${provider.logo}</div>'">`;
@@ -116,6 +118,29 @@
         lastUpdatedContainer.hidden = false;
       } else {
         lastUpdatedContainer.hidden = true;
+      }
+    }
+
+    if (segmentsContainer) {
+      if (Array.isArray(provider.segments) && provider.segments.length > 0) {
+        segmentsContainer.innerHTML = provider.segments
+          .map((segment) => `<span class="provider-chip neutral"><i class="fas fa-users"></i>${segment}</span>`)
+          .join("");
+        segmentsContainer.hidden = false;
+      } else {
+        segmentsContainer.hidden = true;
+      }
+    }
+
+    if (complianceContainer) {
+      const complianceList = provider.comparison?.compliance;
+      if (Array.isArray(complianceList) && complianceList.length > 0) {
+        complianceContainer.innerHTML = complianceList
+          .map((item) => `<span class="provider-chip"><i class="fas fa-shield-check"></i>${item}</span>`)
+          .join("");
+        complianceContainer.hidden = false;
+      } else {
+        complianceContainer.hidden = true;
       }
     }
     
@@ -516,6 +541,17 @@
     
     if (provider.resources && provider.resources.length > 0) {
       schema.url = provider.resources[0].url;
+    }
+
+    if (provider.segments && provider.segments.length > 0) {
+      schema.audience = provider.segments.map((segment) => ({
+        "@type": "Audience",
+        "audienceType": segment
+      }));
+    }
+
+    if (provider.comparison?.compliance && provider.comparison.compliance.length > 0) {
+      schema.featureList = provider.comparison.compliance;
     }
 
     const script = document.createElement('script');
