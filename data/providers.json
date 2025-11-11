@@ -636,6 +636,339 @@
       "minCommitment": "₺50K aylık hacim"
     },
     "supportsCommissionCalculator": true
+  },
+  {
+    "id": "ziraat-bankasi",
+    "name": "Ziraat Bankası POS",
+    "logo": "ZRT",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 421,
+    "featured": true,
+    "isNew": false,
+    "badges": ["Devlet Güvencesi", "En Yaygın"],
+    "segments": ["KOBİ", "Kurumsal", "Perakende", "Franchise"],
+    "cardDescription": "Türkiye'nin en büyük banka şubesi ağı ve devlet güvencesiyle işletmelere güvenilir ödeme altyapısı.",
+    "modalSummary": "Ziraat Bankası, 1900+ şubesiyle Türkiye'nin en yaygın bankacılık ağına sahiptir. KOBİ'ler ve perakende sektörüne özel kampanyalar ve uygun komisyon oranları sunar.",
+    "features": ["Fiziksel + Sanal POS", "3D Secure", "Taksit İmkanı", "Mobil POS"],
+    "differentiators": ["1900+ şube desteği", "KOBİ dostu", "Devlet garantili", "Düşük komisyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.19 + ₺0.25",
+      "feeModel": { "percentage": 2.19, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "KOBİ Paketi", "value": "%2.19 + ₺0.25" },
+        { "label": "Standart", "value": "%2.49 + ₺0.25" },
+        { "label": "Kurumsal", "value": "Özel fiyat" }
+      ],
+      "notes": "KOBİ'lere özel düşük komisyon. Taksit seçenekleri mevcut."
+    },
+    "campaign": {
+      "label": "KOBİ Fırsatı",
+      "text": "İlk 6 ay %1.99 komisyon"
+    },
+    "metrics": { "settlement": "T+1", "support": "Şube desteği + 444 0 100", "uptime": "%99.7", "successRate": "%99.1" },
+    "keywords": ["ziraat", "ziraat bankası", "pos", "kobi"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.ziraatbank.com.tr/tr/kurumsal/sanal-pos", "icon": "fa-credit-card" },
+      { "label": "İletişim", "url": "https://www.ziraatbank.com.tr/tr/iletisim", "icon": "fa-phone" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Bankacılık", "url": "https://www.ziraatbank.com.tr/tr/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@ziraatbank.com.tr", "phone": "+90 (444) 0 100" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP", "SDK"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "halkbank",
+    "name": "Halkbank POS",
+    "logo": "HLK",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 312,
+    "featured": false,
+    "isNew": false,
+    "badges": ["KOBİ Dostu"],
+    "segments": ["KOBİ", "Esnaf", "Perakende"],
+    "cardDescription": "Esnaf ve KOBİ'lere özel avantajlı POS çözümleri ve yerel müşteri desteğiyle güvenilir ödeme sistemi.",
+    "modalSummary": "Halkbank, esnaf ve KOBİ segmentine odaklanmış banka POS çözümleri sunar. Kampanyalı komisyon oranları ve şube bazlı yerel destek ile öne çıkar.",
+    "features": ["Sanal POS", "Mobil POS", "3D Secure", "Paraf Kart Entegrasyonu"],
+    "differentiators": ["Esnaf dostu", "Kampanyalı komisyon", "Şube desteği", "Kredi paketleri"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.29 + ₺0.20",
+      "feeModel": { "percentage": 2.29, "fixed": 0.20, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Esnaf Paketi", "value": "%2.29 + ₺0.20" },
+        { "label": "Standart", "value": "%2.59 + ₺0.25" }
+      ],
+      "notes": "Esnaf ve KOBİ'lere özel indirimli komisyon."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Şube desteği + 444 0 400", "uptime": "%99.5", "successRate": "%98.9" },
+    "keywords": ["halkbank", "pos", "esnaf", "kobi"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.halkbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.halkbank.com.tr/tr/kurumsal-bankacılık" }
+    ],
+    "contact": { "email": "kurumsal@halkbank.com.tr", "phone": "+90 (444) 0 400" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "teb",
+    "name": "TEB Sanal POS",
+    "logo": "TEB",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.7,
+    "reviews": 267,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Kurumsal"],
+    "segments": ["Kurumsal", "E-ticaret", "SaaS"],
+    "cardDescription": "Kurumsal işletmeler için gelişmiş API entegrasyonu ve esnek ödeme çözümleri sunan banka POS sistemi.",
+    "modalSummary": "TEB, kurumsal ve teknoloji şirketlerine özel RESTful API, webhook desteği ve gelişmiş raporlama araçlarıyla ön plana çıkan sanal POS çözümleri sunar.",
+    "features": ["RESTful API", "3D Secure 2.0", "Webhook", "Gelişmiş Raporlama"],
+    "differentiators": ["Teknik dokümantasyon", "Sandbox ortamı", "API-first yaklaşım", "Hızlı entegrasyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.45 + ₺0.30",
+      "feeModel": { "percentage": 2.45, "fixed": 0.30, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Standart", "value": "%2.45 + ₺0.30" },
+        { "label": "Kurumsal (>₺1M)", "value": "%2.19 + ₺0.25" }
+      ],
+      "notes": "Yüksek hacimli işletmeler için özel fiyatlandırma."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "7/24 Teknik Destek", "uptime": "%99.8", "successRate": "%99.3" },
+    "keywords": ["teb", "sanal pos", "api", "kurumsal"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "API Dokümantasyonu", "url": "https://www.teb.com.tr/api-docs", "icon": "fa-book" },
+      { "label": "Sanal POS", "url": "https://www.teb.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal Çözümler", "url": "https://www.teb.com.tr/kurumsal" }
+    ],
+    "contact": { "email": "sanalposs@teb.com.tr", "phone": "+90 (444) 0 666" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "BDDK", "PSD2"],
+      "integrations": ["REST API", "Webhook", "SDK"],
+      "minCommitment": "₺100K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "denizbank",
+    "name": "DenizBank Sanal POS",
+    "logo": "DNZ",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.5,
+    "reviews": 198,
+    "featured": false,
+    "isNew": false,
+    "badges": [],
+    "segments": ["E-ticaret", "Perakende", "Kurumsal"],
+    "cardDescription": "E-ticaret odaklı sanal POS çözümleri ve esnek ödeme seçenekleriyle online satış yapan işletmeler için ideal.",
+    "modalSummary": "DenizBank, e-ticaret sitelerine özel hazır entegrasyon paketleri ve çoklu kart destekleriyle hızlı başlangıç imkanı sağlar.",
+    "features": ["Sanal POS", "3D Secure", "E-ticaret Paketleri", "Hızlı Kurulum"],
+    "differentiators": ["E-ticaret odaklı", "Kolay entegrasyon", "Çoklu kart desteği", "Pazaryeri çözümleri"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.69 + ₺0.25",
+      "feeModel": { "percentage": 2.69, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "E-ticaret Paketi", "value": "%2.69 + ₺0.25" },
+        { "label": "Standart", "value": "%2.89 + ₺0.30" }
+      ],
+      "notes": "E-ticaret işletmelerine özel paketler."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+2", "support": "Hafta içi 09:00-18:00", "uptime": "%99.4", "successRate": "%98.7" },
+    "keywords": ["denizbank", "sanal pos", "e-ticaret"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.denizbank.com/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.denizbank.com/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@denizbank.com", "phone": "+90 (444) 0 900" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK"],
+      "integrations": ["REST API", "WooCommerce", "OpenCart"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "vakifbank",
+    "name": "VakıfBank Sanal POS",
+    "logo": "VKF",
+    "categories": ["bank", "payment-gateway"],
+    "type": "Banka POS",
+    "rating": 4.6,
+    "reviews": 389,
+    "featured": false,
+    "isNew": false,
+    "badges": ["Güvenilir"],
+    "segments": ["KOBİ", "Kurumsal", "Perakende"],
+    "cardDescription": "Geniş şube ağı ve kurumsal destek ile işletmelere güvenilir sanal POS çözümleri sunan köklü banka.",
+    "modalSummary": "VakıfBank, KOBİ ve kurumsal segmente yönelik kapsamlı sanal POS hizmetleri sunar. World Card entegrasyonu ve kampanyalı dönemlerde avantajlı komisyon oranları ile öne çıkar.",
+    "features": ["Sanal POS", "World Card", "3D Secure", "Mobil POS"],
+    "differentiators": ["Geniş şube ağı", "World Card avantajları", "KOBİ kampanyaları", "Müşteri desteği"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.39 + ₺0.25",
+      "feeModel": { "percentage": 2.39, "fixed": 0.25, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "KOBİ", "value": "%2.39 + ₺0.25" },
+        { "label": "Standart", "value": "%2.59 + ₺0.30" }
+      ],
+      "notes": "World Card işlemlerinde ek indirim."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Şube + 444 0 724", "uptime": "%99.6", "successRate": "%99.0" },
+    "keywords": ["vakıfbank", "vakıf", "pos", "world card"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Sanal POS", "url": "https://www.vakifbank.com.tr/sanal-pos", "icon": "fa-credit-card" }
+    ],
+    "sources": [
+      { "label": "Kurumsal", "url": "https://www.vakifbank.com.tr/kurumsal" }
+    ],
+    "contact": { "email": "kurumsal@vakifbank.com.tr", "phone": "+90 (444) 0 724" },
+    "comparison": {
+      "goLive": "1-2 hafta",
+      "compliance": ["PCI DSS", "BDDK", "KVKK"],
+      "integrations": ["REST API", "SOAP"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "payme",
+    "name": "Payme",
+    "logo": "PAY",
+    "categories": ["payment-gateway", "digital-wallet"],
+    "type": "Ödeme Kuruluşu",
+    "rating": 4.4,
+    "reviews": 142,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Yeni Nesil"],
+    "segments": ["E-ticaret", "SaaS", "Dijital Hizmetler"],
+    "cardDescription": "Hızlı entegrasyon ve modern API'ler ile yeni nesil işletmeler için optimize edilmiş ödeme altyapısı.",
+    "modalSummary": "Payme, startup ve SaaS şirketlerine özel geliştirilmiş ödeme gateway'i sunar. No-code entegrasyon, düşük komisyon ve hızlı onboarding ile dikkat çeker.",
+    "features": ["REST API", "No-code Widget", "Webhook", "Dashboard"],
+    "differentiators": ["15 dakikada canlı", "No-code entegrasyon", "Startup dostu", "Esnek fiyatlandırma"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.79 + ₺0.39",
+      "feeModel": { "percentage": 2.79, "fixed": 0.39, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Starter", "value": "%2.79 + ₺0.39" },
+        { "label": "Growth (>₺250K)", "value": "%2.49 + ₺0.29" }
+      ],
+      "notes": "İlk ₺50K işlem hacmine kadar %0 komisyon kampanyası."
+    },
+    "campaign": {
+      "label": "Startup Kampanyası",
+      "text": "İlk ₺50K'ya %0 komisyon"
+    },
+    "metrics": { "settlement": "T+1", "support": "Email + Chat", "uptime": "%99.9", "successRate": "%99.1" },
+    "keywords": ["payme", "ödeme", "startup", "api"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "Dokümantasyon", "url": "https://docs.payme.com.tr", "icon": "fa-book" },
+      { "label": "Dashboard", "url": "https://dashboard.payme.com.tr", "icon": "fa-chart-line" }
+    ],
+    "sources": [
+      { "label": "Ürünler", "url": "https://www.payme.com.tr" }
+    ],
+    "contact": { "email": "hello@payme.com.tr", "phone": "+90 (212) 123 45 67" },
+    "comparison": {
+      "goLive": "1 gün",
+      "compliance": ["PCI DSS", "KVKK"],
+      "integrations": ["REST API", "Widget", "Shopify", "WooCommerce"],
+      "minCommitment": "Yok"
+    },
+    "supportsCommissionCalculator": true
+  },
+  {
+    "id": "craftgate",
+    "name": "Craftgate",
+    "logo": "CRF",
+    "categories": ["payment-gateway"],
+    "type": "Ödeme Geçidi",
+    "rating": 4.7,
+    "reviews": 94,
+    "featured": false,
+    "isNew": true,
+    "badges": ["Gelişmiş API"],
+    "segments": ["Pazar Yeri", "SaaS", "Platform"],
+    "cardDescription": "Pazar yeri ve platform işletmeleri için split payment ve sub-merchant yönetimi özellikleriyle güçlü ödeme altyapısı.",
+    "modalSummary": "Craftgate, çok taraflı pazar yerleri için split payment, escrow ve alt üye işyeri yönetimi gibi gelişmiş özelliklere sahip modern ödeme gateway'idir.",
+    "features": ["Split Payment", "Sub-merchant Yönetimi", "Escrow", "RESTful API", "Webhook"],
+    "differentiators": ["Pazar yeri odaklı", "Split payment", "Alt üye işyeri", "Modern dokümantasyon"],
+    "pricing": {
+      "label": "Komisyon:",
+      "headline": "%2.89 + ₺0.49",
+      "feeModel": { "percentage": 2.89, "fixed": 0.49, "subscription": 0, "currency": "TRY", "installment": 0 },
+      "tiers": [
+        { "label": "Platform", "value": "%2.89 + ₺0.49" },
+        { "label": "Enterprise", "value": "Özel fiyat" }
+      ],
+      "notes": "Alt üye işyeri her biri için +%0.20 ek komisyon."
+    },
+    "campaign": null,
+    "metrics": { "settlement": "T+1", "support": "Email + Slack", "uptime": "%99.95", "successRate": "%99.4" },
+    "keywords": ["craftgate", "marketplace", "split payment", "pazar yeri"],
+    "lastUpdated": "2025-02-11",
+    "addedAt": "2025-02-11",
+    "resources": [
+      { "label": "API Docs", "url": "https://developer.craftgate.io", "icon": "fa-book" },
+      { "label": "Sandbox", "url": "https://sandbox.craftgate.io", "icon": "fa-flask" }
+    ],
+    "sources": [
+      { "label": "Ürünler", "url": "https://craftgate.io" }
+    ],
+    "contact": { "email": "sales@craftgate.io", "phone": "+90 (212) 456 78 90" },
+    "comparison": {
+      "goLive": "1 hafta",
+      "compliance": ["PCI DSS", "KVKK", "PSD2"],
+      "integrations": ["REST API", "Webhook", "SDK (PHP, Node, Python)"],
+      "minCommitment": "₺200K aylık hacim"
+    },
+    "supportsCommissionCalculator": true
   }
 ]
 
