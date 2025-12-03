@@ -12,6 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <div class="announcement-left">
+                    <span class="announcement-badge">Yeni</span>
+                    <span>Fintech Ekosistem Raporu yayımlandı • TCMB lisans listesi, FAST limiti, Dijital TL fazı ve BKM hacimleri güncellendi.</span>
+                </div>
+                <a class="announcement-link" href="#analytics"><i class="fas fa-arrow-right"></i> Raporu incele</a>
+            </div>
+        </div>
+    </div>
     <header class="site-header">
         <div class="container">
             <div class="header-content">
@@ -38,14 +49,20 @@
 
     <section class="hero">
         <div class="container">
+            <div class="data-bar">
+                <div class="data-pill"><i class="fas fa-coins"></i>TCMB lisanslı kuruluş: 49</div>
+                <div class="data-pill"><i class="fas fa-chart-line"></i>BKM kartlı ödeme 2024: ₺9,16T</div>
+                <div class="data-pill"><i class="fas fa-bolt"></i>FAST limit: ₺100.000</div>
+                <div class="data-pill"><i class="fas fa-wallet"></i>Dijital TL: Faz-2 pilot</div>
+            </div>
             <div class="hero-content">
                 <div class="hero-text">
                     <h2>İşiniz İçin En İyi Ödeme Çözümünü Bulun</h2>
-                    <p>TCMB lisanslı ödeme kuruluşları ve banka API'leri için güncel oranlar, entegrasyon notları ve doğrulanmış haberler tek platformda.</p>
+                    <p>Türkiye'nin en kapsamlı fintech platformu. 65+ ödeme sağlayıcısı, güncel fiyatlar ve kampanyalar ile doğrulanmış sektör verilerini tek ekrandan yönetin.</p>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">49</span>
-                            <span class="stat-label">TCMB Lisanslı Kuruluş</span>
+                            <span class="stat-number">65+</span>
+                            <span class="stat-label">Ödeme &amp; e-Para Sağlayıcısı</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">₺0</span>
@@ -1023,8 +1040,8 @@
                     datasets: [{
                         label: 'Dijital Ödeme Hacmi (₺B)',
                         data: [45.2, 67.8, 89.4, 103.7, 127.3],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.12)',
                         borderWidth: 3,
                         fill: true,
                         tension: 0.4
@@ -1042,18 +1059,18 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
+                                color: 'rgba(15, 23, 42, 0.08)'
                             },
                             ticks: {
-                                color: 'white'
+                                color: '#1e293b'
                             }
                         },
                         x: {
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
+                                color: 'rgba(15, 23, 42, 0.05)'
                             },
                             ticks: {
-                                color: 'white'
+                                color: '#1e293b'
                             }
                         }
                     }
@@ -1073,11 +1090,11 @@
                     datasets: [{
                         data: [35.2, 28.7, 18.9, 12.4, 4.8],
                         backgroundColor: [
-                            '#1e3a8a',
-                            '#3b82f6',
+                            '#2563eb',
+                            '#0ea5e9',
                             '#10b981',
                             '#f59e0b',
-                            '#ef4444'
+                            '#8b5cf6'
                         ],
                         borderWidth: 0
                     }]
