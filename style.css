@@ -54,6 +54,14 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+.announcement-bar::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.35), transparent);
+    margin-top: 0.75rem;
+}
+
 .announcement-content {
     display: flex;
     justify-content: space-between;
@@ -125,6 +133,8 @@ p {
     cursor: pointer;
     transition: var(--transition);
     font-size: 0.875rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
@@ -158,6 +168,21 @@ p {
 .btn-outline:hover {
     background: var(--gray-100);
     border-color: var(--gray-400);
+}
+
+.btn-primary::after,
+.btn-secondary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+    opacity: 1;
 }
 
 /* Header */
@@ -249,6 +274,10 @@ p {
     font-size: 0.9rem;
     color: var(--gray-700);
     font-weight: 600;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .data-pill i {
