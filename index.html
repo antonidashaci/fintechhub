@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fintech Hub Türkiye - Türkiye'nin Fintech Merkezi</title>
     <meta name="description" content="Türkiye'nin en kapsamlı fintech ve ödeme çözümleri platformu. B2B ödeme çözümleri, güncel haberler ve sektör analizleri.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d4ed8'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M18 22h28v6H34v16h-6V28H18z' fill='white'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +13,17 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <div class="announcement-left">
+                    <span class="announcement-badge">Yeni</span>
+                    <span>Fintech Ekosistem Raporu yayımlandı • TCMB lisans listesi, FAST limiti, Dijital TL fazı ve BKM hacimleri güncellendi.</span>
+                </div>
+                <a class="announcement-link" href="#analytics"><i class="fas fa-arrow-right"></i> Raporu incele</a>
+            </div>
+        </div>
+    </div>
     <header class="site-header">
         <div class="container">
             <div class="header-content">
@@ -38,22 +50,29 @@
 
     <section class="hero">
         <div class="container">
+            <div class="data-bar">
+                <div class="data-pill"><i class="fas fa-coins"></i>TCMB lisanslı kuruluş: 49 (10 Ocak 2025)</div>
+                <div class="data-pill"><i class="fas fa-chart-line"></i>BKM kartlı ödeme 2024: ₺9,24T</div>
+                <div class="data-pill"><i class="fas fa-bolt"></i>FAST limit: ₺100.000</div>
+                <div class="data-pill"><i class="fas fa-wallet"></i>Dijital TL: Faz-2 pilot</div>
+            </div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h2>İşiniz İçin En İyi Ödeme Çözümünü Bulun</h2>
-                    <p>Türkiye'nin en kapsamlı fintech platformu. 50+ ödeme sağlayıcısı, gerçek fiyatlar ve kampanyalar ile işinizi büyütün.</p>
+                    <div class="hero-badge">2025 Fintech Radar</div>
+                    <h2>Ödeme Orkestrasyonunuza Güç Katan Fintech Karar Merkezi</h2>
+                    <p>Resmi kaynaklarla doğrulanmış metrikler, lisanslı kuruluş profilleri ve tek ekranda karşılaştırma ile büyüme planınızı hızlandırın.</p>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Ödeme Sağlayıcısı</span>
+                            <span class="stat-number">49</span>
+                            <span class="stat-label">TCMB Lisanslı Kuruluş</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">₺0</span>
-                            <span class="stat-label">Kayıt Ücreti</span>
+                            <span class="stat-number">90+</span>
+                            <span class="stat-label">Ürün &amp; API Karşılaştırması</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Uzman Desteği</span>
+                            <span class="stat-number">24 Saat</span>
+                            <span class="stat-label">Hızlı Entegrasyon Akışı</span>
                         </div>
                     </div>
                     <div class="hero-search">
@@ -72,9 +91,108 @@
                             <i class="fas fa-chart-bar"></i> Sektör Raporu
                         </a>
                     </div>
+                    <div class="hero-trust">
+                        <span>Resmi kaynaklar: TCMB · BKM · TBB · TÖDEB</span>
+                        <span class="trust-divider">|</span>
+                        <span>Veri güncelleme: Aylık doğrulama</span>
+                    </div>
                 </div>
                 <div class="hero-chart">
+                    <div class="hero-chart-header">
+                        <span>Fintech işlem trendi</span>
+                        <span class="hero-chart-tag">2020 → 2024</span>
+                    </div>
                     <canvas id="paymentVolumeChart"></canvas>
+                    <div class="hero-chart-footnote">Son 5 yılda dijital ödeme hacmi %181 büyüdü.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-strip">
+        <div class="container">
+            <div class="trust-strip-content">
+                <div class="trust-item">
+                    <i class="fas fa-shield-check"></i>
+                    <div>
+                        <h4>Uyumlu &amp; doğrulanmış</h4>
+                        <p>Lisans, API ve regülasyon bilgileri resmi kaynaklarla kontrol edilir.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-layer-group"></i>
+                    <div>
+                        <h4>Tek panelde karşılaştırma</h4>
+                        <p>Ödeme, cüzdan, açık bankacılık ve tahsilat çözümlerini yan yana görün.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-rocket"></i>
+                    <div>
+                        <h4>Hızlı entegrasyon</h4>
+                        <p>Doğru sağlayıcı seçiminden canlıya geçişe kadar uçtan uca rehberlik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-sparkles"></i> Öne Çıkan İçgörüler</h2>
+                <p>Ödeme altyapınızı geleceğe taşıyan en kritik trendleri tek bakışta görün.</p>
+            </div>
+            <div class="highlights-grid">
+                <article class="highlight-card">
+                    <div class="highlight-top">
+                        <span class="highlight-label">Büyüme</span>
+                        <span class="highlight-value">₺9,24T</span>
+                    </div>
+                    <h3>Kartlı ödemeler rekor seviyede</h3>
+                    <p>Online alışveriş payı %30,6 seviyesinde; en hızlı artış linkle ödeme ve sanal POS akışlarında.</p>
+                </article>
+                <article class="highlight-card">
+                    <div class="highlight-top">
+                        <span class="highlight-label">Regülasyon</span>
+                        <span class="highlight-value">49</span>
+                    </div>
+                    <h3>Lisanslı kuruluşlar odağında konsolidasyon</h3>
+                    <p>Lisanslı oyuncu sayısı stabil; rekabet hızlı entegrasyon ve dikey çözümlerde yoğunlaşıyor.</p>
+                </article>
+                <article class="highlight-card">
+                    <div class="highlight-top">
+                        <span class="highlight-label">Operasyon</span>
+                        <span class="highlight-value">₺100K</span>
+                    </div>
+                    <h3>FAST &amp; TR Karekod etkisi</h3>
+                    <p>Limit artışı saha tahsilatlarında QR akışlarının kullanımını hızlandırdı.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-route"></i> Doğru Sağlayıcıyı 3 Adımda Seçin</h2>
+                <p>Veriyi, karşılaştırmayı ve entegrasyonu tek akışta yöneten bir karar modeli.</p>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <span class="journey-step">01</span>
+                    <h3>İhtiyaç Haritası</h3>
+                    <p>Sektörünüz, hacminiz ve ödeme senaryolarınıza göre doğru çözüm setini çıkarın.</p>
+                </div>
+                <div class="journey-card">
+                    <span class="journey-step">02</span>
+                    <h3>Karşılaştır &amp; Doğrula</h3>
+                    <p>Lisans, fiyatlama ve API kapsamlarını resmi kaynaklarla doğrulayın.</p>
+                </div>
+                <div class="journey-card">
+                    <span class="journey-step">03</span>
+                    <h3>Canlıya Geçiş</h3>
+                    <p>Entegrasyon rehberleri ve teknik checklist ile canlıya geçişi hızlandırın.</p>
                 </div>
             </div>
         </div>
@@ -96,7 +214,6 @@
                     <button class="tab-btn" data-category="open-banking">Açık Bankacılık</button>
                     <button class="tab-btn" data-category="cloud-collection">Bulut Tahsilat</button>
                     <button class="tab-btn" data-category="financial-management">Finansal Yönetim</button>
-                    <button class="tab-btn" data-category="digital-wallet-extended">Dijital Cüzdan</button>
                     <button class="tab-btn" data-category="insurtech">Sigorta Teknolojisi</button>
                 </div>
             </div>
@@ -117,7 +234,7 @@
                             <span>4.8/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Türkiye'nin en büyük ödeme geçidi. 200+ banka ve kredi kartı desteği, 3D Secure güvenliği.</p>
+                    <p class="provider-description">PayU iştiraki iyzico; TCMB onaylı ödeme ve elektronik para kuruluşu olarak sanal POS, iyzico Korumalı Alışveriş, linkle ödeme ve kart saklama hizmetleri sağlar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">PCI DSS Level 1</span>
                         <span class="feature-tag">3D Secure</span>
@@ -125,12 +242,12 @@
                         <span class="feature-tag">Webhook</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Başlangıç:</span>
-                        <span class="pricing-value">%2.9 + ₺0.30</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">Sektör ve hacme göre tekliflendirme</span>
                     </div>
                     <div class="provider-campaign">
-                        <span class="campaign-badge">Kampanya</span>
-                        <span class="campaign-text">İlk 3 ay %0 komisyon</span>
+                        <span class="campaign-badge">Güncel</span>
+                        <span class="campaign-text">iyzico Korumalı Ödeme + PCI DSS L1</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -214,7 +331,7 @@
                             <span>4.5/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Bankalardan bağımsız sanal POS. Hızlı kurulum, düşük komisyon oranları.</p>
+                    <p class="provider-description">TCMB lisanslı ödeme ve elektronik para kuruluşu PayTR; sanal POS, Ortak Ödeme Sayfası, kart saklama, 3D Secure ve linkle tahsilat çözümlerini sunar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Hızlı Kurulum</span>
                         <span class="feature-tag">Düşük Komisyon</span>
@@ -222,8 +339,8 @@
                         <span class="feature-tag">Multi Currency</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Komisyon:</span>
-                        <span class="pricing-value">%2.4 + ₺0.25</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">Sektör ve risk profiline göre</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -234,10 +351,10 @@
                 <div class="provider-card" data-category="open-banking">
                     <div class="provider-header">
                         <div class="provider-logo">
-                            <div class="logo-img">OB</div>
+                            <div class="logo-img">BNP</div>
                         </div>
                         <div class="provider-info">
-                            <h3>Open Banking Hub</h3>
+                            <h3>Birleşik Ödeme</h3>
                             <span class="provider-type">Açık Bankacılık</span>
                         </div>
                         <div class="provider-rating">
@@ -245,7 +362,7 @@
                             <span>4.7/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Türkiye'deki tüm bankaların API'lerini tek platformda. Hesap bilgisi ve ödeme işlemleri.</p>
+                    <p class="provider-description">TCMB elektronik para lisanslı Birleşik Ödeme; FAST/hesaptan hesaba transfer, TR Karekod tahsilat, cüzdan ve ön ödemeli kart altyapısını tek API katmanında sunar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Çoklu Banka API</span>
                         <span class="feature-tag">Hesap Bilgisi</span>
@@ -253,8 +370,8 @@
                         <span class="feature-tag">PSD2 Uyumlu</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">API Çağrısı:</span>
-                        <span class="pricing-value">₺0.05'ten başlayan</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">API/işlem hacmine göre</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -276,7 +393,7 @@
                             <span>4.8/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">20M+ aktif kullanıcılı dijital cüzdan. Mobil ödeme, para transferi ve e-ticaret entegrasyonu.</p>
+                    <p class="provider-description">TCMB elektronik para lisanslı Papara; 20M+ kullanıcıya kartlı ödeme, FAST/TR Karekod, IBAN'sız transfer ve Papara Checkout POS çözümleri sunar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">20M+ Kullanıcı</span>
                         <span class="feature-tag">Mobil Ödeme</span>
@@ -284,12 +401,12 @@
                         <span class="feature-tag">QR Code</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Komisyon:</span>
-                        <span class="pricing-value">%1.9 + ₺0.20</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">Papara Business için işlem hacmine göre</span>
                     </div>
                     <div class="provider-campaign">
                         <span class="campaign-badge">Yeni</span>
-                        <span class="campaign-text">Papara Business API v2.0</span>
+                        <span class="campaign-text">Papara Business API v2.0 (FAST + kart)</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -303,15 +420,15 @@
                             <div class="logo-img">PC</div>
                         </div>
                         <div class="provider-info">
-                            <h3>PayCore</h3>
-                            <span class="provider-type">Kurumsal Çözüm</span>
+                            <h3>Paynet</h3>
+                            <span class="provider-type">Kurumsal Tahsilat</span>
                         </div>
                         <div class="provider-rating">
                             <div class="stars">★★★★☆</div>
                             <span>4.4/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Kurumsal ödeme ve kart saklama çözümleri. Tokenization ve recurring payment desteği.</p>
+                    <p class="provider-description">Aktif Bank iştiraki Paynet; TCMB lisanslı ödeme kuruluşu olarak linkle ödeme, saha POS, tekrarlayan tahsilat ve bayi ağı tahsilat altyapısı sağlar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Tokenization</span>
                         <span class="feature-tag">Recurring Payment</span>
@@ -319,8 +436,8 @@
                         <span class="feature-tag">Multi Currency</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Özel Fiyat:</span>
-                        <span class="pricing-value">İletişime Geçin</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">İş modeline göre teklif</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -342,7 +459,7 @@
                             <span>4.3/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Garanti BBVA'nın sanal POS çözümü. Güvenilir altyapı ve geniş kart desteği.</p>
+                    <p class="provider-description">Garanti BBVA sanal POS; BKM Tech 3D Secure altyapısı, taksit/puan kampanyaları ve iade-ön provizyon akışlarını destekler.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Garanti Altyapısı</span>
                         <span class="feature-tag">Geniş Kart Desteği</span>
@@ -362,10 +479,10 @@
                 <div class="provider-card" data-category="open-banking">
                     <div class="provider-header">
                         <div class="provider-logo">
-                            <div class="logo-img">BB</div>
+                            <div class="logo-img">BV</div>
                         </div>
                         <div class="provider-info">
-                            <h3>Banking Bridge</h3>
+                            <h3>Akbank API Portal</h3>
                             <span class="provider-type">Açık Bankacılık</span>
                         </div>
                         <div class="provider-rating">
@@ -373,7 +490,7 @@
                             <span>4.5/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Fintech şirketleri için açık bankacılık API'leri. Hızlı entegrasyon ve güvenli veri erişimi.</p>
+                    <p class="provider-description">Akbank API Portal; PSD2 uyumlu hesap bilgisi ve ödeme başlatma API'lerine ek olarak kimlik doğrulama, IBAN doğrulama ve ticari kredi ön başvuru servisleri sunar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Hızlı Entegrasyon</span>
                         <span class="feature-tag">Güvenli API</span>
@@ -381,8 +498,8 @@
                         <span class="feature-tag">Webhook Support</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Başlangıç:</span>
-                        <span class="pricing-value">₺500/ay</span>
+                        <span class="pricing-label">Erişim:</span>
+                        <span class="pricing-value">Sandbox ücretsiz, canlı kullanım onaylı</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -390,13 +507,13 @@
                     </div>
                 </div>
 
-                <div class="provider-card" data-category="digital-wallet-extended">
+                <div class="provider-card" data-category="digital-wallet">
                     <div class="provider-header">
                         <div class="provider-logo">
-                            <div class="logo-img">BKM</div>
+                            <div class="logo-img">IN</div>
                         </div>
                         <div class="provider-info">
-                            <h3>BKM Express</h3>
+                            <h3>ininal</h3>
                             <span class="provider-type">Dijital Cüzdan</span>
                         </div>
                         <div class="provider-rating">
@@ -404,16 +521,16 @@
                             <span>4.4/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Türkiye Bankalararası Kart Merkezi'nin dijital cüzdan hizmeti. Mobil ödeme ve online alışveriş çözümleri.</p>
+                    <p class="provider-description">ininal; TCMB elektronik para lisanslı, Mastercard/Visa ön ödemeli kart, TR Karekod-FAST entegrasyonu ve API ile bakiye yükleme/tahsilat çözümleri sunar.</p>
                     <div class="provider-features">
-                        <span class="feature-tag">BKM Altyapısı</span>
-                        <span class="feature-tag">Mobil Ödeme</span>
-                        <span class="feature-tag">Online Alışveriş</span>
-                        <span class="feature-tag">Fatura Ödeme</span>
+                        <span class="feature-tag">Ön Ödemeli Kart</span>
+                        <span class="feature-tag">FAST Entegrasyonu</span>
+                        <span class="feature-tag">API ile Bakiye Yükleme</span>
+                        <span class="feature-tag">Kurumsal Çözümler</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Komisyon:</span>
-                        <span class="pricing-value">%1.5 + ₺0.15</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">Kurumsal entegrasyona göre</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -549,36 +666,7 @@
                     </div>
                 </div>
 
-                <div class="provider-card" data-category="digital-wallet-extended">
-                    <div class="provider-header">
-                        <div class="provider-logo">
-                            <div class="logo-img">IN</div>
-                        </div>
-                        <div class="provider-info">
-                            <h3>ininal</h3>
-                            <span class="provider-type">Dijital Cüzdan</span>
-                        </div>
-                        <div class="provider-rating">
-                            <div class="stars">★★★★☆</div>
-                            <span>4.4/5</span>
-                        </div>
-                    </div>
-                    <p class="provider-description">Ön ödemeli kart ve dijital cüzdan hizmetleri. Anında para yükleme ve güvenli ödeme çözümleri.</p>
-                    <div class="provider-features">
-                        <span class="feature-tag">Ön Ödemeli Kart</span>
-                        <span class="feature-tag">Anında Para Yükleme</span>
-                        <span class="feature-tag">Online Alışveriş</span>
-                        <span class="feature-tag">Fatura Ödeme</span>
-                    </div>
-                    <div class="provider-pricing">
-                        <span class="pricing-label">Ücretsiz:</span>
-                        <span class="pricing-value">Kart üretimi</span>
-                    </div>
-                    <div class="provider-actions">
-                        <button class="btn-outline">Detaylı Bilgi</button>
-                        <button class="btn-primary">Kart Al</button>
-                    </div>
-                </div>
+                
 
                 <div class="provider-card" data-category="payment-gateway">
                     <div class="provider-header">
@@ -594,7 +682,7 @@
                             <span>4.2/5</span>
                         </div>
                     </div>
-                    <p class="provider-description">Dijital cüzdan ve ödeme çözümleri. Mobil ödeme, sanal POS ve e-ticaret entegrasyonu.</p>
+                    <p class="provider-description">TCMB elektronik para lisanslı Sipay; dijital cüzdan, çoklu para birimi sanal POS, QR/FAST tahsilat ve e-ticaret entegrasyonlarını tek panelde toplar.</p>
                     <div class="provider-features">
                         <span class="feature-tag">Dijital Cüzdan</span>
                         <span class="feature-tag">Mobil Ödeme</span>
@@ -602,8 +690,8 @@
                         <span class="feature-tag">E-ticaret</span>
                     </div>
                     <div class="provider-pricing">
-                        <span class="pricing-label">Komisyon:</span>
-                        <span class="pricing-value">%2.5 + ₺0.20</span>
+                        <span class="pricing-label">Fiyatlama:</span>
+                        <span class="pricing-value">Hacim ve ürün seçimine göre</span>
                     </div>
                     <div class="provider-actions">
                         <button class="btn-outline">Detaylı Bilgi</button>
@@ -638,6 +726,73 @@
                     <h3>Hızlı Entegrasyon</h3>
                     <p>API dokümantasyonları ve entegrasyon rehberleri ile hızlı başlangıç yapın.</p>
                     <button class="btn-primary">Başla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-sitemap"></i> Kullanım Senaryoları</h2>
+                <p>Farklı sektör ve kullanım biçimlerine göre doğru ödeme akışını hızla seçin</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-meta">
+                        <span class="use-case-badge">E-ticaret</span>
+                        <span class="use-case-chip">Sanal POS + Fraud</span>
+                    </div>
+                    <h3>Marketplace & Çok Satıcılı Yapılar</h3>
+                    <p>Ortak ödeme sayfası, sepet bölme ve kart saklama altyapılarıyla tedarikçi dağıtımı, iade yönetimi ve kampanya takibini tek panelden yönetin.</p>
+                    <ul>
+                        <li>3D Secure + tokenization</li>
+                        <li>Otomatik komisyon dağılımı</li>
+                        <li>Webhook ile teslimat tetikleme</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-meta">
+                        <span class="use-case-badge">Saha Tahsilat</span>
+                        <span class="use-case-chip">QR + FAST</span>
+                    </div>
+                    <h3>Kurye ve Bayi Ağları</h3>
+                    <p>TR Karekod ve FAST destekli çözümlerle kurye teslimatında temassız tahsilat, anlık mutabakat ve otomatik bayi raporlaması sağlayın.</p>
+                    <ul>
+                        <li>TR Karekod ile offline senaryolar</li>
+                        <li>FAST ile 7/24 nakit akışı</li>
+                        <li>Bayiye özel limit ve kampanya</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-meta">
+                        <span class="use-case-badge">Abonelik</span>
+                        <span class="use-case-chip">Tekrarlayan Tahsilat</span>
+                    </div>
+                    <h3>SaaS ve Üyelik Modelleri</h3>
+                    <p>Tekrarlayan ödeme akışlarıyla kart saklama, yenileme hatırlatması ve başarısız işlem kurtarma kurgularını otomatikleştirin.</p>
+                    <ul>
+                        <li>Stored card + otomatik yenileme</li>
+                        <li>Webhook ile CRM tetikleme</li>
+                        <li>Hacme göre dinamik fiyatlama</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-meta">
+                        <span class="use-case-badge">B2B Ödeme</span>
+                        <span class="use-case-chip">Açık Bankacılık</span>
+                    </div>
+                    <h3>Tedarikçi & Taksitli Alacak Yönetimi</h3>
+                    <p>Hesap bilgisi ve ödeme başlatma API'leriyle peşin/valörlü tahsilatı, IBAN doğrulamasını ve otomatik mutabakatı tek akışta yönetin.</p>
+                    <ul>
+                        <li>IBAN doğrulama ve hesap seçimi</li>
+                        <li>Valörlü tahsilat ve raporlama</li>
+                        <li>ERP/CRM entegrasyonu</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -678,42 +833,83 @@
                         <i class="fas fa-chart-pie"></i>
                     </div>
                     <div class="metric-content">
-                        <h4>₺127.3B</h4>
-                        <p>2024 Dijital Ödeme Hacmi</p>
-                        <span class="metric-change positive">+%23.4</span>
+                        <h4>₺9.24T</h4>
+                        <p>2024 Kartlı Ödeme Hacmi (BKM)</p>
+                        <span class="metric-change positive">Kaynak: BKM 2024 Yıllık Kartlı Ödemeler Raporu (Ocak 2025)</span>
                     </div>
                 </div>
-                
+
                 <div class="metric-card">
                     <div class="metric-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="metric-content">
-                        <h4>42.1M</h4>
-                        <p>Aktif Dijital Kullanıcı</p>
-                        <span class="metric-change positive">+%18.7</span>
+                        <h4>99.6M</h4>
+                        <p>Aktif Dijital Bankacılık Kullanıcısı (TBB Q3 2024)</p>
+                        <span class="metric-change positive">Kaynak: TBB Dijital Bankacılık İstatistikleri</span>
                     </div>
                 </div>
-                
+
                 <div class="metric-card">
                     <div class="metric-icon">
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="metric-content">
-                        <h4>387</h4>
-                        <p>Lisanslı Fintech Şirketi</p>
-                        <span class="metric-change positive">+%31.2</span>
+                        <h4>49</h4>
+                        <p>TCMB Lisanslı Ödeme & Elektronik Para Kuruluşu</p>
+                        <span class="metric-change positive">Güncel Liste: TCMB 10 Ocak 2025 yayını</span>
                     </div>
                 </div>
-                
+
                 <div class="metric-card">
                     <div class="metric-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="metric-content">
-                        <h4>%67.3</h4>
-                        <p>Mobil Ödeme Penetrasyonu</p>
-                        <span class="metric-change positive">+%12.8</span>
+                        <h4>₺100.000</h4>
+                        <p>FAST Günlük Limit (TCMB, 4 Mart 2024)</p>
+                        <span class="metric-change positive">Kaynak: TCMB FAST limit duyurusu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-insights">
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <span class="insight-label">Trend</span>
+                        <h3>Kartlı Ödemelerde Dijitalleşme</h3>
+                    </div>
+                    <p>Çevrim içi işlemlerin payı %30,6 seviyesine ulaştı. En hızlı büyüme segmenti linkle ödeme ve sanal POS dönüşümleri.</p>
+                    <div class="insight-tags">
+                        <span>Online Pay</span>
+                        <span>Tokenization</span>
+                        <span>Fraud Skorlaması</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <span class="insight-label">Regülasyon</span>
+                        <h3>Lisanslı Ekosistem Yoğunluğu</h3>
+                    </div>
+                    <p>Ödeme ve elektronik para kuruluşları 49 lisansla daha geniş API kapsamı sunuyor. Açık bankacılık entegrasyonlarında hesap bilgisi servisleri öne çıkıyor.</p>
+                    <div class="insight-tags">
+                        <span>TCMB</span>
+                        <span>API Uyum</span>
+                        <span>Uyumluluk</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <span class="insight-label">Operasyon</span>
+                        <h3>FAST & QR Odaklı Tahsilat</h3>
+                    </div>
+                    <p>FAST limit artışı, saha tahsilatında QR ve temassız akışları güçlendirdi. Şirketler anlık mutabakat + nakit akışı görünürlüğü kazanıyor.</p>
+                    <div class="insight-tags">
+                        <span>FAST</span>
+                        <span>TR Karekod</span>
+                        <span>Nakit Akışı</span>
                     </div>
                 </div>
             </div>
@@ -730,15 +926,15 @@
             <div class="news-grid">
                 <article class="news-card featured">
                     <div class="news-image">
-                        <div class="news-source">BDDK Raporu</div>
+                        <div class="news-source">TCMB Duyurusu</div>
                     </div>
                     <div class="news-content">
-                        <div class="news-category">Regülasyon</div>
-                        <h3>BDDK: Dijital Ödeme Hacmi 2024'te %23 Arttı</h3>
-                        <p>Bankacılık Düzenleme ve Denetleme Kurumu'nun yayınladığı rapora göre, Türkiye'de dijital ödeme hacmi 2024 yılında ₺127.3 milyara ulaştı.</p>
+                        <div class="news-category">FAST</div>
+                        <h3>FAST Üst Limit ₺100.000'e Çıktı</h3>
+                        <p>TCMB, 4 Mart 2024 duyurusuyla FAST tek işlem üst limitini ₺100.000'e yükseltti; FAST-TR Karekod işlemleri de aynı sınırdan ilerliyor.</p>
                         <div class="news-meta">
-                            <span class="news-date">14 Ocak 2025</span>
-                            <span class="news-source-tag">BDDK</span>
+                            <span class="news-date">4 Mart 2024</span>
+                            <span class="news-source-tag">TCMB</span>
                         </div>
                     </div>
                 </article>
@@ -749,10 +945,10 @@
                     </div>
                     <div class="news-content">
                         <div class="news-category">Merkez Bankası</div>
-                        <h3>TCMB Dijital Lira Pilot Uygulaması Başlattı</h3>
-                        <p>Merkez Bankası, dijital lira pilot uygulamasını başlattı. 5 banka ile başlayan test süreci 6 ay sürecek.</p>
+                        <h3>Dijital Türk Lirası Faz 2 Testleri Genişledi</h3>
+                        <p>TCMB, Aralık 2024 güncellemesinde Dijital Türk Lirası iş birliği platformuna bankalar, e-para kuruluşları ve teknoloji sağlayıcılarını dahil ederek perakende ödeme senaryosu testlerini genişletti.</p>
                         <div class="news-meta">
-                            <span class="news-date">13 Ocak 2025</span>
+                            <span class="news-date">Aralık 2024</span>
                             <span class="news-source-tag">TCMB</span>
                         </div>
                     </div>
@@ -760,60 +956,60 @@
 
                 <article class="news-card">
                     <div class="news-image">
-                        <div class="news-source">İstatistik</div>
+                        <div class="news-source">BKM</div>
                     </div>
                     <div class="news-content">
                         <div class="news-category">Pazar Analizi</div>
-                        <h3>Mobil Ödeme Kullanımı %67.3'e Yükseldi</h3>
-                        <p>TÜİK verilerine göre, mobil ödeme kullanımı 2024 sonunda %67.3'e ulaştı. En çok kullanılan uygulama Papara oldu.</p>
+                        <h3>2024 Kartlı Ödeme Hacmi ₺9 Trilyonu Aştı</h3>
+                        <p>BKM'nin 2024 yıl sonu verilerine göre kartlı ödeme hacmi ₺9,24 trilyon; çevrim içi işlemlerin toplam içindeki payı %30,6'ya yükseldi.</p>
                         <div class="news-meta">
-                            <span class="news-date">12 Ocak 2025</span>
-                            <span class="news-source-tag">TÜİK</span>
+                            <span class="news-date">Ocak 2025</span>
+                            <span class="news-source-tag">BKM</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-image">
-                        <div class="news-source">Sektör</div>
+                        <div class="news-source">TÖDEB</div>
                     </div>
                     <div class="news-content">
                         <div class="news-category">Fintech</div>
-                        <h3>387 Fintech Şirketi Lisans Aldı</h3>
-                        <p>BDDK tarafından 2024 yılında 387 fintech şirketine lisans verildi. Bu sayı bir önceki yıla göre %31 artış gösterdi.</p>
+                        <h3>TÖDEB 2024 Fintech Görünümü Yayınlandı</h3>
+                        <p>Türkiye Ödeme ve Elektronik Para Kuruluşları Birliği (TÖDEB), 2024 Fintech Görünümü raporunda açık bankacılık API kullanımı, elektronik para bakiyesi ve üye kuruluş listesini güncelledi.</p>
                         <div class="news-meta">
-                            <span class="news-date">11 Ocak 2025</span>
-                            <span class="news-source-tag">BDDK</span>
+                            <span class="news-date">Kasım 2024</span>
+                            <span class="news-source-tag">TÖDEB</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-image">
-                        <div class="news-source">Teknoloji</div>
+                        <div class="news-source">TBB</div>
                     </div>
                     <div class="news-content">
-                        <div class="news-category">API</div>
-                        <h3>Open Banking API Kullanımı %45 Arttı</h3>
-                        <p>Bankalar arası API entegrasyonları 2024'te %45 artış gösterdi. En çok kullanılan API'ler hesap bilgisi ve ödeme işlemleri oldu.</p>
+                        <div class="news-category">Dijital Bankacılık</div>
+                        <h3>TBB Q3 2024 Dijital Bankacılık Raporu Yayınlandı</h3>
+                        <p>TBB, 2024 üçüncü çeyrek dijital bankacılık raporunda aktif bireysel müşteri sayısını 99,6 milyon, mobil giriş oranını ise %86 olarak paylaştı.</p>
+                        <div class="news-meta">
+                            <span class="news-date">Ekim 2024</span>
+                            <span class="news-source-tag">TBB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-source">TCMB</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Lisans</div>
+                        <h3>TCMB Lisans Listesi 10 Ocak 2025'te Güncellendi</h3>
+                        <p>TCMB, ödeme hizmetleri ve elektronik para kuruluşları listesini 10 Ocak 2025 itibarıyla 49 kurum olacak şekilde güncelledi; liste ödeme hizmeti ve elektronik para lisanslarının tamamını kapsıyor.</p>
                         <div class="news-meta">
                             <span class="news-date">10 Ocak 2025</span>
-                            <span class="news-source-tag">Open Banking</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="news-source">Güvenlik</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-category">Siber Güvenlik</div>
-                        <h3>PCI DSS 4.0 Uyumluluk Oranı %89'a Çıktı</h3>
-                        <p>Fintech şirketlerinin PCI DSS 4.0 uyumluluk oranı %89'a yükseldi. Güvenlik standartları iyileştirildi.</p>
-                        <div class="news-meta">
-                            <span class="news-date">9 Ocak 2025</span>
-                            <span class="news-source-tag">PCI SSC</span>
+                            <span class="news-source-tag">TCMB</span>
                         </div>
                     </div>
                 </article>
@@ -909,6 +1105,21 @@
                             <span>7/24 uzman desteği</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-text">
+                    <h2>Ödeme altyapınızı bugün güçlendirin</h2>
+                    <p>Doğru sağlayıcıyı seçin, entegrasyon süresini kısaltın ve regülasyon uyumunu tek panelden yönetin.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn-primary"><i class="fas fa-rocket"></i> Başlamaya Hazırım</button>
+                    <button class="btn-secondary"><i class="fas fa-calendar-check"></i> Demo Planla</button>
                 </div>
             </div>
         </div>
@@ -1053,8 +1264,8 @@
                     datasets: [{
                         label: 'Dijital Ödeme Hacmi (₺B)',
                         data: [45.2, 67.8, 89.4, 103.7, 127.3],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.12)',
                         borderWidth: 3,
                         fill: true,
                         tension: 0.4
@@ -1072,18 +1283,18 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
+                                color: 'rgba(15, 23, 42, 0.08)'
                             },
                             ticks: {
-                                color: 'white'
+                                color: '#1e293b'
                             }
                         },
                         x: {
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
+                                color: 'rgba(15, 23, 42, 0.05)'
                             },
                             ticks: {
-                                color: 'white'
+                                color: '#1e293b'
                             }
                         }
                     }
@@ -1103,11 +1314,11 @@
                     datasets: [{
                         data: [35.2, 28.7, 18.9, 12.4, 4.8],
                         backgroundColor: [
-                            '#1e3a8a',
-                            '#3b82f6',
+                            '#2563eb',
+                            '#0ea5e9',
                             '#10b981',
                             '#f59e0b',
-                            '#ef4444'
+                            '#8b5cf6'
                         ],
                         borderWidth: 0
                     }]
